@@ -1,0 +1,40 @@
+.nav {
+  width:254px;
+}
+
+.nav h2 {
+  padding:50px 10px 5px 20px;
+  margin:0;
+  text-align:center;
+  font-size:2em;
+  background:transparent url(../images/backgrounds/nav_top.png) left top no-repeat;
+}
+
+.nav ul {
+  font-size:1.1em;
+  list-style:none;
+  margin:0;
+  padding:00px 0 60px 20px;
+  background:transparent url(../images/backgrounds/nav_bottom.png) left bottom no-repeat;
+
+}
+
+.nav ul ul {
+  background:transparent;
+  padding:0 0 0 30px;
+}
+
+.nav a {
+  display:block;
+  color:#000;
+  text-decoration:none;
+  padding:4px 0;
+}
+
+.nav a:hover {
+  text-decoration:underline;
+}
+
+.nav .selected a {
+  font-weight:bold;
+}

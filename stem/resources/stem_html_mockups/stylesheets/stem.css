@@ -1,0 +1,121 @@
+body {
+  margin:0;
+  padding:0;
+  font-size:80%;
+  font-family:arial, helvetica, sans-serif;
+  background:#e4edda;
+}
+
+h2.header {
+  background: transparent url(../images/backgrounds/main/top.jpg) left top repeat-x;
+  font-family:"Bradley Hand ITC", arial, helvetica, sans-serif;
+  margin:0;
+  padding:0;
+}
+
+#wrapper {
+  margin:0 10px 0 20px;
+}
+
+.clear {
+  clear:both;
+  font-size:1px;
+  height:1px;
+  line-height:1px;
+}
+
+a img {
+  border:none;
+}
+
+h1, h2 {
+  font-family:"Bradley Hand ITC", arial, helvetica, sans-serif;
+}
+
+/* Access Links */
+
+.access {
+  background:#003466;
+  color:#fff;
+  margin:0;
+  padding:5px 0;
+  font-family:helvetica,arial,sans-serif;
+}
+
+.access ul {
+  width:1216px;
+  margin:0 0 0 10px;
+  padding:0;
+}
+
+.access a {
+  color:#fff;
+  text-decoration:none;
+}
+
+.access a:hover {
+  text-decoration:underline;
+}
+
+.access li {
+  float:left;
+  list-style:none;
+  padding:0 10px;
+  border-right:1px solid #fff;
+}
+
+.access li.first {
+  padding-left:0;
+  border-right:none;
+  font-weight:bold;
+}
+
+/* content */
+
+.navigation,
+.content {
+  background: #fff url(../images/backgrounds/content/left.png) left bottom no-repeat;
+}
+
+.navigation ul,
+.content .content-wrapper {
+  margin:0;
+  padding:10px 20px 20px 20px;
+  background: transparent url(../images/backgrounds/content/right.png) right bottom no-repeat;
+}
+
+.navigation h2,
+.content h2.title {
+  background: #7b317b url(../images/backgrounds/header/left.png) left top no-repeat;
+  color:#fff;
+  margin:0;
+  padding:0;
+}
+
+.navigation h2 span,
+.content h2.title span {
+  background: transparent url(../images/backgrounds/header/right.png) right top no-repeat;
+  display:block;
+  padding:5px 20px;
+}
+
+.navigation ul {
+  list-style:none;
+  margin:0;
+}
+
+.navigation li {
+  margin:10px 0;
+  padding:0;
+}
+
+.navigation a {
+  text-decoration:none;
+  font-family:"Bradley Hand ITC", arial, helvetica, sans-serif;
+  color:#000;
+  font-size:1.3em;
+}
+
+.navigation a:hover {
+  text-decoration:underline;
+}

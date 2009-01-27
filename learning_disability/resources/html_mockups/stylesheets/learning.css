@@ -22,7 +22,7 @@ body {
 }
 
 a img {
-border:none;
+  border:none;
 }
 
 /* Access Links */
@@ -63,7 +63,4 @@ border:none;
 padding-left:0;
 border-right:none;
 font-weight:bold;
-}
-.access {
-
 }

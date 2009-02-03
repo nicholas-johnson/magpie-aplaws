@@ -7,29 +7,25 @@
 		xmlns:nav="http://ccm.redhat.com/london/navigation"
 		exclude-result-prefixes="xsl portal portlet bebop nav">
 	
-	<!-- xsl:template match="portal:homepageWorkspace[@id='middle']">
-		<xsl:for-each select="bebop:portal/bebop:portlet">
-			<xsl:call-template name="portlet" />
+	
+	<xsl:template match="portal:homepageWorkspace[@id='left']">
+		<xsl:for-each select="portal:portal/bebop:portlet">
+			<xsl:apply-templates select="." />
+			<xsl:apply-templates select="portlet:action" />
 		</xsl:for-each>
-		<xsl:apply-templates select="bebop:portal/bebop:portlet[nav:objectList]" />
-		Hello Rudi
+		<xsl:apply-templates select="bebop:link" />
 	</xsl:template>
 	
 	<xsl:template match="portal:homepageWorkspace[@id='right']">
-		Hello Rudi
+		<xsl:for-each select="portal:portal/bebop:portlet">
+			<xsl:apply-templates select="." />
+			<xsl:apply-templates select="portlet:action" />
+		</xsl:for-each>
+		<xsl:apply-templates select="bebop:link" />
 	</xsl:template>
-		
-	
-	<xsl:template name="portlet">
-		<div class="feature">
-			<h1>Portlet</h1>
-		</div>
-	</xsl:template -->
 	
 	<xsl:template match="bebop:portlet[nav:objectList]">
-		
 		<div class="feature">
-			
 			<xsl:choose>
 				
 				<xsl:when test="attribute::title='TextTicker'">

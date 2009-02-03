@@ -32,25 +32,8 @@
 		<link rel="stylesheet" href="{$theme-prefix}/style/print.css" media="print" type="text/css" charset="iso-8859-1" />
 	</xsl:template>
 	
-		<xsl:template name="cssHomepage">
-		<link rel="stylesheet" href="{$theme-prefix}/style/basic.css" type="text/css" charset="iso-8859-1" />
-		<style type="text/css">
-			<xsl:text disable-output-escaping="yes">
-					
-		&lt;!--			
-			</xsl:text>
-			
-		@import "<xsl:value-of select="$theme-prefix"/>/style/global.css";
-		@import "<xsl:value-of select="$theme-prefix"/>/style/homepageLayout.css";
-			
-			<xsl:text disable-output-escaping="yes">
-		--&gt;
-
-			</xsl:text>
-		
-		</style>
-				<!-- Enhance look of printed output with "print only" stylesheet -->
-		<link rel="stylesheet" href="{$theme-prefix}/style/print.css" media="print" type="text/css" charset="iso-8859-1" />
+	<xsl:template name="cssHomepage">
+		<link rel="stylesheet" href="{$theme-prefix}/style/style.css" type="text/css" charset="iso-8859-1" />
 	</xsl:template>
 	
 	

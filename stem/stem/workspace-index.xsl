@@ -80,7 +80,7 @@
 					<img src="images/random_images/1.jpg" alt="" />
 				</div>
 				<a name="content" class="access">&#160;</a>
-				<xsl:apply-templates select="//portal:homepageWorkspace[@id='middle']" />
+				<xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />
 			</div>
 		</div>
 		
@@ -88,12 +88,6 @@
 			<xsl:apply-templates select="//portal:homepageWorkspace[@id='left']" />
 		</div>
 			
-	</xsl:template>
-	
-	<xsl:template name="homepageBreadcrumb">
-		<div id="breadcrumb">
-			You are in: Home
-		</div>
 	</xsl:template>
 
 </xsl:stylesheet>

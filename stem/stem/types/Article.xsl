@@ -9,7 +9,7 @@
 version="1.0">
 
 
-
+BUM!!!
 <xsl:template name="CT_Article_graphics">
 
 <div id="greeting">

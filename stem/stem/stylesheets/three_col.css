@@ -1,0 +1,55 @@
+#floatWrapper {
+  width:70%;
+  float:right;
+}
+
+.content {
+  float:left;
+  width:60%;
+}
+
+.relatedItems {
+  float:right;
+  width:38.6%;
+}
+
+.navigation {
+  float:left;
+  width:29%;
+}
+
+/* Right column */
+
+.relatedItems .related {
+  background: #fff url(../images/backgrounds/content/left.png) left bottom no-repeat;
+}
+
+.relatedItems .related .related-content {
+  margin:0;
+  padding:10px 20px 20px 20px;
+  background: transparent url(../images/backgrounds/content/right.png) right bottom no-repeat;
+}
+
+.relatedItems .related h2 {
+  background: #7b317b url(../images/backgrounds/header/left.png) left top no-repeat;
+  color:#fff;
+  margin:0;
+  padding:0;
+}
+
+.relatedItems .related h2 span {
+  background: transparent url(../images/backgrounds/header/right.png) right top no-repeat;
+  display:block;
+  padding:5px 20px;
+}
+
+.relatedItems ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.relatedItems li {
+  margin:0.5em 0;
+  padding:0;
+}

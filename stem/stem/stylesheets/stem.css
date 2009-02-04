@@ -74,6 +74,7 @@ h1, h2 {
   background:transparent;
   line-height:1px;
   font-size:1px;
+  position:absolute;
 }
 /* content */
 
@@ -104,9 +105,25 @@ h1, h2 {
   padding:5px 20px;
 }
 
+/* navigation */
+
+.navigation {
+  font-family:"Bradley Hand ITC", arial, helvetica, sans-serif;
+}
+
 .navigation ul {
   list-style:none;
+  padding:5px 20px;
   margin:0;
+  font-size:1.4em;
+}
+
+.navigation ul ul {
+  background:transparent;
+  margin:0;
+  padding:0 0 0 20px;
+  font-size:1em;
+  border-right:1px solid #fff; /* IE Bug */
 }
 
 .navigation li {
@@ -114,13 +131,51 @@ h1, h2 {
   padding:0;
 }
 
+.navigation li.selected {
+  font-weight:bold;
+}
+
 .navigation a {
   text-decoration:none;
-  font-family:"Bradley Hand ITC", arial, helvetica, sans-serif;
   color:#000;
-  font-size:1.3em;
 }
 
 .navigation a:hover {
   text-decoration:underline;
+}
+
+.footer {
+  clear:both;
+  height:151px;
+  background: transparent url(../images/backgrounds/main/bottom.jpg) left top repeat-x;
+}
+
+.footer ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+  position:relative;
+}
+
+.footer li {
+  margin:0;
+  padding:0;
+}
+
+.footer .middlesbrough-partnership {
+  float:right
+}
+
+.footer .middlesbrough-partnership a {
+  display:block;
+  padding:80px 40px 0 0;
+}
+
+.footer .moving-forwards {
+  float:right
+}
+
+.footer .moving-forwards a {
+  display:block;
+  padding:70px 40px 0 0;
 }

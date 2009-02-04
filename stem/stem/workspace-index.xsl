@@ -60,14 +60,15 @@
 				<xsl:call-template name="metaData"/>
 				<xsl:call-template name="cssHomepage" />
 				<xsl:call-template name="javaScript" />
+				<xsl:call-template name="javascriptHomepage" />
 			</head>
 			<body>
 				<xsl:call-template name="accessLinks" />
 				<xsl:call-template name="pageHeader" />
 				<div id="wrapper">
 					<xsl:call-template name="homepageContent" />
-					<xsl:call-template name="pageFooter" />
 				</div>
+				<xsl:call-template name="pageFooter" />
 			</body>
 		</html>
 	</xsl:template>
@@ -77,17 +78,27 @@
 			<h2 class="title"><span>Stem</span></h2>
 			<div class="content-wrapper">
 				<div class="random_image">
-					<img src="images/random_images/1.jpg" alt="" />
+					<img id="random_image" src="{$theme-prefix}/images/random_images/1.jpg" alt="" />
 				</div>
 				<a name="content" class="access">&#160;</a>
 				<xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />
+				<br class="clear" />
 			</div>
 		</div>
 		
 		<div class="navigation">
 			<xsl:apply-templates select="//portal:homepageWorkspace[@id='left']" />
 		</div>
-			
+	</xsl:template>
+	
+	<xsl:template name="cssHomepage">
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/stem.css" type="text/css" />
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/two_col.css" type="text/css" />
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/homepage.css" type="text/css" />
+	</xsl:template>
+	
+	<xsl:template name="javascriptHomepage">
+		<script src="{$theme-prefix}/javascripts/rotating_banner.js">&#170;</script>
 	</xsl:template>
 
 </xsl:stylesheet>

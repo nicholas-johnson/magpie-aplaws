@@ -22,14 +22,16 @@
 			<xsl:for-each select="nav:objectList/nav:item">
 				<div class="item">
 					<div class="item_wrapper">
+						<a href="{nav:path}">
 						<img>
 							<xsl:attribute name="src"><xsl:value-of select="$dispatcher-prefix"/>/cms-service/stream/image/?image_id=<xsl:value-of select="nav:attribute[@name='imageAttachments.image.id']"/></xsl:attribute>
 							<xsl:attribute name="alt">
 								<xsl:value-of select="nav:attribute[@name='imageAttachments.caption']"/>
 							</xsl:attribute>
 						</img>
+						</a>
 						<h2>
-							<xsl:value-of select="nav:attribute[@name='title']"/>
+							<a href="{nav:path}"><xsl:value-of select="nav:attribute[@name='title']"/></a>
 						</h2>
 						<xsl:value-of select="nav:attribute[@name='lead']"/>
 					</div>
@@ -42,6 +44,7 @@
 		<h2>
 			<span>Navigation</span>
 		</h2>
+		<a name="nav" class="access">&#160;</a>
 		<ul>
 			<xsl:for-each select="portlet:contentDirectory/portlet:contentDirectoryEntry">
 				<xsl:sort select="@name"/>

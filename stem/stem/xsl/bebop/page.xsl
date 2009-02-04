@@ -90,12 +90,12 @@
 			<ul>
 				<li class="first">Accessibility:</li>
 				<li><a href="#nav">Skip to Navigation</a></li>
-				<li><a href="#">Small</a></li>
-				<li><a href="#">Medium</a></li>
-				<li><a href="#">Large</a></li>
-				<li><a href="#">Accessibility</a></li>
-				<li><a href="#">Translate This Site</a></li>
-				<li><a href="#">Hear This Site</a></li>
+				<li><a id="small_link" href="#">Small</a></li>
+				<li><a id="medium_link" href="#">Medium</a></li>
+				<li><a id="large_link" href="#">Large</a></li>
+				<li><a href="http://www.middlesbrough.gov.uk/ccm/content/accessibility/">Accessibility</a></li>
+				<li><a href="http://www.middlesbrough.gov.uk/ccm/content/translation.en">Translate This Site</a></li>
+				<li><a href="http://www.middlesbrough.gov.uk/ccm/content/hear-this-site.en">Hear This Site</a></li>
 			</ul>
 			<br class="clear" />
 		</div>

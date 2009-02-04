@@ -100,8 +100,8 @@
 			
 	<xsl:template name="contentNav">
 		<div class="navigation">
-			<a name="navigation" class="access">&#160;</a>
 			<h2><span>Navigation</span></h2>
+			<a name="nav" class="access">&#160;</a>
 			<xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
 		</div>
 	</xsl:template>

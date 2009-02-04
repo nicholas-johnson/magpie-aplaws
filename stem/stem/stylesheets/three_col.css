@@ -22,6 +22,7 @@
 
 .relatedItems .related {
   background: #fff url(../images/backgrounds/content/left.png) left bottom no-repeat;
+  margin-bottom:20px;
 }
 
 .relatedItems .related .related-content {
@@ -52,4 +53,13 @@
 .relatedItems li {
   margin:0.5em 0;
   padding:0;
+}
+
+.relatedItems a {
+  color: #000;
+  text-decoration:none;
+}
+
+.relatedItems a:hover {
+  text-decoration:underline;
 }

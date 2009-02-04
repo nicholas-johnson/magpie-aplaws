@@ -12,11 +12,13 @@
 	
 	
 	<xsl:template name="css">
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/small.css" type="text/css" />
 		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/stem.css" type="text/css" />
 	</xsl:template>
 	
 	<xsl:template name="javaScript">
-		<script src="{$theme-prefix}/javascripts/jquery-1.3.1.js">&#170;</script>
+		<script src="{$theme-prefix}/javascripts/jquery-1.3.1.js">&#160;</script>
+		<script src="{$theme-prefix}/javascripts/font_sizes.js">&#160;</script>
 	</xsl:template>
 	
 </xsl:stylesheet>

@@ -82,7 +82,7 @@
 				</div>
 				<a name="content" class="access">&#160;</a>
 				<xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />
-				<br class="clear" />
+				<div class="clear">&#160;</div>
 			</div>
 		</div>
 		

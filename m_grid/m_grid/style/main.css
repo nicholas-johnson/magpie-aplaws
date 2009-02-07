@@ -1,0 +1,281 @@
+/* Structure */
+
+body {
+	background: #C2DFED url('../images/background.jpg') top left repeat-x; 
+	text-align: center;
+	font: 62.5% /* Resets default font size to 10px */ Arial, Helvetica, sans-serif;
+}
+
+#page {
+	margin: 0 auto; 
+	width: 960px; /* Maximum site width */
+	text-align: left;
+}
+
+#wrap {
+	width: 960px; 
+	float: left;
+}
+
+#container {
+	width: 960px; 
+	float: left; 
+	padding: 20px 0 0;
+}
+
+#header {
+	width: 960px; 
+	min-height: 105px; 
+	height: 105px; 
+	float: left; 
+    clear: both;
+}
+
+#logo {
+	padding: 0; 
+	float: left; 
+	width: 185px;
+}
+
+#heading {
+	padding: 0 10px; 
+	float: left; 
+	width: 505px;
+}
+
+#search {
+	padding: 0; 
+	float: left; 
+	width: 250px;
+	padding-top: 40px;
+	height: 20px;
+}
+
+#searchbox {
+	height: 20px;
+	color: #666;
+	font: 1.4em Arial, Helvetica, sans-serif;
+	background: #FFFFFF url('../images/search-bkg.gif') no-repeat top left;
+	border: 0pt none;
+	width: 190px;
+	padding: 5px 0 0 5px;
+}
+
+#searchbtn {
+	height: 25px;
+	font: 12px Arial, Helvetica, sans-serif;
+	background: url('../images/search-btn.jpg') no-repeat top left;
+	border: 0pt none;
+	padding: 0;
+	width: 50px;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-weight: bold;
+	line-height: 12px;
+}
+
+#navigation {
+	width: 780px; 
+	text-align: center;
+}
+
+#navigation p span {
+	padding: 0 .5em; 
+	background: url('../images/black-line.gif') right no-repeat;
+}
+
+#navigation p {
+	font-size: 1.4em; 
+	margin: 0; 
+	padding: 0;
+}
+
+#navigation input {
+	font-size: 1.4em; 
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #999999;
+}
+
+#sidebar {
+	width: 190px; 
+	float: left;
+}
+
+#content {
+	width: 920px;
+	background: url('../images/page-bkg.png') top left repeat-y; 
+	float: left;
+    padding: 0em 20px 3em 20px;
+}
+
+#breadcrumb {
+	width: 920px; 
+	float: left;
+	font-size: 1.1em;
+	margin-bottom: 1em;
+}
+
+#left {
+	width: 340px; 
+	float: left;
+	padding-right: 10px;
+}
+
+#center {
+	width: 340px; 
+	float: left;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#content-left {
+	width: 690px; 
+	float: left;
+	padding: 0 20px 0 0;
+	margin: 0;	
+}
+
+#right {
+	padding-left: 10px;
+	width: 197px; 
+	float: left;
+	border-left: 3px double #cacaca;
+	position: relative;
+}
+
+#footer {
+	float: left; 
+	clear: both; 
+	height: 50px; 
+	min-height: 50px; 
+	width: 960px; 
+	background: url('../images/bottom-bar.png') top left no-repeat;
+}
+
+#footer-inner {
+	width: 920px; 
+	float: left; 
+	margin: 0 auto;
+	position: relative;
+}
+
+.post {
+	clear: both;
+	width: 340px;
+	padding: 1em 0;
+	border-bottom: 1px solid #ccc;
+}
+
+/* END Structure */
+
+/* Headings */
+#header h1 { 
+	display: block; 
+	width: 175px; 
+	height: 105px; 
+	margin: 0;
+	padding: 0;
+	text-indent: -9999px; 
+	background: transparent url(../images/logo.png) no-repeat 0 0; 
+	cursor: pointer;
+} 
+
+#heading h2 {
+	font-size: 2.4em;
+	padding: 40px 0 0;
+	margin: 0;
+}
+
+#left h4 {
+	margin: 0 0 .5em; 
+	color: #336699;
+}
+
+h4 a, h4 a:visited{
+	margin: 0 0 .5em; 
+	color: #336699;
+	text-decoration: none;
+}
+
+h4 {font-size: 1.6em;}
+
+#center h3 {
+	background: #000; 
+	color: #FFFFFF; 
+	margin: 0; 
+	padding: 5px 0 5px 1em; 
+	letter-spacing: 0.03em;
+	font-size: 1.8em;
+	font-weight: normal;
+}
+
+#left h3, #content-left h3 {
+	padding: 0; 
+	margin: 0;
+	font-size: 2.4em;
+}
+
+#right h3 {
+	margin: 0 0 .5em; 
+	font-size: 1.3em; 
+	letter-spacing: 0.03em; 
+	color: #CC0033;
+	text-transform: uppercase;
+}
+/* End Headings */
+
+/* Navigation */
+#nav {clear:both; font-weight:bold; color:#666; margin:0px 0 0 0px; padding: 0px 0 10px 5px; float:left; list-style-type:none; background:url('../images/nav/bkg.png') bottom left no-repeat; width: 960px;}
+#nav a:hover {text-decoration: none;}
+#nav li {list-style-type:none; float:left; margin:0 0 0 0px; padding:0 0 0 0px; height: 44px;}
+#nav li a span {color:#000; font-size: 1.4em; background:url('../images/nav/left.png') transparent top left no-repeat; padding: 15px 5px 0 15px; display: block; float: left; height: 29px;}
+#nav li a {color:#666; background:url('../images/nav/right.png') top right no-repeat; padding:0 10px 0 0; margin: 0; height: 44px; display: block; float: left; text-decoration: none;}
+#nav li.current a span {color:#000; font-size: 1.4em; background:url('../images/nav/left-current.png') transparent top left no-repeat; padding: 15px 5px 0 15px; display: block; float: left; height: 29px}
+#nav li.current a {color:#666; background:url('../images/nav/right-current.png') top right no-repeat; padding:0 10px 0 0; margin: 0; height: 44px; display: block; float: left; text-decoration: none;}
+#nav li a:hover span  {color:#000; font-size: 1.4em; background:url('../images/nav/left-current.png') transparent top left no-repeat; padding: 15px 5px 0 15px; display: block; float: left; height: 29px; text-decoration: none;}
+#nav li a:hover  {color:#666; background:url('../images/nav/right-current.png') top right no-repeat; padding:0 10px 0 0; margin: 0; height: 44px; display: block; float: left; text-decoration: none;}
+#nav li.cur, #nav li.over, #nav li:hover {cursor: pointer;}
+#nav li strong, ul#nav li.cur a, ul#nav li.over a, ul#nav li:hover a {text-decoration: underline; cursor: pointer; /* Important, For FireFox */}
+/* END Navigation */
+
+/* Google Map */
+#map-container {float: left; width: 100%;}
+#map {float: left; width: 50%; height: 450px; border: 1px solid black; font-size: 1.4em; line-height: 1.4em;}
+.contact {min-height: 125px; height: 125px; width: 240px}
+#sidebar0, #sidebar1, #sidebar2, #sidebar3 {float: left; width: 23%; font-size: 1.2em; position: relative; /* Important, For FireFox */}
+#sidebar1 {padding-left: 10px;}
+#sidebar0 a, #sidebar1 a, #sidebar0 a:visited, #sidebar1 a:visited {color: #000; cursor: pointer; text-decoration: none;}
+#sidebar0 a:hover, #sidebar1 a:hover {color: #999999;}
+#sidebar-heading { }
+#sidebar-heading p {margin: 0; padding: 0; font-size: 1.4em; color: #333;}
+#side_bar {float: left; margin: 0; height: 480px; overflow: auto; width: 260px; font-size: 1.4em; }
+.direct {min-height: 40px; height: 40px; width: 240px;}
+.tohere {min-height: 150px; height: 150px; width: 240px;}
+/* END Google Map */
+
+/* General styles */
+#header h1 a {display: block; width: 100%; height: 100%; outline: none;} 
+#breadcrumb p {margin: 0; padding: 0;}
+#left img {margin-right: 10px;}
+#left p {font-size: 1.2em; margin-top: 0;}
+#content-left p {font-size: 1.4em; margin: .5em 0; line-height: 1.4em}
+#content-left ul {font-size: 1.4em; margin-bottom: .5em; line-height: 1.4em}
+#right ul {margin: 0 0 1em 0px; list-style: none; padding: 0; font-size: 1.2em;}
+#right ul li{padding-bottom: .3em;}
+#sidebar ul {}
+#sidebar ul li {list-style: none; font-size: 2.0em; padding: 1em; background: url('../images/sidebar-line.jpg') bottom right no-repeat;}
+#footer p {font-size: 1.1em; text-align: center; padding: 0; margin: 0;}
+#footer p span {padding: 0 5px;}
+#footer div.hr {height: 2px; padding: 0px 0 0px 0; margin: 0px auto 0 auto; width: 960px; background: url('../images/footer-hr.jpg') repeat-x scroll center;}
+#footer .hr hr {display: none;}
+#search p {text-align: right; font-size: 1.2em; padding: 10px 0 0;}
+#footer p a, #footer p a:visited {color: #000; text-decoration: underline;}
+#footer p a:hover {text-decoration: none;}
+
+#search p a, #search p a:visited {color: #FFF; background: #C45005; padding: 2px; letter-spacing: 0.03em; text-decoration: none;}
+#search p a:hover {text-decoration: none;}
+#right a, #right a:visited{color: #666; text-decoration: none;}
+#right a:hover{color: #999;	text-decoration: none;}
+.post span {color: #444; font-style: italic}
+.post p {margin: 0; padding: 0;}
+.post p, .post h4, .post img {clear: both;}

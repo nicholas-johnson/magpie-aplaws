@@ -1,0 +1,61 @@
+*html #content {
+	background: none;
+	/* filter applies only to IE5+/Win */
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='scale', src='images/page-bkg-ie6.png');
+}
+
+*html #searchbtn {
+	padding-bottom: 0px;
+}
+
+*html #searchbtn, *html #searchbox {
+	top: 55px
+}
+
+/* Image Replacement */
+*html #header h1 {
+	background: none;
+	/* filter applies only to IE5+/Win */
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='scale', src='images/logo.png');
+}
+
+*html #nav {
+	background: none;
+	/* filter applies only to IE5+/Win */
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='fixed', src='images/nav/bkg-ie6.png');
+}
+
+*html #nav li a:hover span {
+	background:url('../images/nav/left-current-ie6.jpg') transparent top left no-repeat;
+	cursor: hand;
+}
+
+*html #nav li a:hover {
+	background:url('../images/nav/right-current-ie6.jpg') top right no-repeat;
+	cursor: hand; 
+}
+
+*html #nav li a span {
+	background: url('../images/nav/left-ie6.jpg') transparent top left no-repeat; 
+}
+
+*html #nav li a {
+	background:url('../images/nav/right-ie6.jpg') top right no-repeat; 
+}
+
+
+*html #nav li.current a span {
+	background:url('../images/nav/left-current-ie6.jpg') transparent top left no-repeat;	
+}
+
+*html #nav li.current a {
+	background:url('../images/nav/right-current-ie6.jpg') top right no-repeat;
+}
+
+*html #footer {
+	background: none;
+	/* filter applies only to IE5+/Win */
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='fixed', src='images/bottom-bar.png');
+}
+
+

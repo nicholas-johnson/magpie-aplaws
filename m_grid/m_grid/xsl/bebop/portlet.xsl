@@ -9,6 +9,14 @@
 		<xsl:apply-templates select="bebop:link"/>
 	</xsl:template>
 	
+	<xsl:template match="portal:homepageWorkspace[@id='middle']">
+		<xsl:for-each select="portal:portal/bebop:portlet">
+			<xsl:apply-templates select="."/>
+			<xsl:apply-templates select="portlet:action"/>
+		</xsl:for-each>
+		<xsl:apply-templates select="bebop:link"/>
+	</xsl:template>
+	
 	<xsl:template match="portal:homepageWorkspace[@id='right']">
 		<xsl:for-each select="portal:portal/bebop:portlet">
 			<xsl:apply-templates select="."/>
@@ -18,26 +26,17 @@
 	</xsl:template>
 	
 	<xsl:template match="bebop:portlet[nav:objectList]">
-		<div class="feature">
-			<xsl:for-each select="nav:objectList/nav:item">
-				<div class="item">
-					<div class="item_wrapper">
-						<a href="{nav:path}">
-						<img>
-							<xsl:attribute name="src"><xsl:value-of select="$dispatcher-prefix"/>/cms-service/stream/image/?image_id=<xsl:value-of select="nav:attribute[@name='imageAttachments.image.id']"/></xsl:attribute>
-							<xsl:attribute name="alt">
-								<xsl:value-of select="nav:attribute[@name='imageAttachments.caption']"/>
-							</xsl:attribute>
-						</img>
-						</a>
-						<h2>
-							<a href="{nav:path}"><xsl:value-of select="nav:attribute[@name='title']"/></a>
-						</h2>
-						<xsl:value-of select="nav:attribute[@name='lead']"/>
-					</div>
-				</div>
-			</xsl:for-each>
-		</div>
+		<h3>Latest News</h3>
+		<xsl:for-each select="nav:objectList/nav:item">
+			<div class="post">
+				<h4><a href="{nav:path}">Learning Platform downtime</a></h4>
+				<p>
+					<img align="left" border="1" style="width:60px; height:60px;" src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={nav:attribute[@name='imageAttachments.image.id']}" alt="nav:attribute[@name='imageAttachments.caption']" />
+					<xsl:value-of select="nav:attribute[@name='lead']"/>
+					<div class="clear">&#160;</div>
+				</p>
+			</div> <!-- end post -->
+		</xsl:for-each>
 	</xsl:template>
 
 	<xsl:template match="bebop:portlet[portlet:contentDirectory]">

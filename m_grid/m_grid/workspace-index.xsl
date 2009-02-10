@@ -107,30 +107,6 @@
 	
 	<xsl:template name="homepageLeftCol">
 		<div id="left">
-			<h3>Latest News</h3>
-			<div class="post">
-				<h4>Learning Platform downtime</h4>
-				<p><img src="images/middlesbrough-grid.gif" align="left" border="1" alt="icon" />
-				The Learning Platform will be unavailable from 18:00 on Sunday 18 January to 09:00 on Monday 19 January. This is due to the upgrade of Service Pack 71.3.
-				<span class="grey">Posted on: 07 Jan 09</span>	
-				</p>
-			</div> <!-- end post -->
-			<div class="post">	
-				<h4>Northern Grid newsletter</h4>
-				<p>
-				<img src="images/ngfl.gif" align="left" border="1" alt="icon" />
-				December's edition of the Northern Grid Newsletter is now available. Click on the link below to access the HTML version, or go to the Northern Grid
-				<span class="grey">Posted on: 01 Dec 08</span>
-				</p>
-			</div> <!-- end post -->
-		    <div class="post">
-				<h4>Chandlers Ridge</h4>
-				<p>
-				<img src="images/chandlers.jpg" align="left" border="1" alt="icon" />
-				The school has been recommended by BECTA to be part of the prestigious ICT Register (www.ict-register.net) in recognition of the work
-				<span class="grey">Posted on: 27 Nov 08</span>
-				</p>
-			</div> <!-- end post -->
 			<xsl:apply-templates select="//portal:homepageWorkspace[@id='left']" />
 		</div> <!-- end left -->
 		
@@ -138,35 +114,14 @@
 	
 	<xsl:template name="homepageCenterCol">
 		<div id="center">
-			<h3>ICT Conference 2009</h3>
-			<img src="images/ict-conference.jpg" alt="ICT Conference will be held on 25 September 2009" />
+			<xsl:apply-templates select="//portal:homepageWorkspace[@id='middle']" />
 		</div> <!-- end center -->
-		<xsl:apply-templates select="//portal:homepageWorkspace[@id='middle']" />
 	</xsl:template>
 	
 	<xsl:template name="homepageRightCol">
 		<div id="right">
-			<h3>Key Links</h3>
-			<ul>
-				<li><a href="/">Middlesbrough Council homepage</a></li>	
-				<li><a href="/">Children and Young People Plan 2007/2008</a></li>
-				<li><a href="/">Free Video and Audio</a></li>
-				<li><a href="/">Family Service Directory</a></li>
-				<li><a href="/">Professional Development</a></li>
-				<li><a href="/">School Admissions</a></li>
-				<li><a href="/">Grants</a></li>
-				<li><a href="/">Education Jobs in Middlesbrough</a></li>
-				<li><a href="/">Education Visits</a></li>
-			</ul>
-			<h3>Resources</h3>
-			<ul>
-				<li><a href="/">Freedom of Information</a></li>
-				<li><a href="/">Fixed term contracts</a></li>
-				<li><a href="/">Sure Start timetables</a></li>
-				<li><a href="/">Program Resources from Priory Woods</a></li>
-			</ul>
+			<xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />
 		</div> <!-- end right -->
-		<xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />
 	</xsl:template>
 
 </xsl:stylesheet>

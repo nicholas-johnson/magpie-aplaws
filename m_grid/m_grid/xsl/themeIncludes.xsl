@@ -7,7 +7,9 @@
 	<xsl:import href="bebop/page.xsl" />
 	<xsl:import href="bebop/pageHeader.xsl" />
 	<xsl:import href="bebop/topNav.xsl" />
+	<xsl:import href="bebop/breadcrumb.xsl" />
 	<xsl:import href="bebop/pageFooter.xsl" />
+	<xsl:import href="bebop/contentTitle.xsl" />
 	<xsl:import href="lib/head.xsl" />
 	<xsl:import href="lib/css.xsl" />
 	<xsl:import href="lib/localisation.xsl" />

@@ -58,74 +58,43 @@
 				<title><xsl:call-template name="councilName" /><xsl:call-template name="htmlTitleBuilder" /></title>
 				<xsl:call-template name="metaData"/>
 				<xsl:call-template name="css" />
-				<xsl:call-template name="cssNavigation" />
-				<xsl:call-template name="javaScript" />
 			</head>
 			<body>
 				<xsl:call-template name="accessLinks" />
-				<xsl:call-template name="pageHeader" />
-				<div id="wrapper">
-					<xsl:call-template name="navigationContent" />
-				</div>
-				<xsl:call-template name="pageFooter" />
+				<div id="page">
+					<div id="wrap">
+						<xsl:call-template name="pageHeader" />
+						<div id="container">
+							<xsl:call-template name="topNav" />
+							<div id="content">
+								<xsl:call-template name="breadcrumb" />
+								<xsl:call-template name="navigationContent" />
+							</div> <!-- End Content -->
+							<xsl:call-template name="pageFooter" />
+						</div> <!-- End Container -->
+					</div> <!-- End Wrap -->
+				</div> <!-- End Page -->
 			</body>
 		</html>
 	</xsl:template>
 	
 	<xsl:template name="navigationContent">
-		<xsl:choose>
-			<xsl:when test="(count(nav:greetingItem/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(nav:greetingItem/cms:item/fileAttachments) > 0)">
-				<div id="floatWrapper">
-					<xsl:call-template name="navigationMain" />
-					<xsl:call-template name="navigationRelated" />
-				</div>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:call-template name="navigationMain" />
-			</xsl:otherwise>
-		</xsl:choose>
-		<xsl:call-template name="navigationNav" />
-		<xsl:call-template name="creatorContactDetails" />
-	</xsl:template>
-	
-	<xsl:template name="navigationMain">
-		<div class="content">
-			<h2 class="title">
-				<span><xsl:value-of select="/bebop:page/nav:categoryPath/nav:category[position()=last()]/@title"/></span>
-			</h2>
-			<div class="content-wrapper">
-				<a name="content" class="access">&#160;</a>
-				<xsl:apply-templates select="nav:greetingItem" />
-				<xsl:apply-templates select="nav:simpleObjectList" mode="alphabetical" />
-			</div>
+		<div id="content-left">
+			<a name="content" class="access">&#160;</a>
+			<h3>
+				<xsl:value-of select="/bebop:page/nav:categoryPath/nav:category[position()=last()]/@title"/>
+			</h3>
+			<a name="content" class="access">&#160;</a>
+			<xsl:apply-templates select="nav:greetingItem" />
 		</div>
-	</xsl:template>
-	
-	<xsl:template name="navigationRelated">
-		<xsl:call-template name="links">
-			<xsl:with-param name="item" select="nav:greetingItem/cms:item"/>
-		</xsl:call-template>
-	</xsl:template>
-			
-	<xsl:template name="navigationNav">
-		<div class="navigation">
-			<a name="nav" class="access">&#160;</a>
-			<h2><span>Navigation</span></h2>
-			<a name="nav" class="access">&#160;</a>
+		<div id="right">
+			<a class="access" name="nav">&#160;</a>
+			<xsl:call-template name="navLinks" />
 			<xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
+			<xsl:call-template name="links">
+				<xsl:with-param name="item" select="nav:greetingItem/cms:item"/>
+			</xsl:call-template>
 		</div>
-	</xsl:template>
-	
-	<xsl:template name="cssNavigation">
-		<xsl:choose>
-			<xsl:when test="(count(nav:greetingItem/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(nav:greetingItem/cms:item/fileAttachments) > 0)">
-				<link rel="stylesheet" href="{$theme-prefix}/stylesheets/three_col.css" type="text/css" />
-			</xsl:when>
-			<xsl:otherwise>
-				<link rel="stylesheet" href="{$theme-prefix}/stylesheets/two_col.css" type="text/css" />
-			</xsl:otherwise>
-		</xsl:choose>
-		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/page.css" type="text/css" />
 	</xsl:template>
 	
 </xsl:stylesheet>

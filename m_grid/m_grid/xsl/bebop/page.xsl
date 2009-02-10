@@ -72,11 +72,7 @@
 	<xsl:template name="pageContent">
 	
 	</xsl:template>
-	
-	<xsl:template name="breadcrumb">
-		<xsl:apply-templates select="nav:categoryPath" />
-	</xsl:template>
-	
+
 	<xsl:template name="accessLinks">
 		<div class="access">
 			<ul>

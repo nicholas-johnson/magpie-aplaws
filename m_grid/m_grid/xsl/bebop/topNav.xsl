@@ -10,14 +10,62 @@
 		xmlns:terms="http://xmlns.redhat.com/london/terms/1.0"
 		exclude-result-prefixes="xsl ui bebop portal cms nav atoz terms">
 		
+	<!-- Why is this hardcoded? Answer- AToZ and Search Results Pages -->
 	<xsl:template name="topNav">
+		
+		<!-- Adjust these to change the top nav -->
+		<xsl:variable name="nav_item_1">Parents/Carers</xsl:variable>
+		<xsl:variable name="nav_url_1">/navigation/business</xsl:variable>
+		<xsl:variable name="nav_item_2">Learners</xsl:variable>
+		<xsl:variable name="nav_url_2">/navigation/business</xsl:variable>
+		<xsl:variable name="nav_item_3">School Staff</xsl:variable>
+		<xsl:variable name="nav_url_3">/navigation/business</xsl:variable>
+		<xsl:variable name="nav_item_4">CFL Staff</xsl:variable>
+		<xsl:variable name="nav_url_4">/navigation/business</xsl:variable>
+		<xsl:variable name="nav_item_5">Governers</xsl:variable>
+		<xsl:variable name="nav_url_5">/navigation/business</xsl:variable>
+		
+		
 		<ul id="nav">
-			<li class="current"><a href="/"><span>Home</span></a></li>
-			<li><a href="/"><span>Parents/Carers</span></a></li><strong></strong>	
-			<li><a href="/"><span>Learners</span></a></li>
-			<li><a href="/"><span>School Staff</span></a></li>
-			<li><a href="/"><span>CFL Staff</span></a></li>
-			<li><a href="/"><span>Log on</span></a></li>
+			<li>
+				<xsl:if test="/bebop:page/@application='portal'">
+					<xsl:attribute name="class">current</xsl:attribute>
+				</xsl:if>	
+				<a href="{$dispatcher-prefix}">
+					<span>Home</span>
+				</a>
+			</li>
+			<li>
+				<xsl:if test="//nav:categoryPath/nav:category[@title=$nav_item_1]">
+					<xsl:attribute name="class">current</xsl:attribute>
+				</xsl:if>	
+				<a href="{$dispatcher-prefix}{$nav_url_1}"><span><xsl:value-of select="$nav_item_1" /></span></a>
+			</li>
+			<li>
+				<xsl:if test="//nav:categoryPath/nav:category[@title=$nav_item_2]">
+					<xsl:attribute name="class">current</xsl:attribute>
+				</xsl:if>	
+				<a href="{$dispatcher-prefix}{$nav_url_2}"><span><xsl:value-of select="$nav_item_2" /></span></a>
+			</li>
+			<li>
+				<xsl:if test="//nav:categoryPath/nav:category[@title=$nav_item_3]">
+					<xsl:attribute name="class">current</xsl:attribute>
+				</xsl:if>	
+				<a href="{$dispatcher-prefix}{$nav_url_3}"><span><xsl:value-of select="$nav_item_3" /></span></a>
+			</li>
+			<li>
+				<xsl:if test="//nav:categoryPath/nav:category[@title=$nav_item_4]">
+					<xsl:attribute name="class">current</xsl:attribute>
+				</xsl:if>	
+				<a href="{$dispatcher-prefix}{$nav_url_4}"><span><xsl:value-of select="$nav_item_4" /></span></a>
+			</li>
+			<li>
+				<xsl:if test="//nav:categoryPath/nav:category[@title=$nav_item_5]">
+					<xsl:attribute name="class">current</xsl:attribute>
+				</xsl:if>	
+				<a href="{$dispatcher-prefix}{$nav_url_5}"><span><xsl:value-of select="$nav_item_5" /></span></a>
+			</li>
+			<li><a href="{$dispatcher-prefix}/ccm/content-center"><span>Log on</span></a></li>
 		</ul>
 	</xsl:template>
 </xsl:stylesheet>

@@ -11,16 +11,20 @@
 	<!-- Category Navigation Lists - Full navigation, just outputs the full --> 
   <!-- category menu as found in the xsl. nj20050210 -->
 	
+	<xsl:template name="navLinks">
+		<xsl:if test="//nav:simpleObjectList//nav:item">
+			<h3>In This Section</h3>
+			<xsl:apply-templates select="//nav:simpleObjectList" mode="alphabetical" />
+		</xsl:if>
+	</xsl:template>
+	
 	<xsl:template name="catNav" match="nav:categoryMenu">
-	<a class="access" name="navigation">&#160;</a>
-		<ul class="nav">
-			<li class="up">
-				<a href="{$dispatcher-prefix}/portal">Home</a>
-			</li>
+		<xsl:if test="/bebop:page/nav:categoryMenu/nav:category/nav:category/nav:category">
+			<h3>Navigation</h3>
 			<ul>
-				<xsl:apply-templates select="/bebop:page/nav:categoryMenu/nav:category/nav:category" />
+				<xsl:apply-templates select="/bebop:page/nav:categoryMenu/nav:category/nav:category/nav:category" />
 			</ul>
-		</ul>
+		</xsl:if>
 	</xsl:template>
 	
 	<!-- descend into categories -->

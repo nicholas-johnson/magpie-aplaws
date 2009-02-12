@@ -20,18 +20,26 @@
 			<div id="heading">
 				<h2>...Engaging our Learning Community</h2>
 			</div> <!-- End Heading -->
-
-			<div id="search">
-				<form action="http://www.bbc.co.uk/cgi-bin/search/results.pl" method="get">
-					<input type="hidden" value="/" name="uri" />
-					<input type="hidden" value="all" name="scope" />
-					<input type="hidden" value="toolbar" name="go" />
-					<input name="q" type="text" id="searchbox" value="Search MGrid" />
-					<input type="submit" value="Search" id="searchbtn" />
-				</form>
-			</div> <!-- End Search -->
+			
+			<xsl:call-template name="search" />
 			
 		</div> <!-- End Header -->
+	</xsl:template>
+	
+	<xsl:template name="search">
+		<div id="search">
+			<form id="siteSearch" action="{$dispatcher-prefix}/search" method="get">
+				<!--input value="default_collection" name="site" type="hidden" />
+				<input value="default_frontend" name="client" type="hidden" />
+				<input value="default_frontend" name="proxystylesheet" type="hidden" />
+				<input value="default_collection" name="site" type="hidden" />
+				<input value="default_frontend" name="client" type="hidden" />
+				<input value="default_frontend" name="proxystylesheet" type="hidden" />
+				<input value="xml_no_dtd" name="output" type="hidden" / -->
+				<input type="text" name="terms" value="Search MGrid" id="terms" accesskey="4" onfocus="if(this.value=='Search MGrid')this.value='';"/>
+				<input type="submit" value="Search" name="submit" id="searchbtn" />
+			</form>
+		</div>
 	</xsl:template>
 	
 </xsl:stylesheet>

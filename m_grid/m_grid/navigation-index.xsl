@@ -84,7 +84,6 @@
 			<h3>
 				<xsl:value-of select="/bebop:page/nav:categoryPath/nav:category[position()=last()]/@title"/>
 			</h3>
-			<a name="content" class="access">&#160;</a>
 			<xsl:apply-templates select="nav:greetingItem" />
 		</div>
 		<div id="right">

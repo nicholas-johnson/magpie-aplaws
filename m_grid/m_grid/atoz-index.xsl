@@ -48,53 +48,61 @@
 			omit-xml-declaration="yes"/>
 			
 	<xsl:template match="bebop:page[@class='simplePage' and @application='atoz']">
+		
+		
 		<html lang="en">
 			<head>
-				<title>
-					Generic Council<xsl:call-template name="htmlTitleBuilder" />
-				</title>
+				<title><xsl:call-template name="councilName" /><xsl:call-template name="htmlTitleBuilder" /></title>
 				<xsl:call-template name="metaData"/>
 				<xsl:call-template name="css" />
-				<xsl:call-template name="javaScript" />
 			</head>
 			<body>
-				<div id="wrapper">
-					<ul class="access">
-						<li>
-							<a href="#content">Skip to content</a>
-						</li>
-						<li>
-							<a href="#navigation">Skip to Navigation</a>
-						</li>
-					</ul>
-					<xsl:call-template name="pageHeader" />
-					<xsl:call-template name="atozBreadcrumb" />
-					<xsl:call-template name="atozContent" />
-					<xsl:call-template name="pageFooter"/>
-				</div>
+				<xsl:call-template name="accessLinks" />
+				<div id="page">
+					<div id="wrap">
+						<xsl:call-template name="pageHeader" />
+						<div id="container">
+							<xsl:call-template name="topNav" />
+							<div id="content">
+								<xsl:call-template name="atozBreadcrumb" />
+								<xsl:call-template name="atozContent" />
+							</div> <!-- End Content -->
+							<xsl:call-template name="pageFooter" />
+						</div> <!-- End Container -->
+					</div> <!-- End Wrap -->
+				</div> <!-- End Page -->
 			</body>
 		</html>
 	</xsl:template>
 
+
 	<xsl:template name="atozBreadcrumb">
 		<div id="breadcrumb">
-			<a href="{$dispatcher-prefix}/portal/" title="home">home</a>
-			<xsl:text disable-output-escaping="yes"> &gt; </xsl:text>A to Z
+			<p>
+				<em>You are here:</em> 
+				<a href="{//bebop:page/ui:userBanner/@workspaceURL}"><abbr title="Middlesbrough Grid for Learning">MGrid</abbr></a>&#160;&gt; A to Z
+			</p>
 		</div>
 	</xsl:template>
 
 	<xsl:template name="atozContent">
-		<div id="contentPage">
-			<div id="floatWrapper">
-				<xsl:call-template name="atozMain" />
-				<xsl:call-template name="atozRelated" />
-			</div>
-			<xsl:call-template name="atozNavigation" />
+		<div id="content-left">
+			<a name="content" class="access">&#160;</a>
+			<h3>Search</h3>
+			<xsl:call-template name="atozMain" />
+		</div>
+		<div id="right">
+			<h3>Key Links</h3>
+			<ul>
+				<li>
+					<a href="{$dispatcher-prefix}/search" class="more" title="Go to Search page">Search</a> - Can't find what you're looking for? Our Search page might have what you need.
+				</li>
+			</ul>
 		</div>
 	</xsl:template>
 		
 	<xsl:template name="atozMain">
-		<div id="content">
+		<div class="atoz">
 			<a name="content" class="access">&#160;</a>
 			<xsl:call-template name="atozLead" />
 			<xsl:call-template name="atozResults" />
@@ -106,7 +114,7 @@
 			<h2>A to Z index of <xsl:call-template name="councilName" /></h2>
 			<p>Choose a letter to browse information and services</p>
 			
-			<ul class="siteNav">
+			<ul class="letters">
 				<xsl:for-each select="atoz:atoz/atoz:letter">
 					<li>
 						<xsl:if test="position()=1">
@@ -131,9 +139,7 @@
 					</li>
 				</xsl:for-each>
 			</ul>
-			<div class="clear">
-				<br/>
-			</div>
+			<div class="clear">&#160;</div>
 		</div><!-- /lead -->
 	</xsl:template>
 
@@ -143,7 +149,7 @@
 				<h3>Categories starting with the letter <xsl:value-of select="atoz:atoz/atoz:letter[@isSelected]" /></h3>
 				<ul>
 					<xsl:for-each select="atoz:atoz/atoz:provider">
-						<xsl:for-each select="atoz:atoz/atoz:atomicEntry">
+						<xsl:for-each select="atoz:atomicEntry">
 							<li class="azResult">
 								<a href="{@url}" title="{@description}">
 									<xsl:value-of select="@title" />
@@ -154,41 +160,6 @@
 				</ul>
 			</div>
 		</xsl:if>
-	</xsl:template>
-	
-	<xsl:template name="atozNavigation">
-		<div id="navigation">
-			<a name="navigation" class="access">&#160;</a>
-			<h2>Site Categories</h2>
-			<ul id="nav">
-				<li>
-					<a href="{$dispatcher-prefix}/portal" title="go to homepage">Home</a>
-					<ul>
-						<li>
-							<p>A to Z</p>
-							<ul>
-								<li>
-									<a href="{$dispatcher-prefix}/atozhelp" class="navChild" title="A to Z explained">A to Z explained</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</xsl:template>
-
-	<xsl:template name="atozRelated">
-		<div id="relatedItems">
-			<div class="related">
-				<h2>Search</h2>
-				<ul class="colItems">
-					<li>
-						<a href="{$dispatcher-prefix}/search" class="more" title="Go to Search page">Search</a> - Can't find what you're looking for? Our Search page might have what you need.
-					</li>
-				</ul>
-			</div>
-		</div>
 	</xsl:template>
 
 </xsl:stylesheet>

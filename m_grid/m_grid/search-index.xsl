@@ -42,92 +42,143 @@
 	<xsl:template name="page" match="bebop:page[@class='simplePage' and @application='search']">
 		<html lang="en">
 			<head>
-				<title>
-					<xsl:call-template name="councilName" /> - Search
-				</title>
+				<title><xsl:call-template name="councilName" /><xsl:call-template name="htmlTitleBuilder" /></title>
 				<xsl:call-template name="metaData"/>
 				<xsl:call-template name="css" />
-				<xsl:call-template name="javaScript" />
 			</head>
 			<body>
-				<div id="wrapper">
-					<xsl:call-template name="pageHeader" />
-					<xsl:call-template name="searchBreadcrumb" />
-					<xsl:call-template name="searchContent" />
-					<xsl:call-template name="pageFooter" />
-				</div>
+				<xsl:call-template name="accessLinks" />
+				<div id="page">
+					<div id="wrap">
+						<xsl:call-template name="pageHeader" />
+						<div id="container">
+							<xsl:call-template name="topNav" />
+							<div id="content">
+									<xsl:call-template name="searchBreadcrumb" />
+									<xsl:call-template name="searchContent" />
+							</div> <!-- End Content -->
+							<xsl:call-template name="pageFooter" />
+						</div> <!-- End Container -->
+					</div> <!-- End Wrap -->
+				</div> <!-- End Page -->
 			</body>
 		</html>
 	</xsl:template>
 	
 	<xsl:template name="searchContent">
-		<div id="contentPage">
-			<div id="floatWrapper">
-				<xsl:call-template name="searchMain" />
-				<xsl:call-template name="searchRelated" />
-			</div>
-			<xsl:call-template name="searchNavigation" />
-		
+		<div id="content-left">
+			<a name="content" class="access">&#160;</a>
+			<h3>Search</h3>
+			<xsl:call-template name="searchMain" />
 		</div>
-	</xsl:template>
-	
-	<xsl:template name="searchMain">
-		<div id="content">
-		<a name="content" class="access">&#160;</a>
-			<h2>Search</h2>
-			<xsl:choose>
-				<xsl:when test="@id='search'">
-					<xsl:call-template name="searchBasic" />
-				</xsl:when>
-				<xsl:when test="@id='advanced'">
-					<xsl:call-template name="searchAdvanced" />
-				</xsl:when>
-				<xsl:when test="@id='reindex'">
-					<xsl:apply-templates/>
-				</xsl:when>
-			</xsl:choose>
-		</div>
-	</xsl:template>
-	
-	<xsl:template name="searchNavigation">
-		<div id="navigation">
-			<a name="navigation" class="access">&#160;</a>
-			<h2>Site Categories</h2>
-			<ul id="nav">
-				<li class="selected">
-					<a href="{$dispatcher-prefix}/portal/" class="home" title="go to homepage">Home</a>
-					<ul>
-						<li>
-							<p>Search</p>
-							<ul>
-								<li>
-									<a href="{$dispatcher-prefix}/searchhelp" class="navChild" title="Search explained">Search explained</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
+		<div id="right">
+			<h2>Key Links</h2>
+			<ul>
+				<li>
+					<a href="{$dispatcher-prefix}/atoz" title="Go to A to Z of content">A to Z content listing</a>
 				</li>
 			</ul>
 		</div>
 	</xsl:template>
-			
-	<xsl:template name="searchRelated">
-		<div id="relatedItems">
-			<div class="related">
-				<h2>A to Z</h2>
-				<ul class="colItems">
-					<li>
-						<a href="{$dispatcher-prefix}/atoz" class="more" title="Go to A to Z page">A to Z</a> - Can't find what you're looking for? Our A to Z page lists all categories in alphabetical order.
-					</li>
-				</ul>
-			</div>
-		</div>
-	</xsl:template>
 	
+	<xsl:template name="searchMain">
+		<a name="content" class="access">&#160;</a>
+		<xsl:choose>
+			<xsl:when test="@id='search'">
+				<xsl:call-template name="searchBasic" />
+			</xsl:when>
+			<xsl:when test="@id='advanced'">
+				<xsl:call-template name="searchAdvanced" />
+			</xsl:when>
+			<xsl:when test="@id='reindex'">
+				<xsl:apply-templates/>
+			</xsl:when>
+		</xsl:choose>
+	</xsl:template>
+
 	<xsl:template name="searchBreadcrumb">
 		<div id="breadcrumb">
-			You are in: <a href="{$dispatcher-prefix}/">Home</a> &gt; Search
+			<p>
+				<em>You are here:</em> 
+				<a href="{//bebop:page/ui:userBanner/@workspaceURL}"><abbr title="Middlesbrough Grid for Learning">MGrid</abbr></a>&#160;&gt; Search
+			</p>
 		</div>
 	</xsl:template>
+
+	<xsl:template name="searchBasic">
+		<xsl:for-each select="bebop:form[@name='search']">
+			<div id="searchArea">
+				<div class="info">
+					<xsl:choose>
+						<xsl:when test="//search:results">
+							<p>
+								<xsl:apply-templates select="//search:paginator" mode="results-summary" />
+							</p>
+						</xsl:when>
+						<xsl:otherwise>
+							<p>Type one or more words into the box below and click 'Search'</p>
+						</xsl:otherwise>
+					</xsl:choose>
+				</div><!-- /info -->
+				<form name="{@name}" method="get" action="{@action}">
+					<label class="searchLabel" for="terms">Search for: </label>
+					<input class="searchBox" id="terms2" name="terms">
+						<xsl:attribute name="value">
+							<xsl:value-of select="./search:query/search:terms/@value" />
+						</xsl:attribute>
+					</input>
+					<input type="submit" name="Submit" id="basicSearchGo" value="Search" class="adgo" />
+					<xsl:apply-templates select="bebop:pageState" />
+				</form>
+			</div><!-- /searchArea -->
+		</xsl:for-each>
+		<xsl:if test="/bebop:page/search:results/search:paginator/@objectCount &gt; 0">
+			<xsl:apply-templates select="search:results" />
+		</xsl:if>
+	</xsl:template>
+
+  <xsl:template match="search:documents">
+			<xsl:for-each select="search:object">
+				<p class="searchResult">
+					<a>
+						<xsl:attribute name="href">
+							<xsl:call-template name="hostlessUri">
+								<xsl:with-param name="url" select="@url" />
+							</xsl:call-template>
+						</xsl:attribute>
+						<xsl:attribute name="title">
+							<xsl:value-of select="@title" />
+						</xsl:attribute>
+						<xsl:value-of select="@title" />
+					</a>
+					<xsl:if test="@summary">
+						<xsl:choose>
+							<xsl:when test="string-length(@summary) &gt; 150">
+								<br /><xsl:value-of select="substring(@summary, 1, 147)" />...
+							</xsl:when>
+							<xsl:otherwise>
+								<br /><xsl:value-of select="@summary" />
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:if>
+				</p>
+			</xsl:for-each>
+		<xsl:apply-templates select="search:paginator" mode="pages" />
+  </xsl:template>
+
+
+ <xsl:template match="search:paginator" mode="page-summary">
+    <xsl:if test="@objectCount &gt; 0">
+      <p class="info">
+        <xsl:text>Displaying page </xsl:text>
+        <xsl:value-of select="@pageNumber" />
+        <xsl:text> of </xsl:text>
+        <xsl:value-of select="@pageCount" />
+        <xsl:text> (maximum of </xsl:text>
+        <xsl:value-of select="@pageSize" />
+        <xsl:text> results per page)</xsl:text>
+      </p><!-- /pageSummary -->
+    </xsl:if>
+  </xsl:template>
 
 </xsl:stylesheet>

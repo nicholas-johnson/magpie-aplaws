@@ -38,7 +38,7 @@
 						<xsl:for-each select="$item/links[targetType='internalLink']">
 							<xsl:sort select="linkOrder"/>
 							<xsl:if test="targetItem/@oid"><!-- check that the linked to item is published -->
-							  <li>
+							  <li class="internal">
 									<xsl:variable name="uri">/redirect/?oid=<xsl:call-template name="url-encode"><xsl:with-param name="str" select="targetItem/@oid" /></xsl:call-template></xsl:variable>
 									<xsl:variable name="title"><xsl:value-of select="linkTitle" /></xsl:variable>
 									<xsl:variable name="description"><xsl:value-of select="linkDescription" /></xsl:variable>
@@ -62,7 +62,7 @@
 					<ul>
 						<xsl:for-each select="$item/links[targetType='externalLink']">
 							<xsl:sort select="linkOrder"/>
-							<li>
+							<li class="external">
 								<xsl:variable name="uri"><xsl:value-of select="targetURI"/></xsl:variable>
 								<xsl:variable name="title"><xsl:value-of select="linkTitle" /></xsl:variable>
 								<xsl:variable name="tip">Go to external website: <xsl:value-of select="linkTitle" /></xsl:variable>
@@ -85,7 +85,7 @@
 				<div class="related-content">
 					<ul>
 						<xsl:for-each select="/bebop:page/nav:relatedItems/nav:relatedItem">
-							<li>
+							<li class="internal">
 								<xsl:variable name="uri"><xsl:value-of select="@path"/></xsl:variable>
 								<xsl:variable name="title"><xsl:value-of select="@title" /></xsl:variable>
 								<a href="{$uri}"><xsl:value-of select="$title" /></a>
@@ -106,10 +106,13 @@
 				<div class="related-content">
 					<ul>
 						<xsl:for-each select="$item/fileAttachments">
-							<li>
-									<a href="{$dispatcher-prefix}/cms-service/download/asset/?asset_id={id}">
-										<xsl:value-of select="translate(name, '-_', '  ')" />
-									</a>
+							<li class="download">
+								<xsl:if test="contains(name,'.pdf')">
+									<xsl:attribute name="class">pdf</xsl:attribute>
+								</xsl:if>
+								<a href="{$dispatcher-prefix}/cms-service/download/asset/?asset_id={id}">
+									<xsl:value-of select="translate(name, '-_', '  ')" />
+								</a>
 								<xsl:if test="description">
 									<xsl:text> - </xsl:text><xsl:value-of select="description" disable-output-escaping="yes"/>
 								</xsl:if>

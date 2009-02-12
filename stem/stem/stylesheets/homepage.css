@@ -1,3 +1,24 @@
+body {
+  text-align:center;
+  background:#dff7fb;
+}
+
+#wrapper {
+  text-align:left;
+  background:#e5edda;
+}
+
+.homepage_wrapper {
+  margin:0 auto;
+  padding:0;
+  width:996px;
+  background:#e5edda;
+}
+
+div.access {
+  width:auto;
+  padding-left:5px;
+}
 
 .content .content-wrapper {
   padding:10px 10px 20px 10px;

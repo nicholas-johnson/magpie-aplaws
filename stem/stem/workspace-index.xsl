@@ -63,12 +63,15 @@
 				<xsl:call-template name="javascriptHomepage" />
 			</head>
 			<body>
-				<xsl:call-template name="accessLinks" />
-				<xsl:call-template name="pageHeader" />
-				<div id="wrapper">
-					<xsl:call-template name="homepageContent" />
+				<div class="homepage_wrapper">
+					<xsl:call-template name="accessLinks" />
+					<xsl:call-template name="pageHeader" />
+					<div id="wrapper">
+						<xsl:call-template name="homepageContent" />
+						<div class="clear">&#160;</div>
+					</div>
+					<xsl:call-template name="pageFooter" />
 				</div>
-				<xsl:call-template name="pageFooter" />
 			</body>
 		</html>
 	</xsl:template>
@@ -98,7 +101,7 @@
 	</xsl:template>
 	
 	<xsl:template name="javascriptHomepage">
-		<script src="{$theme-prefix}/javascripts/rotating_banner.js">&#170;</script>
+		<!--script src="{$theme-prefix}/javascripts/rotating_banner.js">&#170;</script -->
 	</xsl:template>
 
 </xsl:stylesheet>

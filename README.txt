@@ -45,9 +45,8 @@ Right Pane:
     <li><a href="/">Program Resources from Priory Woods</a></li>
 </ul>
 
-Navigation:
 
-2 level Nav of the form:
+Navigation (2 level Nav):
 
 Parents/Carers
         School Admissions
@@ -105,7 +104,7 @@ Right Column - Content Item List.
                  Sort Ordering - id desc
                  Max Items - 2
 
-Navigation:
+Navigation (1 level deep):
 * Home
 * About STEM
 * Contact Us

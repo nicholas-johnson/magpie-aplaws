@@ -1,0 +1,33 @@
+
+.content {
+  padding-bottom:20px;
+}
+
+.content .heading {
+  background: #7b317b url(../images/backgrounds/header/left.png) left top no-repeat;
+  color:#fff;
+  margin:0;
+  padding:0;
+}
+
+.content .heading h2 {
+  background: transparent url(../images/backgrounds/header/right.png) right top no-repeat;
+  display:block;
+  margin:0;
+  padding:5px 20px;
+}
+
+.content .item {
+  margin:0;
+  padding:10px 20px 20px 20px;
+  background: transparent url(../images/backgrounds/content/right.png) right bottom no-repeat;
+}
+
+.content .lead {
+  font-weight:bold;
+}
+
+.content img {
+  float:left;
+  margin:0 20px 10px 0;
+}

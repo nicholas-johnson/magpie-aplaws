@@ -101,7 +101,7 @@
 	</xsl:template>
 	
 	<xsl:template name="javascriptHomepage">
-		<!--script src="{$theme-prefix}/javascripts/rotating_banner.js">&#170;</script -->
+		<script src="{$theme-prefix}/javascripts/rotating_banner.js">&#170;</script>
 	</xsl:template>
 
 </xsl:stylesheet>

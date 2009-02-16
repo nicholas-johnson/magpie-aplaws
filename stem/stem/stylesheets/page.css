@@ -1,6 +1,6 @@
 
 .content {
-padding-bottom:20px;
+  padding-bottom:20px;
 }
 
 .content .heading {
@@ -28,6 +28,6 @@ padding-bottom:20px;
 }
 
 .content img {
-float:left;
-margin:0 20px 10px 0;
+  float:left;
+  margin:0 20px 10px 0;
 }

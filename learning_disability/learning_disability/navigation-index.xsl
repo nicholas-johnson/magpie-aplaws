@@ -63,8 +63,12 @@
 			</head>
 			<body>
 				<xsl:call-template name="accessLinks" />
-				<xsl:call-template name="pageHeader" />
 				<div id="wrapper">
+					<div class="header">
+						<h1><a href="index.html"><img src="{$theme-prefix}/images/logos/logo_pink.png" alt="Middlesbrough Learning Disability Open Partnership Board" /></a></h1>
+						<h2><a href="#"><img src="{$theme-prefix}/images/titles/sub_groups.png" alt="Sub Groups" /></a></h2>
+						<br class="clear" />
+					</div>
 					<xsl:call-template name="navigationContent" />
 				</div>
 				<xsl:call-template name="pageFooter" />
@@ -73,27 +77,21 @@
 	</xsl:template>
 	
 	<xsl:template name="navigationContent">
-		<xsl:choose>
-			<xsl:when test="(count(nav:greetingItem/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(nav:greetingItem/cms:item/fileAttachments) > 0)">
-				<div id="floatWrapper">
-					<xsl:call-template name="navigationMain" />
-					<xsl:call-template name="navigationRelated" />
-				</div>
-			</xsl:when>
-			<xsl:otherwise>
-				<xsl:call-template name="navigationMain" />
-			</xsl:otherwise>
-		</xsl:choose>
+		<xsl:call-template name="navigationMain" />
+		<xsl:call-template name="navigationRelated" />
 		<xsl:call-template name="navigationNav" />
 		<xsl:call-template name="creatorContactDetails" />
 	</xsl:template>
 	
 	<xsl:template name="navigationMain">
 		<div class="content">
-			<h2 class="title">
+			<xsl:if test="(count(nav:greetingItem/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(nav:greetingItem/cms:item/fileAttachments) > 0)">
+				<xsl:attribute name="class">content narrow</xsl:attribute>
+			</xsl:if>
+			<h2>
 				<span><xsl:value-of select="/bebop:page/nav:categoryPath/nav:category[position()=last()]/@title"/></span>
 			</h2>
-			<div class="content-wrapper">
+			<div class="text">
 				<a name="content" class="access">&#160;</a>
 				<xsl:apply-templates select="nav:greetingItem" />
 				<xsl:apply-templates select="nav:simpleObjectList" mode="alphabetical" />
@@ -108,10 +106,9 @@
 	</xsl:template>
 			
 	<xsl:template name="navigationNav">
-		<div class="navigation">
+		<div class="nav">
 			<a name="nav" class="access">&#160;</a>
 			<h2><span>Navigation</span></h2>
-			<a name="nav" class="access">&#160;</a>
 			<xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
 		</div>
 	</xsl:template>
@@ -125,7 +122,6 @@
 				<link rel="stylesheet" href="{$theme-prefix}/stylesheets/two_col.css" type="text/css" />
 			</xsl:otherwise>
 		</xsl:choose>
-		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/page.css" type="text/css" />
 	</xsl:template>
 	
 </xsl:stylesheet>

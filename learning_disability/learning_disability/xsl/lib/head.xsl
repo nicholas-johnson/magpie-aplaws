@@ -13,7 +13,8 @@
 	
 	<xsl:template name="css">
 		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/small.css" type="text/css" />
-		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/stem.css" type="text/css" />
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/learning.css" type="text/css" />
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/article.css" type="text/css" />
 	</xsl:template>
 	
 	<xsl:template name="javaScript">

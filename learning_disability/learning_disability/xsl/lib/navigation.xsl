@@ -12,58 +12,23 @@
   <!-- category menu as found in the xsl. nj20050210 -->
 	
 	<xsl:template name="catNav" match="nav:categoryMenu">
-	<a class="access" name="navigation">&#160;</a>
-		<ul class="nav">
-			<li class="up">
-				<a href="{$dispatcher-prefix}/portal">Home</a>
-			</li>
-			<ul>
-				<xsl:apply-templates select="/bebop:page/nav:categoryMenu/nav:category/nav:category" />
-			</ul>
+		<ul>
+			<xsl:apply-templates select="/bebop:page/nav:categoryMenu/nav:category/nav:category" />
 		</ul>
 	</xsl:template>
 	
 	<!-- descend into categories -->
 	<xsl:template match="nav:category">
-		
-			<!-- test to see if item is current category. If it is don't make it a link. 
-			Also test to see if you are a child of the what's on category you are not 
-			in the past or more than 12 months in the future -->
-		<xsl:choose>
-			<xsl:when test="@url=/bebop:page/@url">
-				<li class="selected">
-					<xsl:value-of select="@title" />
-				</li>
-			</xsl:when>
-			<!-- If we are viewing the what's on category, only show months in the next year -->
-			<xsl:when test="parent::nav:category/@description='WhatsOnCategory'">
-				<xsl:variable name="currentMonth" select="( /bebop:page/ui:nowDateTime/monthNo + 1 ) + ( /bebop:page/ui:nowDateTime/year * 12 )" />
-				<xsl:variable name="navMonth" select="substring-before(@description, '.') + ( substring-after(@description, '.') * 12 )" />
-				<xsl:variable name="monthProximity" select="$navMonth - $currentMonth" />
-				<xsl:if test="$monthProximity &gt; -1 and $monthProximity &lt; 13">
-					<li>
-						<xsl:if test="@isSelected='true'">
-							<xsl:attribute name="class">up</xsl:attribute>
-						</xsl:if>
-						<a href="{@url}">
-							<xsl:value-of select="@title" />
-						</a>
-					</li>
-				</xsl:if>
-			</xsl:when>
-			<xsl:otherwise>
-				<li>
-					<xsl:if test="@isSelected='true'">
-						<xsl:attribute name="class">up</xsl:attribute>
-					</xsl:if>
-					<a href="{@url}">
-						<xsl:value-of select="@title" />
-					</a>
-				</li>
-			</xsl:otherwise>
-		</xsl:choose>
+		<li>
+			<xsl:if test="@url=/bebop:page/@url">
+				<xsl:attribute name="class">selected</xsl:attribute>
+			</xsl:if>
+			<a href="{@url}">
+				<xsl:value-of select="@title" />
+			</a>
+		</li>
 		<xsl:if test="nav:category">
-			<ul class="selected">
+			<ul>
 				<xsl:apply-templates select="nav:category" />
 			</ul>
 		</xsl:if>

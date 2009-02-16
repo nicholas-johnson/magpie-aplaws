@@ -10,7 +10,7 @@
 	<xsl:template name="links">
 		<xsl:param name="item" />
 		<xsl:if test="(count($item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count($item/fileAttachments) > 0)">
-			<div class="relatedItems">
+			<div class="links">
 				<xsl:call-template name="downloads">
 					<xsl:with-param name="item" select="$item" />
 				</xsl:call-template>

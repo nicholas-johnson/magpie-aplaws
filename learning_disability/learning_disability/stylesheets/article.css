@@ -1,0 +1,138 @@
+#wrapper {
+  position:relative;
+  width:95%;
+  margin:10px auto;
+}
+
+.header h1 {
+float:left;
+}
+
+.header h2 {
+float:left;
+padding:0 0 0 80px;
+}
+
+.content {
+  width:50%;
+  position:absolute;
+  left:26%;
+  padding:0 0 100px 0;
+}
+
+.content h2 {
+  margin:0;
+  padding:0;
+  font-size:2em;
+  background:transparent url(../images/backgrounds/wide_col/top_right.png) right top no-repeat;
+}
+
+.content h2 span {
+  background:transparent url(../images/backgrounds/wide_col/top_left.png) left top no-repeat;
+  padding:80px 30px 0px 30px;
+  display:block;
+}
+
+.content .text {
+font-size:1.2em;
+  margin:0;
+  padding:30px 30px 100px 30px;
+  background:transparent url(../images/backgrounds/content_bottom.png) left bottom no-repeat;
+  min-height:300px;
+}
+
+.nav {
+  width:25%;
+  position:absolute;
+  left:0;
+  background:transparent url(../images/backgrounds/narrow_col/bottom_right.png) right bottom no-repeat;
+}
+
+.nav ul {
+  font-size:1.1em;
+  list-style:none;
+  margin:0;
+  padding:0px 10px 60px 20px;
+  background:transparent url(../images/backgrounds/narrow_col/bottom_left.png) left bottom no-repeat;
+}
+
+.nav h2 {
+  padding:0;
+  margin:0;
+  text-align:center;
+  font-size:2em;
+  background:#33fffe url(../images/backgrounds/narrow_col/top_right.png) right top no-repeat;
+}
+
+.nav h2 span {
+  padding:50px 10px 5px 20px;
+  display:block;
+  background:transparent url(../images/backgrounds/narrow_col/top_left.png) left top no-repeat;
+}
+
+.nav ul ul {
+  background:none;
+  padding:0 0 0 30px;
+}
+
+.nav li {
+  margin:0;
+  padding:0;
+  border-bottom:1px solid #fff; /* IE6 Bug */
+}
+
+.nav a {
+  display:block;
+  color:#000;
+  text-decoration:none;
+  padding:4px 0;
+  border-bottom:1px solid #fff; /* IE6 Bug */
+}
+
+.nav a:hover {
+  text-decoration:underline;
+}
+
+.nav .selected a {
+  font-weight:bold;
+}
+
+.links {
+position:absolute;
+width:261px;
+left:950px;
+}
+
+
+.links h2 {
+  padding:50px 10px 5px 20px;
+  margin:0;
+  font-size:2em;
+  text-align:center;
+  background:transparent url(../images/backgrounds/links_top.png) left top no-repeat;
+}
+.links ul {
+  font-size:0.9em;
+  list-style:none;
+  margin:0;
+  padding:0px 10px 60px 55px;
+  background:transparent url(../images/backgrounds/links_bottom.png) left bottom no-repeat;
+}
+
+.links li {
+  margin:0;
+  padding:0;
+  border-bottom:1px solid #fff; /* IE6 Bug */
+}
+
+.links a {
+  display:block;
+  color:#000;
+  text-decoration:none;
+  padding:4px 0;
+  border-bottom:1px solid #fff; /* IE6 Bug */
+}
+
+.links a:hover {
+  text-decoration:underline;
+}

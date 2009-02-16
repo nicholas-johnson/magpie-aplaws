@@ -1,0 +1,72 @@
+body {
+  text-align:center;
+  background:#33fffe;
+  margin:0;
+  padding:0;
+}
+
+#wrapper {
+  width:1216px;
+  text-align:left;
+  margin:0 auto;
+  font-family:"Comic Sans MS", arial, sans-serif;
+
+}
+
+.clear {
+  clear:both;
+  font-size:1px;
+  height:1px;
+  line-height:1px;
+}
+
+a img {
+  border:none;
+}
+
+/* Access Links */
+
+.access {
+  background:#003466;
+  color:#fff;
+  margin:0;
+  padding:5px 0;
+  text-align:center;
+  font-family:helvetica,arial,sans-serif;
+}
+
+.access ul {
+  width:1216px;
+  text-align:left;
+  margin:0 auto;
+  padding:0;
+}
+
+.access a {
+  color:#fff;
+  text-decoration:none;
+}
+
+.access a:hover {
+  text-decoration:underline;
+}
+
+.access li {
+  float:left;
+  list-style:none;
+  padding:0 10px;
+  border-right:1px solid #fff;
+}
+
+.access li.first {
+  padding-left:0;
+  border-right:none;
+  font-weight:bold;
+}
+
+#wrapper .access {
+  position:absolute;
+  font-size:1px;
+  line-height:1px;
+  background:transparent;
+}

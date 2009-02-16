@@ -61,20 +61,6 @@
 	</xsl:template>
 	
 	<xsl:template name="pageFooter">
-		<div class="footer">
-			<ul>
-				<li class="moving-forwards">
-					<a href="http://www.migglesbrough.gov.uk">
-						<img src="{$theme-prefix}/images/logos/middlesbrough-moving-forward.png" alt="Middlesbrough Moving Forward" />
-					</a>
-				</li>
-				<li class="middlesbrough-partnership">
-					<a href="http://www.middlesbroughpartnership.org.uk/">
-						<img src="{$theme-prefix}/images/logos/middlesbrough-partnership.png" alt="Middlesbrough Partnership" />
-					</a>
-				</li>
-			</ul>
-		</div>
 	</xsl:template>
 	
 	<xsl:template name="pageContent">

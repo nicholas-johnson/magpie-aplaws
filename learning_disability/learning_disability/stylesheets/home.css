@@ -1,0 +1,60 @@
+#wrapper {
+  position:relative;
+  height:700px;
+}
+
+h1 {
+  position:absolute;
+  top:30px;
+  left:263px;
+  margin:0;
+  padding:0;
+}
+
+
+ul.home_links {
+  margin:0;
+  padding:0;
+}
+
+ul.home_links li {
+  position:absolute;
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+li.sub_groups {
+top:30px;
+left:0px;
+}
+
+li.news {
+top:295px;
+left:0px;
+}
+
+li.consultation {
+top:530px;
+left:40px;
+}
+
+li.about {
+top:520px;
+left:460px;
+}
+
+li.projects {
+top:15px;
+left:880px;
+}
+
+li.links {
+top:224px;
+left:897px;
+}
+
+li.contact {
+top:480px;
+left:870px;
+}

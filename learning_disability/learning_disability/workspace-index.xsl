@@ -60,48 +60,44 @@
 				<xsl:call-template name="metaData"/>
 				<xsl:call-template name="cssHomepage" />
 				<xsl:call-template name="javaScript" />
-				<xsl:call-template name="javascriptHomepage" />
 			</head>
 			<body>
-				<div class="homepage_wrapper">
-					<xsl:call-template name="accessLinks" />
-					<xsl:call-template name="pageHeader" />
-					<div id="wrapper">
-						<xsl:call-template name="homepageContent" />
-						<div class="clear">&#160;</div>
-					</div>
-					<xsl:call-template name="pageFooter" />
+				<xsl:call-template name="accessLinks" />
+				<div id="wrapper">
+					<xsl:call-template name="homepageContent" />
+					<div class="clear">&#160;</div>
 				</div>
 			</body>
 		</html>
 	</xsl:template>
 	
 	<xsl:template name="homepageContent">
-		<div class="content">
-			<h2 class="title"><span>Stem</span></h2>
-			<div class="content-wrapper">
-				<div class="random_image">
-					<img id="random_image" src="{$theme-prefix}/images/random_images/1.jpg" alt="" />
-				</div>
-				<a name="content" class="access">&#160;</a>
-				<xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />
-				<div class="clear">&#160;</div>
-			</div>
-		</div>
+		<h1><img src="{$theme-prefix}/images/logo.jpg" alt="Middlesbrough Learning Disability Open Partnership Board" title="Middlesbrough Learning Disability Open Partnership Board" /></h1>
+		<a name="nav"></a>
 		
-		<div class="navigation">
-			<xsl:apply-templates select="//portal:homepageWorkspace[@id='left']" />
-		</div>
+		<!-- Change these parameters to set up the navigation on the homepage. This nav is locked and can't reasonably be done with a portlet -->
+		<xsl:variable name="url_1">/navigation/business</xsl:variable>
+		<xsl:variable name="url_2">/navigation/business</xsl:variable>
+		<xsl:variable name="url_3">/navigation/business</xsl:variable>
+		<xsl:variable name="url_4">/navigation/business</xsl:variable>
+		<xsl:variable name="url_5">/navigation/business</xsl:variable>
+		<xsl:variable name="url_6">/navigation/business</xsl:variable>
+		<xsl:variable name="url_7">/navigation/business</xsl:variable>
+		
+		<ul class="home_links">
+			<li class="sub_groups"><a href="{$dispatcher-prefix}{$url_1}"><img src="{$theme-prefix}/images/home_links/sub_groups.png" alt="Sub Groups" /></a></li>
+			<li class="news"><a href="{$dispatcher-prefix}{$url_2}"><img src="{$theme-prefix}/images/home_links/news.png" alt="News" /></a></li>
+			<li class="consultation"><a href="{$dispatcher-prefix}{$url_3}"><img src="{$theme-prefix}/images/home_links/consultation.png" alt="Consultation" /></a></li>
+			<li class="about"><a href="{$dispatcher-prefix}{$url_4}"><img src="{$theme-prefix}/images/home_links/about.png" alt="About Us" /></a></li>
+			<li class="projects"><a href="{$dispatcher-prefix}{$url_5}"><img src="{$theme-prefix}/images/home_links/projects.png" alt="Projects" /></a></li>
+			<li class="links"><a href="{$dispatcher-prefix}{$url_6}"><img src="{$theme-prefix}/images/home_links/links.png" alt="Links" /></a></li>
+			<li class="contact"><a href="{$dispatcher-prefix}{$url_7}"><img src="{$theme-prefix}/images/home_links/contact.png" alt="Contact Us" /></a></li>
+		</ul>
 	</xsl:template>
 	
 	<xsl:template name="cssHomepage">
-		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/stem.css" type="text/css" />
-		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/two_col.css" type="text/css" />
-		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/homepage.css" type="text/css" />
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/learning.css" type="text/css" />
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/home.css" type="text/css" />
 	</xsl:template>
 	
-	<xsl:template name="javascriptHomepage">
-		<script src="{$theme-prefix}/javascripts/rotating_banner.js">&#170;</script>
-	</xsl:template>
-
 </xsl:stylesheet>

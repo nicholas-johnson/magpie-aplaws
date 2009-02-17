@@ -4,13 +4,21 @@
   margin:10px auto;
 }
 
+.header {
+  position:relative;
+}
+
 .header h1 {
-float:left;
+  margin:0;
+  padding:10px 0 20px 0;
 }
 
 .header h2 {
-float:left;
-padding:0 0 0 80px;
+  position:absolute;
+  margin:0;
+  padding:0;
+  left:300px;
+  top:0;
 }
 
 .content {
@@ -21,7 +29,8 @@ padding:0 0 0 80px;
   background:transparent url(../images/backgrounds/wide_col/bottom_right.png) right bottom no-repeat;
 }
 
-.content .text {
+.content .text,
+.content .item {
   font-size:1.2em;
   margin:0;
   padding:30px 30px 100px 30px;
@@ -40,6 +49,11 @@ padding:0 0 0 80px;
   background:transparent url(../images/backgrounds/wide_col/top_left.png) left top no-repeat;
   padding:80px 30px 0px 30px;
   display:block;
+}
+
+.content .item img {
+  float:left;
+  margin:0 30px 0 20px;
 }
 
 .nav {
@@ -99,25 +113,43 @@ padding:0 0 0 80px;
 }
 
 .links {
-position:absolute;
-width:261px;
-left:950px;
+  position:absolute;
+  width:23%;
+  left:77%;
 }
-
 
 .links h2 {
-  padding:50px 10px 5px 20px;
   margin:0;
+  padding:0;
   font-size:2em;
   text-align:center;
-  background:transparent url(../images/backgrounds/links_top.png) left top no-repeat;
+  background:#33fffe url(../images/backgrounds/narrow_col/top_right.png) right top no-repeat;
 }
+
+.links h2 span{
+  background:transparent url(../images/backgrounds/narrow_col/top_left.png) left top no-repeat;
+  display:block;
+  padding:50px 10px 5px 20px;
+}
+
+.links .related {
+  background:transparent url(../images/backgrounds/narrow_col/bottom_right.png) right bottom no-repeat;
+  margin:0 0 30px 0;
+}
+
+.links .related-content {
+  background:transparent url(../images/backgrounds/narrow_col/bottom_left.png) left bottom no-repeat;
+}
+
+.links p {
+  padding:0px 10px 10px 55px;
+}
+
 .links ul {
   font-size:0.9em;
   list-style:none;
   margin:0;
   padding:0px 10px 60px 55px;
-  background:transparent url(../images/backgrounds/links_bottom.png) left bottom no-repeat;
 }
 
 .links li {

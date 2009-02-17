@@ -93,7 +93,7 @@ You also need to do some theme work to get the header working correctly. Edit: m
 
 ______________________________________________________________________
 
-**STEM **
+** STEM **
 Stronger Together in East Middlesbrough
 
 Portlets:
@@ -113,3 +113,28 @@ Navigation (1 level deep):
 * STEM Themes
 * Image Galleries
 
+
+______________________________________________________________________
+
+** Learning Disability **
+
+Portlets:
+none
+
+Navigation:
+* About Us
+        Who we are
+        What we do
+        Terms of reference
+* Sub Groups
+        unknown
+* Links
+        unknown
+* News
+        unknown
+* Consultation
+        unknown
+* Projects
+        unknown
+* Contact Us
+        unknown

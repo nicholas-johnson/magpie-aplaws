@@ -52,14 +52,6 @@
 		</html>
 	</xsl:template>
 	
-	<xsl:template name="pageHeader">
-		<h2 class="header">
-			<a href="{$dispatcher-prefix}">
-				<img src="{$theme-prefix}/images/logo.png" alt="STEM - Stronger Together in East Middlesbrough" title="STEM - Stronger Together in East Middlesbrough" />
-			</a>
-		</h2>
-	</xsl:template>
-	
 	<xsl:template name="pageFooter">
 	</xsl:template>
 	

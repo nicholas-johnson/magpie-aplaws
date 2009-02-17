@@ -59,16 +59,18 @@
 				<xsl:call-template name="metaData"/>
 				<xsl:call-template name="css" />
 				<xsl:call-template name="cssNavigation" />
-				<xsl:call-template name="javaScript" />
 			</head>
 			<body>
+				<xsl:attribute name="class">
+					<xsl:call-template name="urlify">
+						<xsl:with-param name="string">
+							<xsl:value-of select="/bebop:page/nav:categoryMenu/nav:category/nav:category[@isSelected='true']/@title" />
+						</xsl:with-param>
+					</xsl:call-template>
+				</xsl:attribute>
 				<xsl:call-template name="accessLinks" />
 				<div id="wrapper">
-					<div class="header">
-						<h1><a href="index.html"><img src="{$theme-prefix}/images/logos/logo_pink.png" alt="Middlesbrough Learning Disability Open Partnership Board" /></a></h1>
-						<h2><a href="#"><img src="{$theme-prefix}/images/titles/sub_groups.png" alt="Sub Groups" /></a></h2>
-						<br class="clear" />
-					</div>
+					<xsl:call-template name="pageHeader" />
 					<xsl:call-template name="navigationContent" />
 				</div>
 				<xsl:call-template name="pageFooter" />
@@ -122,6 +124,7 @@
 				<link rel="stylesheet" href="{$theme-prefix}/stylesheets/two_col.css" type="text/css" />
 			</xsl:otherwise>
 		</xsl:choose>
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/colours.css" type="text/css" />
 	</xsl:template>
 	
 </xsl:stylesheet>

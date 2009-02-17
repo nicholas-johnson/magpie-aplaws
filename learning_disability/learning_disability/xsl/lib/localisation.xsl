@@ -12,7 +12,7 @@
 
 	<!-- Edit these files to localise your aplaws theme -->
 	<xsl:template name="councilName">
-		STEM
+		Middlesbrough Learning Disability Open Partnership Board
 	</xsl:template>
 	
 	<xsl:template name="councilLogo">

@@ -36,10 +36,8 @@ a img {
 }
 
 .access ul {
-  width:1216px;
-  text-align:left;
-  margin:0 auto;
-  padding:0;
+  padding:0 0 0 20px;
+  margin:0;
 }
 
 .access a {

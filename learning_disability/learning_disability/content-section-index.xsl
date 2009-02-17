@@ -53,12 +53,18 @@
 				<xsl:call-template name="metaData"/>
 				<xsl:call-template name="css" />
 				<xsl:call-template name="cssContent" />
-				<xsl:call-template name="javaScript" />
 			</head>
 			<body>
+				<xsl:attribute name="class">
+					<xsl:call-template name="urlify">
+						<xsl:with-param name="string">
+							<xsl:value-of select="/bebop:page/nav:categoryMenu/nav:category/nav:category[@isSelected='true']/@title" />
+						</xsl:with-param>
+					</xsl:call-template>
+				</xsl:attribute>
 				<xsl:call-template name="accessLinks" />
-				<xsl:call-template name="pageHeader" />
 				<div id="wrapper">
+					<xsl:call-template name="pageHeader" />
 					<xsl:call-template name="contentSectionContent" />
 				</div>
 				<xsl:call-template name="pageFooter" />
@@ -67,8 +73,6 @@
 	</xsl:template>
 	
 	<xsl:template name="contentSectionContent">
-		
-		
 		<xsl:choose>
 			<xsl:when test="(count(cms:contentPanel/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(cms:contentPanel/cms:item/fileAttachments) > 0)">
 				<div id="floatWrapper">
@@ -99,7 +103,7 @@
 	</xsl:template>
 			
 	<xsl:template name="contentNav">
-		<div class="navigation">
+		<div class="nav">
 			<h2><span>Navigation</span></h2>
 			<a name="nav" class="access">&#160;</a>
 			<xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
@@ -115,7 +119,7 @@
 				<link rel="stylesheet" href="{$theme-prefix}/stylesheets/two_col.css" type="text/css" />
 			</xsl:otherwise>
 		</xsl:choose>
-		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/page.css" type="text/css" />
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/colours.css" type="text/css" />
 	</xsl:template>
 
 </xsl:stylesheet>

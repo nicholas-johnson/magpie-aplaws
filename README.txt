@@ -138,3 +138,6 @@ Navigation:
         unknown
 * Contact Us
         unknown
+        
+Theme work
+Modify the parameters in workspace-index.xsl on line 78 to set up the hoepage navigation. The nav is highly customized and can't reasonably be done with a portlet.

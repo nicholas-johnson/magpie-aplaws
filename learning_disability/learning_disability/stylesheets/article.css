@@ -17,28 +17,29 @@ padding:0 0 0 80px;
   width:50%;
   position:absolute;
   left:26%;
-  padding:0 0 100px 0;
+  margin:0 0 100px 0;
+  background:transparent url(../images/backgrounds/wide_col/bottom_right.png) right bottom no-repeat;
+}
+
+.content .text {
+  font-size:1.2em;
+  margin:0;
+  padding:30px 30px 100px 30px;
+  background:transparent url(../images/backgrounds/wide_col/bottom_left.png) left bottom no-repeat;
+  min-height:300px;
 }
 
 .content h2 {
   margin:0;
   padding:0;
   font-size:2em;
-  background:transparent url(../images/backgrounds/wide_col/top_right.png) right top no-repeat;
+  background:#33fffe url(../images/backgrounds/wide_col/top_right.png) right top no-repeat;
 }
 
 .content h2 span {
   background:transparent url(../images/backgrounds/wide_col/top_left.png) left top no-repeat;
   padding:80px 30px 0px 30px;
   display:block;
-}
-
-.content .text {
-font-size:1.2em;
-  margin:0;
-  padding:30px 30px 100px 30px;
-  background:transparent url(../images/backgrounds/content_bottom.png) left bottom no-repeat;
-  min-height:300px;
 }
 
 .nav {

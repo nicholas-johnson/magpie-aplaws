@@ -8,7 +8,10 @@
   version="1.0" exclude-result-prefixes="bebop cms ui aplaws xsl">
 
   <xsl:import href="../../../../ROOT/__ccm__/apps/content-section/xsl/admin.xsl"/>
-  
+  <xsl:import href="../../../../ROOT/packages/bebop/xsl/dcp.xsl"/>
+
+  <xsl:import href="../../../../ROOT/__ccm__/themes/aplaws/category-step.xsl"/>
+
   <xsl:param name="theme-prefix" />
 
   <xsl:variable name="here"><xsl:value-of select="$static-prefix"/>/cms/admin/page</xsl:variable>

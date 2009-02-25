@@ -58,6 +58,7 @@
 					<xsl:call-template name="councilName" /> - Homepage
 				</title>
 				<xsl:call-template name="metaData"/>
+				<xsl:call-template name="css" />
 				<xsl:call-template name="cssHomepage" />
 				<xsl:call-template name="javaScript" />
 				<xsl:call-template name="javascriptHomepage" />
@@ -95,7 +96,6 @@
 	</xsl:template>
 	
 	<xsl:template name="cssHomepage">
-		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/stem.css" type="text/css" />
 		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/two_col.css" type="text/css" />
 		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/homepage.css" type="text/css" />
 	</xsl:template>

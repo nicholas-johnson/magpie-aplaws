@@ -76,13 +76,13 @@
 		<a name="nav"></a>
 		
 		<!-- Change these parameters to set up the navigation on the homepage. This nav is locked and can't reasonably be done with a portlet -->
-		<xsl:variable name="url_1">/navigation/business</xsl:variable>
-		<xsl:variable name="url_2">/navigation/business</xsl:variable>
-		<xsl:variable name="url_3">/navigation/business</xsl:variable>
-		<xsl:variable name="url_4">/navigation/business</xsl:variable>
-		<xsl:variable name="url_5">/navigation/business</xsl:variable>
-		<xsl:variable name="url_6">/navigation/business</xsl:variable>
-		<xsl:variable name="url_7">/navigation/business</xsl:variable>
+		<xsl:variable name="url_1">/navigation/sub-groups/</xsl:variable>
+		<xsl:variable name="url_2">/navigation/news/</xsl:variable>
+		<xsl:variable name="url_3">/navigation/consultation/</xsl:variable>
+		<xsl:variable name="url_4">/navigation/about-us/</xsl:variable>
+		<xsl:variable name="url_5">/navigation/projects/</xsl:variable>
+		<xsl:variable name="url_6">/navigation/links/</xsl:variable>
+		<xsl:variable name="url_7">/navigation/contact-us/</xsl:variable>
 		
 		<ul class="home_links">
 			<li class="sub_groups"><a href="{$dispatcher-prefix}{$url_1}"><img src="{$theme-prefix}/images/home_links/sub_groups.png" alt="Sub Groups" /></a></li>

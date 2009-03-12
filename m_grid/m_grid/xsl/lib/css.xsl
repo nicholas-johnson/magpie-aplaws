@@ -8,11 +8,9 @@
 		xmlns:nav="http://ccm.redhat.com/london/navigation"
 		xmlns:cms="http://www.arsdigita.com/cms/1.0"
 		exclude-result-prefixes="xsl bebop portal atoz nav cms ui">
-	
-	
-	
+
 	<xsl:template name="css">
-		<link rel="stylesheet" type="text/css" href="{$theme-prefix}/style/accessibility.css" /> 
+		<link rel="stylesheet" type="text/css" href="{$theme-prefix}/style/magpie.css" /> 
 		<link rel="stylesheet" type="text/css" href="{$theme-prefix}/style/main.css" /> 
 		<xsl:text disable-output-escaping="yes">
       &lt;!--[if IE 6]&gt;

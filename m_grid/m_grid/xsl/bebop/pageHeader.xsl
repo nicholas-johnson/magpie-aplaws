@@ -28,7 +28,7 @@
 	
 	<xsl:template name="search">
 		<div id="search">
-			<form id="siteSearch" action="{$dispatcher-prefix}/search" method="get">
+			<form action="{$dispatcher-prefix}/search" method="get">
 				<!--input value="default_collection" name="site" type="hidden" />
 				<input value="default_frontend" name="client" type="hidden" />
 				<input value="default_frontend" name="proxystylesheet" type="hidden" />
@@ -36,7 +36,7 @@
 				<input value="default_frontend" name="client" type="hidden" />
 				<input value="default_frontend" name="proxystylesheet" type="hidden" />
 				<input value="xml_no_dtd" name="output" type="hidden" / -->
-				<input type="text" name="terms" value="Search MGrid" id="terms" accesskey="4" onfocus="if(this.value=='Search MGrid')this.value='';"/>
+				<input type="text" name="terms" value="Search MGrid" id="searchbox" accesskey="4" onfocus="if(this.value=='Search MGrid')this.value='';"/>
 				<input type="submit" value="Search" name="submit" id="searchbtn" />
 			</form>
 		</div>

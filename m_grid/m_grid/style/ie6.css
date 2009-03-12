@@ -1,7 +1,5 @@
 *html #content {
-	background: none;
-	/* filter applies only to IE5+/Win */
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='scale', src='images/page-bkg-ie6.png');
+	background: url('../images/page-bkg-ie6.png') top left repeat-y; 
 }
 
 *html #searchbtn {
@@ -14,15 +12,11 @@
 
 /* Image Replacement */
 *html #header h1 {
-	background: none;
-	/* filter applies only to IE5+/Win */
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='scale', src='images/logo.png');
+	background: transparent url(../images/logo-ie6.png) no-repeat 0 0; 
 }
 
 *html #nav {
-	background: none;
-	/* filter applies only to IE5+/Win */
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='fixed', src='images/nav/bkg-ie6.png');
+	background: url('../images/nav/bkg-ie6.png') bottom left no-repeat; 
 }
 
 *html #nav li a:hover span {
@@ -53,9 +47,10 @@
 }
 
 *html #footer {
-	background: none;
+	/* background: none; */
 	/* filter applies only to IE5+/Win */
-	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='fixed', src='images/bottom-bar.png');
+	/* filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true', sizingMethod='fixed', src='../images/bottom-bar.png'); */
+	background: url('../images/bottom-bar-ie6.png') top left no-repeat;
 }
 
 

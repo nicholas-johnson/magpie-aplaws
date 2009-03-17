@@ -15,15 +15,15 @@
 		
 		<!-- Adjust these to change the top nav -->
 		<xsl:variable name="nav_item_1">Parents/Carers</xsl:variable>
-		<xsl:variable name="nav_url_1">/navigation/business</xsl:variable>
+		<xsl:variable name="nav_url_1">/navigation/parents-carers/</xsl:variable>
 		<xsl:variable name="nav_item_2">Learners</xsl:variable>
-		<xsl:variable name="nav_url_2">/navigation/business</xsl:variable>
+		<xsl:variable name="nav_url_2">/navigation/learners/</xsl:variable>
 		<xsl:variable name="nav_item_3">School Staff</xsl:variable>
-		<xsl:variable name="nav_url_3">/navigation/business</xsl:variable>
+		<xsl:variable name="nav_url_3">/navigation/school-staff/</xsl:variable>
 		<xsl:variable name="nav_item_4">CFL Staff</xsl:variable>
-		<xsl:variable name="nav_url_4">/navigation/business</xsl:variable>
-		<xsl:variable name="nav_item_5">Governers</xsl:variable>
-		<xsl:variable name="nav_url_5">/navigation/business</xsl:variable>
+		<xsl:variable name="nav_url_4">/navigation/cfl-staff/</xsl:variable>
+		<xsl:variable name="nav_item_5">Governors</xsl:variable>
+		<xsl:variable name="nav_url_5">/navigation/governors/</xsl:variable>
 		
 		
 		<ul id="nav">

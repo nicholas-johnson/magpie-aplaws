@@ -65,7 +65,7 @@
 				</xsl:if>	
 				<a href="{$dispatcher-prefix}{$nav_url_5}"><span><xsl:value-of select="$nav_item_5" /></span></a>
 			</li>
-			<li><a href="{$dispatcher-prefix}/ccm/content-center"><span>Log on</span></a></li>
+			<li><a href="{$dispatcher-prefix}/content-center"><span>Log on</span></a></li>
 		</ul>
 	</xsl:template>
 </xsl:stylesheet>

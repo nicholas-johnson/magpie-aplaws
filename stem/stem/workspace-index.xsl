@@ -79,7 +79,7 @@
 	
 	<xsl:template name="homepageContent">
 		<div class="content">
-			<h2 class="title"><span>Stem</span></h2>
+			<h2 class="title"><span>STEM</span></h2>
 			<div class="content-wrapper">
 				<div class="random_image">
 					<img id="random_image" src="{$theme-prefix}/images/random_images/1.jpg" alt="" />

@@ -10,7 +10,7 @@ body.business .nav h2 {
   background-color:#ffd1ff;
 }
 
-body.business .links h2 {
+body.business #wrapper .links h2 {
   background-color:#ffd1ff;
 }
 
@@ -32,7 +32,7 @@ body.sub-groups .nav h2 {
   background-color:#ffd1ff;
 }
 
-body.sub-groups .links h2 {
+body.sub-groups #wrapper .links h2 {
   background-color:#ffd1ff;
 }
 
@@ -54,7 +54,7 @@ body.news .nav h2 {
   background-color:#fec0c0;
 }
 
-body.news .links h2 {
+body.news #wrapper .links h2 {
   background-color:#fec0c0;
 }
 
@@ -76,7 +76,7 @@ body.consultation .nav h2 {
   background-color:#b9dcff;
 }
 
-body.consultation .links h2 {
+body.consultation #wrapper .links h2 {
   background-color:#b9dcff;
 }
 
@@ -98,7 +98,7 @@ body.about-us .nav h2 {
   background-color:#fdfc9d;
 }
 
-body.about-us .links h2 {
+body.about-us #wrapper .links h2 {
   background-color:#fdfc9d;
 }
 
@@ -120,7 +120,7 @@ body.contact-us .nav h2 {
   background-color:#b8ffb7;
 }
 
-body.contact-us .links h2 {
+body.contact-us #wrapper .links h2 {
   background-color:#b8ffb7;
 }
 
@@ -142,7 +142,7 @@ body.links .nav h2 {
   background-color:#ffd4aa;
 }
 
-body.links .links h2 {
+body.links #wrapper .links h2 {
   background-color:#ffd4aa;
 }
 
@@ -164,7 +164,7 @@ body.links .nav h2 {
   background-color:#ffd4aa;
 }
 
-body.links .links h2 {
+body.links #wrapper .links h2 {
   background-color:#ffd4aa;
 }
 
@@ -186,7 +186,7 @@ body.projects .nav h2 {
   background-color:#cdcdcd;
 }
 
-body.projects .links h2 {
+body.projects #wrapper .links h2 {
   background-color:#cdcdcd;
 }
 

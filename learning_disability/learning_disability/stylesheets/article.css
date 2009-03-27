@@ -112,13 +112,13 @@
   font-weight:bold;
 }
 
-.links {
+#wrapper .links {
   position:absolute;
   width:23%;
   left:77%;
 }
 
-.links h2 {
+#wrapper .links h2 {
   margin:0;
   padding:0;
   font-size:2em;
@@ -126,39 +126,56 @@
   background:#33fffe url(../images/backgrounds/narrow_col/top_right.png) right top no-repeat;
 }
 
-.links h2 span{
+#wrapper .links h2 span{
   background:transparent url(../images/backgrounds/narrow_col/top_left.png) left top no-repeat;
   display:block;
   padding:50px 10px 5px 20px;
 }
 
-.links .related {
+#wrapper .links .related {
   background:transparent url(../images/backgrounds/narrow_col/bottom_right.png) right bottom no-repeat;
   margin:0 0 30px 0;
 }
 
-.links .related-content {
+#wrapper .links .related-content {
   background:transparent url(../images/backgrounds/narrow_col/bottom_left.png) left bottom no-repeat;
 }
 
-.links p {
+#wrapper .links p {
   padding:0px 10px 10px 55px;
 }
 
-.links ul {
+#wrapper .links ul {
   font-size:0.9em;
   list-style:none;
   margin:0;
-  padding:0px 10px 60px 55px;
+  padding:0px 20px 60px 35px;
 }
 
-.links li {
+#wrapper .links li {
   margin:0;
-  padding:0;
+  padding:0 0 0 30px;
   border-bottom:1px solid #fff; /* IE6 Bug */
 }
 
-.links a {
+#wrapper .links .internal {
+  background: transparent url(../images/backgrounds/related/link.gif) 4px 5px no-repeat;
+}
+
+#wrapper .links .external {
+  background: transparent url(../images/backgrounds/related/external.png) 4px 5px no-repeat;
+}
+
+#wrapper .links .download {
+  background: transparent url(../images/backgrounds/related/download.gif) 4px 5px no-repeat;
+}
+
+#wrapper .links .pdf {
+  background: transparent url(../images/backgrounds/related/pdf.png) left 5px no-repeat;
+}
+
+
+#wrapper .links a {
   display:block;
   color:#000;
   text-decoration:none;
@@ -166,6 +183,6 @@
   border-bottom:1px solid #fff; /* IE6 Bug */
 }
 
-.links a:hover {
+#wrapper .links a:hover {
   text-decoration:underline;
 }

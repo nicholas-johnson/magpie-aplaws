@@ -80,10 +80,10 @@
 		</div>		
 		<div id="right">
 			<a name="nav" class="access">&#160;</a>
-			<xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
 			<xsl:call-template name="links">
 				<xsl:with-param name="item" select="cms:contentPanel/cms:item"/>
 			</xsl:call-template>
+			<xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
 		</div>
 	</xsl:template>
 

@@ -13,7 +13,7 @@
 	
 	<xsl:template name="navLinks">
 		<xsl:if test="//nav:simpleObjectList//nav:item">
-			<h3>In This Section</h3>
+			<h3><xsl:value-of select="/bebop:page/nav:categoryPath/nav:category[last()]/@title" /> Links</h3>
 			<xsl:apply-templates select="//nav:simpleObjectList" mode="alphabetical" />
 		</xsl:if>
 	</xsl:template>
@@ -22,7 +22,9 @@
 		<xsl:if test="/bebop:page/nav:categoryMenu/nav:category/nav:category/nav:category">
 			<h3>Navigation</h3>
 			<ul>
-				<xsl:apply-templates select="/bebop:page/nav:categoryMenu/nav:category/nav:category/nav:category" />
+				<xsl:apply-templates select="/bebop:page/nav:categoryMenu/nav:category/nav:category/nav:category">
+					<xsl:sort select="@title" />
+				</xsl:apply-templates>
 			</ul>
 		</xsl:if>
 	</xsl:template>
@@ -38,22 +40,6 @@
 				<li class="selected">
 					<xsl:value-of select="@title" />
 				</li>
-			</xsl:when>
-			<!-- If we are viewing the what's on category, only show months in the next year -->
-			<xsl:when test="parent::nav:category/@description='WhatsOnCategory'">
-				<xsl:variable name="currentMonth" select="( /bebop:page/ui:nowDateTime/monthNo + 1 ) + ( /bebop:page/ui:nowDateTime/year * 12 )" />
-				<xsl:variable name="navMonth" select="substring-before(@description, '.') + ( substring-after(@description, '.') * 12 )" />
-				<xsl:variable name="monthProximity" select="$navMonth - $currentMonth" />
-				<xsl:if test="$monthProximity &gt; -1 and $monthProximity &lt; 13">
-					<li>
-						<xsl:if test="@isSelected='true'">
-							<xsl:attribute name="class">up</xsl:attribute>
-						</xsl:if>
-						<a href="{@url}">
-							<xsl:value-of select="@title" />
-						</a>
-					</li>
-				</xsl:if>
 			</xsl:when>
 			<xsl:otherwise>
 				<li>

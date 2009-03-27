@@ -38,6 +38,8 @@
 				<input value="xml_no_dtd" name="output" type="hidden" / -->
 				<input type="text" name="terms" value="Search MGrid" id="searchbox" accesskey="4" onfocus="if(this.value=='Search MGrid')this.value='';"/>
 				<input type="submit" value="Search" name="submit" id="searchbtn" />
+				<input type="hidden" name="restrictToContentSections" value="mgrid" />
+
 			</form>
 		</div>
 	</xsl:template>

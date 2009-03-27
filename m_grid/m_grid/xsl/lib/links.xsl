@@ -69,6 +69,7 @@
 			<h3>Related Items</h3>
 			<ul>
 				<xsl:for-each select="/bebop:page/nav:relatedItems/nav:relatedItem">
+					<xsl:sort select="@title" />
 					<li>
 						<xsl:variable name="uri"><xsl:value-of select="@path"/></xsl:variable>
 						<xsl:variable name="title"><xsl:value-of select="@title" /></xsl:variable>
@@ -86,6 +87,7 @@
 			<h3>Resources</h3>
 			<ul>
 				<xsl:for-each select="$item/fileAttachments">
+					<xsl:sort select="name" />
 					<li>
 							<a href="{$dispatcher-prefix}/cms-service/download/asset/?asset_id={id}">
 								<xsl:value-of select="translate(name, '-_', '  ')" />

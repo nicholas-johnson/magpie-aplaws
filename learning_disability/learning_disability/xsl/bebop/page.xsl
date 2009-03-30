@@ -75,7 +75,7 @@
 				<li><a href="http://www.middlesbrough.gov.uk/ccm/content/translation.en">Translate This Site</a></li>
 				<li><a href="http://www.middlesbrough.gov.uk/ccm/content/hear-this-site.en">Hear This Site</a></li>
 			</ul>
-			<br class="clear" />
+			<div class="clear">&#160;</div>
 		</div>
 	</xsl:template>
 

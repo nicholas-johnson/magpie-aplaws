@@ -4,7 +4,7 @@
 }
 
 .access ul {
-  width:1216px;
+  width:1000px;
   text-align:left;
   margin:0 auto;
 }
@@ -12,7 +12,7 @@
 h1 {
   position:absolute;
   top:30px;
-  left:263px;
+  left:228px;
   margin:0;
   padding:0;
 }
@@ -31,36 +31,36 @@ ul.home_links li {
 }
 
 li.sub_groups {
-top:30px;
-left:0px;
+top:50px;
+left:20px;
 }
 
 li.news {
-top:295px;
-left:0px;
+top:245px;
+left:10px;
 }
 
 li.consultation {
-top:530px;
-left:40px;
+top:440px;
+left:60px;
 }
 
 li.about {
-top:520px;
-left:460px;
+top:414px;
+left:384px;
 }
 
 li.projects {
-top:15px;
-left:880px;
+top:40px;
+left:710px;
 }
 
 li.links {
-top:224px;
-left:897px;
+top:202px;
+left:724px;
 }
 
 li.contact {
-top:480px;
-left:870px;
+top:400px;
+left:704px;
 }

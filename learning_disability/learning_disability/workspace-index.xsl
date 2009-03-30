@@ -60,6 +60,7 @@
 				<xsl:call-template name="metaData"/>
 				<xsl:call-template name="cssHomepage" />
 				<xsl:call-template name="javaScript" />
+				<xsl:call-template name="javaScriptHomepage" />
 			</head>
 			<body>
 				<xsl:call-template name="accessLinks" />
@@ -85,19 +86,23 @@
 		<xsl:variable name="url_7">/navigation/contact-us/</xsl:variable>
 		
 		<ul class="home_links">
-			<li class="sub_groups"><a href="{$dispatcher-prefix}{$url_1}"><img src="{$theme-prefix}/images/home_links/sub_groups.png" alt="Sub Groups" /></a></li>
-			<li class="news"><a href="{$dispatcher-prefix}{$url_2}"><img src="{$theme-prefix}/images/home_links/news.png" alt="News" /></a></li>
-			<li class="consultation"><a href="{$dispatcher-prefix}{$url_3}"><img src="{$theme-prefix}/images/home_links/consultation.png" alt="Consultation" /></a></li>
-			<li class="about"><a href="{$dispatcher-prefix}{$url_4}"><img src="{$theme-prefix}/images/home_links/about.png" alt="About Us" /></a></li>
-			<li class="projects"><a href="{$dispatcher-prefix}{$url_5}"><img src="{$theme-prefix}/images/home_links/projects.png" alt="Projects" /></a></li>
-			<li class="links"><a href="{$dispatcher-prefix}{$url_6}"><img src="{$theme-prefix}/images/home_links/links.png" alt="Links" /></a></li>
-			<li class="contact"><a href="{$dispatcher-prefix}{$url_7}"><img src="{$theme-prefix}/images/home_links/contact.png" alt="Contact Us" /></a></li>
+			<li class="sub_groups rollover"><a href="{$dispatcher-prefix}{$url_1}"><img src="{$theme-prefix}/images/home_links/sub_groups_off.png" alt="Sub Groups" /></a></li>
+			<li class="news rollover"><a href="{$dispatcher-prefix}{$url_2}"><img src="{$theme-prefix}/images/home_links/news_off.png" alt="News" /></a></li>
+			<li class="consultation rollover"><a href="{$dispatcher-prefix}{$url_3}"><img src="{$theme-prefix}/images/home_links/consultation_off.png" alt="Consultation" /></a></li>
+			<li class="about rollover"><a href="{$dispatcher-prefix}{$url_4}"><img src="{$theme-prefix}/images/home_links/about_off.png" alt="About Us" /></a></li>
+			<li class="projects rollover"><a href="{$dispatcher-prefix}{$url_5}"><img src="{$theme-prefix}/images/home_links/projects_off.png" alt="Projects" /></a></li>
+			<li class="links rollover"><a href="{$dispatcher-prefix}{$url_6}"><img src="{$theme-prefix}/images/home_links/links_off.png" alt="Links" /></a></li>
+			<li class="contact rollover"><a href="{$dispatcher-prefix}{$url_7}"><img src="{$theme-prefix}/images/home_links/contact_off.png" alt="Contact Us" /></a></li>
 		</ul>
 	</xsl:template>
 	
 	<xsl:template name="cssHomepage">
 		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/learning.css" type="text/css" />
 		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/home.css" type="text/css" />
+	</xsl:template>
+	
+	<xsl:template name="javaScriptHomepage">
+		<script src="{$theme-prefix}/javascripts/rollover.js">&#160;</script>
 	</xsl:template>
 	
 </xsl:stylesheet>

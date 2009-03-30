@@ -14,6 +14,10 @@ body.business #wrapper .links h2 {
   background-color:#ffd1ff;
 }
 
+body.business #wrapper .links .related {
+  border-bottom:1px solid #ffd1ff;
+}
+
 body.business .content h2 {
   background-color:#ffd1ff;
 }
@@ -34,6 +38,10 @@ body.sub-groups .nav h2 {
 
 body.sub-groups #wrapper .links h2 {
   background-color:#ffd1ff;
+}
+
+body.sub-groups #wrapper .links .related {
+  border-bottom:1px solid #ffd1ff;
 }
 
 body.sub-groups .content h2 {
@@ -58,6 +66,10 @@ body.news #wrapper .links h2 {
   background-color:#fec0c0;
 }
 
+body.news #wrapper .links .related {
+  border-bottom:1px solid #fec0c0;
+}
+
 body.news .content h2 {
   background-color:#fec0c0;
 }
@@ -78,6 +90,10 @@ body.consultation .nav h2 {
 
 body.consultation #wrapper .links h2 {
   background-color:#b9dcff;
+}
+
+body.consultation #wrapper .links .related {
+  border-bottom:1px solid #b9dcff;
 }
 
 body.consultation .content h2 {
@@ -102,6 +118,10 @@ body.about-us #wrapper .links h2 {
   background-color:#fdfc9d;
 }
 
+body.about-us #wrapper .links .related {
+  border-bottom:1px solid #fdfc9d;
+}
+
 body.about-us .content h2 {
   background-color:#fdfc9d;
 }
@@ -124,6 +144,10 @@ body.contact-us #wrapper .links h2 {
   background-color:#b8ffb7;
 }
 
+body.contact-us #wrapper .links .related {
+  border-bottom:1px solid #b8ffb7;
+}
+
 body.contact-us .content h2 {
   background-color:#b8ffb7;
 }
@@ -145,27 +169,8 @@ body.links .nav h2 {
 body.links #wrapper .links h2 {
   background-color:#ffd4aa;
 }
-
-body.links .content h2 {
-  background-color:#ffd4aa;
-}
-
-/* links */
-
-body.links {
-  background:#ffd4aa;
-}
-
-body.links .content h2 {
-  background-color:#ffd4aa;
-}
-
-body.links .nav h2 {
-  background-color:#ffd4aa;
-}
-
-body.links #wrapper .links h2 {
-  background-color:#ffd4aa;
+body.links #wrapper .links .related {
+  border-bottom:1px solid #ffd4aa;
 }
 
 body.links .content h2 {
@@ -188,6 +193,10 @@ body.projects .nav h2 {
 
 body.projects #wrapper .links h2 {
   background-color:#cdcdcd;
+}
+
+body.projects #wrapper .links .related {
+  border-bottom:1px solid #cdcdcd;
 }
 
 body.projects .content h2 {

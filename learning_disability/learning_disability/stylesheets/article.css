@@ -69,6 +69,7 @@
   margin:0;
   padding:0px 10px 60px 20px;
   background:transparent url(../images/backgrounds/narrow_col/bottom_left.png) left bottom no-repeat;
+  border-left:1px solid #fff;
 }
 
 .nav h2 {

@@ -29,7 +29,7 @@
 		<h3>Latest News</h3>
 		<xsl:for-each select="nav:objectList/nav:item">
 			<div class="post">
-				<h4><a href="{nav:path}">Learning Platform downtime</a></h4>
+				<h4><a href="{nav:path}"><xsl:value-of select="nav:attribute[@name='title']" /></a></h4>
 				<p>
 					<img align="left" border="1" style="width:60px; height:60px;" src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={nav:attribute[@name='imageAttachments.image.id']}" alt="nav:attribute[@name='imageAttachments.caption']" />
 					<xsl:value-of select="nav:attribute[@name='lead']"/>

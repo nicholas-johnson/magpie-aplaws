@@ -31,7 +31,9 @@
 			<div class="post">
 				<h4><a href="{nav:path}"><xsl:value-of select="nav:attribute[@name='title']" /></a></h4>
 				<p>
-					<img align="left" border="1" style="width:60px; height:60px;" src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={nav:attribute[@name='imageAttachments.image.id']}" alt="nav:attribute[@name='imageAttachments.caption']" />
+					<xsl:if test="nav:attribute[@name='imageAttachments.image.id']">
+						<img align="left" border="1" style="width:60px; height:60px;" src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={nav:attribute[@name='imageAttachments.image.id']}" alt="nav:attribute[@name='imageAttachments.caption']" />
+					</xsl:if>
 					<xsl:value-of select="nav:attribute[@name='lead']"/>
 					<div class="clear">&#160;</div>
 				</p>

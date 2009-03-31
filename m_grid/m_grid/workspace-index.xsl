@@ -36,6 +36,7 @@
 	<!-- Override the defaults with theme specific includes -->
 	<xsl:import href="xsl/themeIncludes.xsl" />
 	<xsl:import href="xsl/bebop/portlet.xsl" />
+	<xsl:import href="xsl/lib/date.xsl" />
 
 	<!-- get useful parameters -->
 	<xsl:param name="context-prefix"></xsl:param>

@@ -35,13 +35,15 @@
 						<img align="left" border="1" style="width:60px; height:60px;" src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={nav:attribute[@name='imageAttachments.image.id']}" alt="nav:attribute[@name='imageAttachments.caption']" />
 					</xsl:if>
 					<xsl:value-of select="nav:attribute[@name='lead']"/>
-					<strong class="date">Posted on 
-						<xsl:call-template name="date">
-							<xsl:with-param name="date">
-								<xsl:value-of select="nav:attribute[@name='newsDate']" />
-							</xsl:with-param>
-						</xsl:call-template>
-					</strong>
+					<xsl:if test="nav:attribute[@name='newsDate']">
+						<strong class="date"><xsl:text> </xsl:text>Posted on 
+							<xsl:call-template name="date">
+								<xsl:with-param name="date">
+									<xsl:value-of select="nav:attribute[@name='newsDate']" />
+								</xsl:with-param>
+							</xsl:call-template>
+						</strong>
+					</xsl:if>
 					<div class="clear">&#160;</div>
 				</p>
 			</div> <!-- end post -->

@@ -125,6 +125,7 @@
 			</xsl:otherwise>
 		</xsl:choose>
 		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/colours.css" type="text/css" />
+		<link rel="stylesheet" href="{$theme-prefix}/stylesheets/navigation_page.css" type="text/css" />
 	</xsl:template>
 	
 </xsl:stylesheet>

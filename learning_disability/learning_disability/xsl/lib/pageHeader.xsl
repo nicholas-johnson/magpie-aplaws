@@ -67,7 +67,7 @@
 							<img src="{$theme-prefix}/images/titles/about_us.png" alt="Middlesbrough Learning Disability Open Partnership Board" />
 						</xsl:when>
 						<xsl:when test="$category='contact-us'">
-							<img src="{$theme-prefix}/images/titles/countact_us.png" alt="Middlesbrough Learning Disability Open Partnership Board" />
+							<img src="{$theme-prefix}/images/titles/contact_us.png" alt="Middlesbrough Learning Disability Open Partnership Board" />
 						</xsl:when>
 						<xsl:when test="$category='links'">
 							<img src="{$theme-prefix}/images/titles/links.png" alt="Middlesbrough Learning Disability Open Partnership Board" />

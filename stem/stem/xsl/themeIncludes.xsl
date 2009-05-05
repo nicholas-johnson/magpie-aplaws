@@ -10,5 +10,6 @@
 	<xsl:import href="lib/localisation.xsl" />
 	<xsl:import href="lib/navigation.xsl" />
 	<xsl:import href="lib/links.xsl" />
+	<xsl:import href="cms/item.xsl" />
 
 </xsl:stylesheet>

@@ -7,7 +7,6 @@ body {
 
 h2.header {
   background: transparent url(../images/backgrounds/main/top.jpg) -140px top repeat-x;
-  font-family:"Bradley Hand ITC", arial, helvetica, sans-serif;
   margin:0;
   padding:0;
 }
@@ -28,7 +27,6 @@ a img {
 }
 
 h1, h2 {
-  font-family:"Bradley Hand ITC", arial, helvetica, sans-serif;
 }
 
 /* Access Links */
@@ -107,7 +105,6 @@ h1, h2 {
 /* navigation */
 
 .navigation {
-  font-family:"Bradley Hand ITC", arial, helvetica, sans-serif;
 }
 
 .navigation ul {

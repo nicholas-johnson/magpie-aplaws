@@ -82,7 +82,7 @@
 			<h2 class="title"><span>STEM</span></h2>
 			<div class="content-wrapper">
 				<div class="random_image">
-					<img id="random_image" src="{$theme-prefix}/images/random_images/1.jpg" alt="" />
+					<img id="random_image" src="http://www.middlesbrough.gov.uk/public/STEM/Images/pic1.jpg" alt="" />
 				</div>
 				<a name="content" class="access">&#160;</a>
 				<xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />

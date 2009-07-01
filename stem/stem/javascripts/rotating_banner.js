@@ -25,7 +25,7 @@ preloadImages = function() {
 
 changeImage = function() {
   $('#random_image_swapper').fadeIn(1000, function(){
-    $('#random_image').attr('src', $('#random_image').attr('src').replace(String(current_image), String(next_image)));
+    $('#random_image').attr('src', $('#random_image').attr('src').replace(String("pic" + current_image), String("pic" + next_image)));
     $('#random_image_swapper').css('display', 'none');
     if (++current_image > number_of_images) {current_image = 1}
     if (++next_image > number_of_images) {next_image = 1}

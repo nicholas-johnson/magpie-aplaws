@@ -47,7 +47,7 @@
 				</title>
 				<xsl:call-template name="metaData"/>
 				<xsl:call-template name="css" />
-				<xsl:call-template name="javaScript" />
+				<xsl:call-template name="javascript" />
 			</head>
 			<body>
 				<div id="wrapper">

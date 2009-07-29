@@ -1,0 +1,47 @@
+#wrapper {
+	font-size:75%;
+	font-family:arial,helvetica,sans-serif;
+	line-height:1.5em;
+}
+
+a {
+	color:#cc3300
+}
+
+h1 {
+	font-size:2.2em;
+	color:#cc3300;
+	font-weight:normal;
+}
+
+h2 {
+	font-size:1.5em;
+	color:#cc3300;
+	font-weight:normal;
+}
+
+h3 {
+	font-size:1.0em;
+	color:#cc3300;
+	font-weight:normal;
+}
+
+h4 {
+	font-size:1.0em;
+	font-weight:bold;
+}
+
+h5 {
+	font-size:1.0em;
+	font-weight:bold;
+}
+
+h6 {
+	font-size:1.0em;
+	font-weight:bold;
+}
+
+hr {
+	border:none;
+	border-bottom:1px dotted #c0c0c0;
+}

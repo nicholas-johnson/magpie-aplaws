@@ -29,17 +29,17 @@
 				</a>
 			</li>
 			<li>
-				<a href="{$dispatcher-prefix}/brown_bin">
+				<a href="{$dispatcher-prefix}{$brown_bin_path}">
 					<img src="{$theme-prefix}/images/top_nav/brown_bin_off.png" alt="Brown Bin" class="rollover" />
 				</a>
 			</li>
 			<li>
-				<a href="{$dispatcher-prefix}/green_bin">
+				<a href="{$dispatcher-prefix}{$green_bin_path}">
 					<img src="{$theme-prefix}/images/top_nav/green_bin_off.png" alt="Green Bin" class="rollover" />
 				</a>
 			</li>
 			<li>
-				<a href="{$dispatcher-prefix}/blue_bin">
+				<a href="{$dispatcher-prefix}{$contact_path}">
 					<img src="{$theme-prefix}/images/top_nav/contact_off.png" alt="Contact" class="rollover" />
 				</a>
 			</li>

@@ -77,3 +77,60 @@ float:left;
 .bottom_row ul.bins li.green_bin {
 margin-left:20px;
 }
+
+.bottom_row .accordian_1 {
+float:left;
+}
+
+.bottom_row .accordian_2 {
+float:right;
+}
+
+.faq {
+width:460px;
+background:#e1e9f5 url(../images/backgrounds/faq_box/top.png) left top no-repeat;
+}
+
+.faq h2 {
+margin:0;
+padding:25px 20px 20px 35px;
+}
+
+.faq .content_wrapper {
+background:transparent url(../images/backgrounds/faq_box/bottom.png) left bottom no-repeat;
+padding:0 0 30px 0;
+}
+
+.faq .question  {
+height:50px;
+background:#88b4db url(../images/backgrounds/faq_box/faq_noscript.png) left top no-repeat;
+color:#fff;
+font-weight:bold;
+}
+
+.faq .question h3 {
+margin:0;
+padding:14px 0 0 70px;
+font-size:1em;
+}
+
+.faq .answer {
+color:#0074b4;
+font-weight:bold;
+background:#e3eaf5 url(../images/backgrounds/faq_box/faq_answer.png) left top no-repeat;
+}
+
+.faq .answer .content {
+padding:17px 10px 17px 70px;
+}
+
+/* Accordian javascript enhancement */
+
+.faq .closed .question {
+cursor:pointer;
+background:#88b4db url(../images/backgrounds/faq_box/faq_closed.png) left top no-repeat;
+}
+
+.faq .open .question {
+background:#88b4db url(../images/backgrounds/faq_box/faq_open.png) left top no-repeat;
+}

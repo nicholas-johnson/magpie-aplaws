@@ -60,6 +60,7 @@
         <xsl:call-template name="css" />
         <xsl:call-template name="cssNavigation" />
         <xsl:call-template name="javascript" />
+        <xsl:call-template name="navigation_javascript" />
       </head>
       <body>
         <div id="wrapper">
@@ -133,15 +134,50 @@
       </div>
     </xsl:if>
     
-      
-    
     
     <div class="bottom_row">
-      <div class="accordian_1">
-        
+      <xsl:variable name="faq_divider" select="ceiling(count(nav:simpleObjectList[@id='itemList']//nav:item) div 2)" />
+      <div class="faq accordian_1">
+        <div class="content_wrapper">
+          <h2><img src="{$theme-prefix}/images/titles/frequently_asked_questions.png" alt="Frequently asked questions" /></h2>
+          <ul>
+            <xsl:for-each select="nav:simpleObjectList[@id='itemList']//nav:item[position() &lt; ($faq_divider + 1)]">
+              <li>
+                <div class="question">
+                  <h3>
+                    <xsl:value-of select="nav:attribute[@name='title']" />
+                  </h3>
+                </div>
+                <div class="answer">
+                  <div class="content">
+                    All bins need to be out by 7am. If bins are not out by 7am you may miss your collections. Collection crews cannot return if the bin is out late.
+                  </div>
+                </div>
+              </li>
+            </xsl:for-each>
+          </ul>
+        </div>
       </div>
-      <div class="accordian_2">
-        
+      <div class="faq accordian_2">
+        <div class="content_wrapper">
+          <h2><img src="{$theme-prefix}/images/titles/continued.png" alt="continued..." /></h2>
+          <ul>
+            <xsl:for-each select="nav:simpleObjectList[@id='itemList']//nav:item[position() &gt; ($faq_divider)]">
+              <li>
+                <div class="question">
+                  <h3>
+                    <xsl:value-of select="nav:attribute[@name='title']" />
+                  </h3>
+                </div>
+                <div class="answer">
+                  <div class="content">
+                    All bins need to be out by 7am. If bins are not out by 7am you may miss your collections. Collection crews cannot return if the bin is out late.
+                  </div>
+                </div>
+              </li>
+            </xsl:for-each>
+          </ul>
+        </div>
       </div>
     </div>
   </xsl:template>
@@ -149,5 +185,10 @@
   <xsl:template name="cssNavigation">
     <link rel="stylesheet" href="{$theme-prefix}/stylesheets/navigation_page.css" type="text/css" />
   </xsl:template>
+  
+	<xsl:template name="navigation_javascript">
+		<script src="{$theme-prefix}/javascripts/accordian.js">&#160;</script>
+	</xsl:template>
+	
   
 </xsl:stylesheet>

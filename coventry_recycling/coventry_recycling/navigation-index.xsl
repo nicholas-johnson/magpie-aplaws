@@ -58,7 +58,7 @@
         <title><xsl:call-template name="councilName" /><xsl:call-template name="htmlTitleBuilder" /></title>
         <xsl:call-template name="metaData"/>
         <xsl:call-template name="css" />
-        <xsl:call-template name="cssNavigation" />
+        <xsl:call-template name="navigation_css" />
         <xsl:call-template name="javascript" />
         <xsl:call-template name="navigation_javascript" />
       </head>
@@ -182,7 +182,7 @@
     </div>
   </xsl:template>
   
-  <xsl:template name="cssNavigation">
+  <xsl:template name="navigation_css">
     <link rel="stylesheet" href="{$theme-prefix}/stylesheets/navigation_page.css" type="text/css" />
   </xsl:template>
   

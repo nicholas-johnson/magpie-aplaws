@@ -1,0 +1,40 @@
+.contact_block {
+float:left;
+width:300px;
+height:200px;
+background:#89a2c6;
+}
+
+.bottom_row .phone {
+background:#89a2c6 url(../images/backgrounds/phone_us_box/top.png) top left no-repeat;
+}
+
+.bottom_row .write {
+background:#89a2c6 url(../images/backgrounds/write_to_us_box/top.png) top left no-repeat;
+}
+
+.bottom_row .visit {
+background:#89a2c6 url(../images/backgrounds/visit_us_box/top.png) top left no-repeat;
+}
+
+.bottom_row .content_wrapper {
+background:transparent url(../images/backgrounds/phone_us_box/bottom.png) bottom left no-repeat;
+height:200px;
+}
+
+.bottom_row .content {
+padding:50px 20px 20px 20px;
+color:#fff;
+}
+
+.bottom_row .content a {
+color:#fff;
+}
+
+.bottom_row .write {
+margin:0 0 0 20px;
+}
+
+.bottom_row .visit {
+margin:0 0 0 20px;
+}

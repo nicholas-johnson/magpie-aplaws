@@ -32,6 +32,7 @@
 
   <!-- now override the defaults with theme specific includes -->
   <xsl:import href="xsl/themeIncludes.xsl"/>
+  <xsl:import href="xsl/contact_us.xsl"/>
   
   <xsl:param name="context-prefix" />
   <xsl:param name="dispatcher-prefix" />
@@ -47,6 +48,17 @@
   
   <!-- Displays a content page -->
   <xsl:template name="page" match="bebop:page[@class='simplePage' and (@application='content-section' or @application='content')]">
+    <xsl:choose>
+      <xsl:when test="//cms:contentPanel/cms:item/type/label = 'MultiPartArticle' and //cms:contentPanel/cms:item/name = 'contact'">
+        <xsl:call-template name="contact_us_page" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="item_page" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template name="item_page">
     <html lang="en">
       <head>
         <title><xsl:call-template name="councilName" /><xsl:call-template name="htmlTitleBuilder" /></title>
@@ -61,6 +73,7 @@
           <xsl:call-template name="pageHeader" />
           <xsl:call-template name="topLinks" />
           <xsl:call-template name="contentSectionContent" />
+          <div class="clear">&#160;</div>
           <xsl:call-template name="pageFooter" />
         </div>
       </body>
@@ -68,58 +81,63 @@
   </xsl:template>
   
   <xsl:template name="contentSectionContent">
-    
-    
     <xsl:choose>
       <xsl:when test="(count(cms:contentPanel/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(cms:contentPanel/cms:item/fileAttachments) > 0)">
-        <div id="floatWrapper">
         <xsl:call-template name="contentMain" />
         <xsl:call-template name="contentRelated" />
-        </div>
       </xsl:when>
       <xsl:otherwise>
         <xsl:call-template name="contentMain" />
       </xsl:otherwise>
     </xsl:choose>
-    <xsl:call-template name="contentNav" />
-    <xsl:call-template name="creatorContactDetails" />
   </xsl:template>
   
   <xsl:template name="contentMain">
-    <div class="content">
-      <div class="content_div">
-        <a name="content" class="access">&#160;</a>
-        <xsl:apply-templates select="cms:contentPanel/cms:item"/>
-        <xsl:apply-templates select="cms:articleSectionPanel"/>
-        <div class="clear">&#160;</div>
+    <a name="content" class="access">&#160;</a>
+    <div class="main">
+      <div class="content_wrapper">
+        <div class="content">
+          <!-- xsl:if test="//nav:greetingItem//imageAttachments[useContext='title']">
+            <h1>
+              <img src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={//nav:greetingItem//imageAttachments[useContext='title']//id}" alt="{//nav:greetingItem//imageAttachments[useContext='title']//description}" />
+            </h1>
+          </xsl:if -->
+          <xsl:apply-templates select="cms:contentPanel/cms:item"/>
+          <xsl:apply-templates select="cms:articleSectionPanel"/>
+        </div>
       </div>
     </div>
   </xsl:template>
   
   <xsl:template name="contentRelated">
-    <xsl:call-template name="links">
-      <xsl:with-param name="item" select="cms:contentPanel/cms:item"/>
-    </xsl:call-template>
-  </xsl:template>
-      
-  <xsl:template name="contentNav">
-    <div class="navigation">
-      <h2><span>Navigation</span></h2>
-      <a name="nav" class="access">&#160;</a>
-      <xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
+    <div class="links">
+      <div class="content_wrapper">
+        <div class="content">
+          <form id="search">
+            <fieldset>
+              <input type="text" class="search" value="search" />
+              <input type="submit" class="submit" value="search" />
+            </fieldset>
+          </form>
+          <h2><img src="{$theme-prefix}/images/titles/useful_links.png" alt="Useful Links" /></h2>
+          <xsl:call-template name="links">
+            <xsl:with-param name="item" select="cms:contentPanel/cms:item"/>
+          </xsl:call-template>
+        </div>
+      </div>
     </div>
   </xsl:template>
-
+      
   <xsl:template name="cssContent">
     <xsl:choose>
       <xsl:when test="(count(cms:contentPanel/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(cms:contentPanel/cms:item/fileAttachments) > 0)">
-        <link rel="stylesheet" href="{$theme-prefix}/stylesheets/three_col.css" type="text/css" />
+        <link rel="stylesheet" href="{$theme-prefix}/stylesheets/two_col_content.css" type="text/css" />
       </xsl:when>
       <xsl:otherwise>
-        <link rel="stylesheet" href="{$theme-prefix}/stylesheets/two_col.css" type="text/css" />
+        <link rel="stylesheet" href="{$theme-prefix}/stylesheets/one_col_content.css" type="text/css" />
       </xsl:otherwise>
     </xsl:choose>
-    <link rel="stylesheet" href="{$theme-prefix}/stylesheets/page.css" type="text/css" />
+    <link rel="stylesheet" href="{$theme-prefix}/stylesheets/content_page.css" type="text/css" />
   </xsl:template>
 
 </xsl:stylesheet>

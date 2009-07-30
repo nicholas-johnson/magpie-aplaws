@@ -1,0 +1,58 @@
+.main {
+float:left;
+width:620px;
+background:#8ab5dc url(../images/backgrounds/top_content_box/top.png) top left no-repeat;
+}
+
+.main .content_wrapper {
+background:transparent url(../images/backgrounds/top_content_box/bottom.png) bottom left no-repeat;
+}
+
+.main .content {
+padding:20px 20px 20px 35px;
+color:#fff;
+font-size:1.10em;
+}
+
+.main .content h1 {
+margin:10px 0 10px 0;
+}
+
+.links {
+float:right;
+width:300px;
+background:#8ab5dc url(../images/backgrounds/top_links_box/top.png) top left no-repeat;
+}
+
+.links .content_wrapper {
+background:transparent url(../images/backgrounds/top_links_box/bottom.png) bottom left no-repeat;
+}
+
+.links .content {
+padding:30px 20px 15px 27px;
+color:#fff;
+font-size:0.8em;
+font-style:italic;
+}
+
+.links h2 {
+  margin:15px 0 15px 0;
+}
+
+.links h2 img {
+  display:block;
+}
+
+.links li {
+background:transparent url(../images/backgrounds/top_links_box/bullet.png) 0px 7px no-repeat;
+padding:0 0 2px 20px;
+}
+
+.links a {
+color:#fff;
+text-decoration:none;
+}
+
+.links a:hover {
+text-decoration:underline;
+}

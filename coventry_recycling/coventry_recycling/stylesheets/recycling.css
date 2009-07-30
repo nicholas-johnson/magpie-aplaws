@@ -77,6 +77,19 @@ line-height:1px;
 color:#777;
 }
 
+table {
+  border-spacing:0;
+  border:none;
+}
+
+tr, td {
+border:none;
+margin:0;
+padding:0;
+  border-spacing:0;
+  width:auto;
+}
+
 /* Disabled Access */
 
 #access_links {

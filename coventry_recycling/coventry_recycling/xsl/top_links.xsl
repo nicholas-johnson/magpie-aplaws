@@ -15,7 +15,7 @@
     <xsl:variable name="blue_bin_path">/navigation/blue-bin</xsl:variable>
     <xsl:variable name="brown_bin_path">/navigation/brown-bin</xsl:variable>
     <xsl:variable name="green_bin_path">/navigation/green-bin</xsl:variable>
-    <xsl:variable name="contact_path">/content/contact</xsl:variable>
+    <xsl:variable name="contact_path">/contact</xsl:variable>
     
     <ul class="top_links">
       <li>

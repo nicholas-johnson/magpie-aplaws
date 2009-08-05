@@ -59,7 +59,7 @@ padding:0;
 border:none;
 }
 
-text-area, input {
+textarea, input {
 font-size: 1em;
 font-family: verdana,helvetica,arial,sans-serif;
 margin:0;

@@ -78,72 +78,10 @@
   <xsl:template name="homepageContent">
     <div class="top_row">
       <a name="content" class="access">&#160;</a>
-      <div class="main">
-        <div class="content_wrapper">
-          <div class="content">
-            <h1><img src="{$theme-prefix}/images/titles/your_new_recycling_and_wast.png" alt="Your New Recycling &amp; Waste Collection" /></h1>
-            <h2><img src="{$theme-prefix}/images/titles/improved_services.png" alt="Improved Services from October 2009" /></h2>
-            <p>We are making improvements to your recycling service so that we can all recycle more and help protect our environment. Depending on where you live, the new service will start between October and November 2009. We will provide you with more detailed information to explain how and when to use the new service when we deliver your new recycling bin a few weeks before we make your first collection. You will have three bins for your recycling, garden waste and rubbish.</p>
-          </div>
-        </div>
-      </div>
-      <div class="links">
-        <div class="content_wrapper">
-          <div class="content">
-            <form id="search">
-              <fieldset>
-                <input type="text" class="search" value="search" />
-                <input type="submit" class="submit" value="search" />
-              </fieldset>
-            </form>
-            <h2><img src="{$theme-prefix}/images/titles/useful_links.png" alt="Useful Links" /></h2>
-            <ul>
-              <li>
-                <a href="#">find your nearest recycling bank</a>
-              </li>
-              <li>
-                <a href="#">find out about composting and water butts</a>
-              </li>
-              <li>
-                <a href="#">find out about real nappies</a>
-              </li>
-              <li>
-                <a href="#">bulky waste collections</a>
-              </li>
-              <li>
-                <a href="#">Public Waste Recycling Facility (The Tip)</a>
-              </li>
-              <li>
-                <a href="#">find out about bicycle recycling</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="clear">&#160;</div>
       <xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />
+      <div class="clear">&#160;</div>
     </div>
     <div class="bottom_row">
-      <ul class="bins">
-        <li class="blue_bin">
-          <a href="#">
-            <img src="{$theme-prefix}/images/bins/blue_off.png" alt="blue bin" class="rollover" />
-          </a>
-        </li>
-        <li class="brown_bin">
-          <a href="#">
-            <img src="{$theme-prefix}/images/bins/brown_off.png" alt="brown bin" class="rollover" />
-          </a>
-        </li>
-        <li class="green_bin">
-          <a href="#">
-            <img src="{$theme-prefix}/images/bins/green_off.png" alt="green bin" class="rollover" />
-          </a>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="navigation">
       <xsl:apply-templates select="//portal:homepageWorkspace[@id='left']" />
     </div>
   </xsl:template>

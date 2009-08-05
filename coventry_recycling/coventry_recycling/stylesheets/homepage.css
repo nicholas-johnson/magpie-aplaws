@@ -1,3 +1,22 @@
 .top_row .main .content h1 {
-margin:10px 0 10px -10px;
+  margin:10px 0 10px -10px;
+}
+
+.configure {
+
+}
+
+.main_form textarea {
+  width:530px;
+  height:170px;
+}
+
+.links_form textarea {
+  width:230px;
+  height:170px
+}
+
+.bins_form textarea{
+  width:800px;
+  height:300px;
 }

@@ -150,7 +150,7 @@
                 </div>
                 <div class="answer">
                   <div class="content">
-                    <xsl:value-of select="nav:attribute[@name='summary']" />&#160;
+                    <xsl:value-of select="nav:attribute[@name='summary']" disable-output-escaping="yes" />&#160;
                   </div>
                 </div>
               </li>
@@ -171,7 +171,7 @@
                 </div>
                 <div class="answer">
                   <div class="content">
-                    <xsl:value-of select="nav:attribute[@name='summary']" />&#160;
+                    <xsl:value-of select="nav:attribute[@name='summary']" disable-output-escaping="yes" />&#160;
                   </div>
                 </div>
               </li>

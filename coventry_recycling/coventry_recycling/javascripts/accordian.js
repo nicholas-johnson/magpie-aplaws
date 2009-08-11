@@ -3,9 +3,10 @@ $(function() {
   $(".faq li").addClass("closed");
   $(".faq li:first").removeClass("closed");
   $(".faq li:first").addClass("open");
-  $(".faq .answer").attr("height", "" + $(".faq .answer").height() + "px")
+  $(".faq .answer").each(function() {
+    $(this).attr("height", "" + $(this).height() + "px");
+  });
   $(".faq .closed .answer").hide();
-  
   $(".faq .question").click(function() {
     var el = $(this)
     if (el.closest('li').hasClass("closed")) {
@@ -21,7 +22,7 @@ $(function() {
 
 function rollUp(el) {
   el.each(function() {
-    $(this).css("height", "100px");
+    $(this).css("height", $(this).attr("height"));
     $(this).animate({height:"0px"}, 300, "swing", function() {
       $(this).hide();
     });

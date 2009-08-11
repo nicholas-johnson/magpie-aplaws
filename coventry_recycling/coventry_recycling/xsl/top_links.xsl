@@ -15,12 +15,19 @@
     <xsl:variable name="blue_bin_path">/navigation/blue-bin</xsl:variable>
     <xsl:variable name="brown_bin_path">/navigation/brown-bin</xsl:variable>
     <xsl:variable name="green_bin_path">/navigation/green-bin</xsl:variable>
-    <xsl:variable name="contact_path">/contact</xsl:variable>
+    <xsl:variable name="contact_path">/recycling/contact</xsl:variable>
     
     <ul class="top_links">
       <li>
         <a href="{$dispatcher-prefix}">
-          <img src="{$theme-prefix}/images/top_nav/home_off.png" alt="Home" class="rollover" />
+          <xsl:choose>
+            <xsl:when test="/bebop:page[@application='portal']">
+              <img src="{$theme-prefix}/images/top_nav/home_over.png" alt="Home" />
+            </xsl:when>
+            <xsl:otherwise>
+              <img src="{$theme-prefix}/images/top_nav/home_off.png" alt="Home" class="rollover" />
+            </xsl:otherwise>
+          </xsl:choose>
         </a>
       </li>
       <li>

@@ -93,12 +93,12 @@
       <div class="links">
         <div class="content_wrapper">
           <div class="content">
-            <form id="search">
+            <!--form id="search">
               <fieldset>
                 <input type="text" class="search" value="search" />
                 <input type="submit" class="submit" value="search" />
               </fieldset>
-            </form>
+            </form -->
             <h2><img src="{$theme-prefix}/images/titles/useful_links.png" alt="Useful Links" /></h2>
             <ul>
               <xsl:for-each select="//nav:greetingItem//links">

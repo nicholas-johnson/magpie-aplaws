@@ -150,7 +150,7 @@
                 </div>
                 <div class="answer">
                   <div class="content">
-                    All bins need to be out by 7am. If bins are not out by 7am you may miss your collections. Collection crews cannot return if the bin is out late.
+                    <xsl:value-of select="nav:attribute[@name='summary']" />&#160;
                   </div>
                 </div>
               </li>
@@ -171,7 +171,7 @@
                 </div>
                 <div class="answer">
                   <div class="content">
-                    All bins need to be out by 7am. If bins are not out by 7am you may miss your collections. Collection crews cannot return if the bin is out late.
+                    <xsl:value-of select="nav:attribute[@name='summary']" />&#160;
                   </div>
                 </div>
               </li>

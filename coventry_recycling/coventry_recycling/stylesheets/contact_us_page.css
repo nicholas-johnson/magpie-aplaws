@@ -1,3 +1,7 @@
+.top_row .main {
+background:#8ab5dc url(../images/backgrounds/contact/top.png) top left no-repeat;
+}
+
 .contact_block {
 float:left;
 width:300px;

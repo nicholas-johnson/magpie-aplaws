@@ -112,8 +112,8 @@
   </xsl:template>
 	
 	<xsl:template name="contact_us_css">
-	  <link rel="stylesheet" href="{$theme-prefix}/stylesheets/contact_us_page.css" type="text/css" />
     <link rel="stylesheet" href="{$theme-prefix}/stylesheets/navigation_page.css" type="text/css" />
+	  <link rel="stylesheet" href="{$theme-prefix}/stylesheets/contact_us_page.css" type="text/css" />
 	</xsl:template>
 	
 </xsl:stylesheet>

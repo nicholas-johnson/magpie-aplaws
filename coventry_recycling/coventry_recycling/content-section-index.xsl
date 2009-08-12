@@ -120,9 +120,29 @@
             </fieldset>
           </form -->
           <h2><img src="{$theme-prefix}/images/titles/useful_links.png" alt="Useful Links" /></h2>
-          <xsl:call-template name="links">
-            <xsl:with-param name="item" select="cms:contentPanel/cms:item"/>
-          </xsl:call-template>
+          <ul>&#160;
+            <xsl:for-each select="//cms:item//links">
+              <li>
+                <xsl:if test="targetType='internalLink'">
+                  <xsl:variable name="uri">/redirect/?oid=<xsl:call-template name="url-encode"><xsl:with-param name="str" select="targetItem/@oid" /></xsl:call-template></xsl:variable>
+                  <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
+                  <xsl:variable name="title"><xsl:value-of select="linkDescription" /></xsl:variable>
+                  <a href="{$uri}" title="{$title}">
+                    <xsl:value-of select="$text" />
+                  </a>
+                </xsl:if>
+                <xsl:if test="targetType='externalLink'">
+                  <xsl:variable name="uri"><xsl:value-of select="targetURI"/></xsl:variable>
+                  <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
+                  <xsl:variable name="title">Go to external website - <xsl:value-of select="linkDescription" /></xsl:variable>
+                  <xsl:variable name="newPage">true</xsl:variable>
+                  <a href="{$uri}" title="{$title}">
+                    <xsl:value-of select="$text" />
+                  </a>
+                </xsl:if>
+              </li>
+            </xsl:for-each>
+          </ul>
         </div>
       </div>
     </div>

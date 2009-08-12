@@ -58,7 +58,7 @@
             </form -->
             <h2><img src="{$theme-prefix}/images/titles/useful_links.png" alt="Useful Links" /></h2>
             <ul>&#160;
-              <xsl:for-each select="//nav:greetingItem//links">
+              <xsl:for-each select="//cms:item//links">
                 <li>
                   <xsl:if test="targetType='internalLink'">
                     <xsl:variable name="uri">/redirect/?oid=<xsl:call-template name="url-encode"><xsl:with-param name="str" select="targetItem/@oid" /></xsl:call-template></xsl:variable>

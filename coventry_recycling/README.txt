@@ -1,3 +1,10 @@
+Directory Contents:
+
+content_images - images required for initial content items.
+coventry recycling - the recycling theme
+resources - original psds for all pages plus helvetica neue bold font and some ai files.
+
+
 How to create the Coventry recycling subsite
 
 1. Install the theme

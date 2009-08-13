@@ -7,6 +7,7 @@ margin: 0;
 padding: 0;
 line-height:1.6em;
 text-align:center;
+background:#fff url(../images/backgrounds/bg.png) left top repeat-x;
 }
 
 #wrapper {
@@ -142,7 +143,7 @@ display:block;
 
 #footer {
 height:121px;
-background: #0074b4 url(../images/footer/footer_bg.png) top left no-repeat;
+background: transparent url(../images/footer/footer_bg.png) top left no-repeat;
 position:relative;
 margin-top:30px;
 }

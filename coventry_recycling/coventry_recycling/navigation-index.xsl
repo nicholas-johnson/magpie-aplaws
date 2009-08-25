@@ -93,12 +93,13 @@
       <div class="links">
         <div class="content_wrapper">
           <div class="content">
-            <!--form id="search">
+            <form id="search" action="http://coventry-live-search-recycling.runtime-collective.com/search/search">
               <fieldset>
-                <input type="text" class="search" value="search" />
-                <input type="submit" class="submit" value="search" />
+                <input type="text" class="search" name="term" value="search" />
+                <input type="hidden" name="page" value="1" />
+                <input type="submit" class="submit" value="Search" />
               </fieldset>
-            </form -->
+            </form>
             <h2><img src="{$theme-prefix}/images/titles/useful_links.png" alt="Useful Links" /></h2>
             <ul>
               <xsl:for-each select="//nav:greetingItem//links">

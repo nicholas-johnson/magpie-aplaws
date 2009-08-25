@@ -1,7 +1,6 @@
 var default_text = "search";
 
 $(function() {
-  $("#search .submit").hide();
   $("#search .search").addClass("greyed_out");
   $("#search .search").focus(function() {
     if ($(this).val() == default_text) {

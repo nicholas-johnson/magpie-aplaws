@@ -1,0 +1,63 @@
+/* basic styling */
+
+body {
+  font-size: 90%;
+  font-family: arial,helvetica,verdana,sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height:1.6em;
+  text-align:center;
+  background:#fff url(../images/backgrounds/bg.png) left top repeat-x;
+}
+
+#wrapper {
+  margin:0 auto;
+  text-align:left;
+  width: 90%;
+}
+
+#header {
+  border-bottom:5px solid #0188b5;
+  padding:20px 0 20px 0
+}
+
+#header h1 {
+  margin:0;
+}
+
+#header h1 a {
+  text-decoration:none;
+  color:#cc0033;
+}
+
+#header .strap a{
+  color:#999;
+}
+
+#access_links {
+  position:absolute;
+  left:-3000px;
+}
+
+#main_col {
+  float:left;
+  width:60%;
+}
+
+#left_col {
+  float:left;
+  width:19%;
+}
+
+#left_col a {
+  color:#004fa4;
+}
+
+#right_col {
+  float:right;
+  width:19%;
+}
+
+#footer {
+  clear:both;
+}

@@ -12,6 +12,18 @@
     exclude-result-prefixes="xsl ui bebop portal cms nav atoz terms">
     
   <xsl:template name="pageHeader">
+    <div class="login">
+      <xsl:choose>
+        <xsl:when test="//ui:userBanner/@screenName">
+          welcome: <xsl:value-of select="//ui:userBanner/@screenName" /> - 
+          <a href="{//ui:userBanner/@logoutURL}">logout</a>
+        </xsl:when>
+        <xsl:otherwise>
+          <a href="{//ui:userBanner/@loginExcursionURL}">login</a>
+        </xsl:otherwise>
+      </xsl:choose>
+    </div>
+    <div class="clear">&#160;</div>
     <div id="header">
       <div class="title">
         <h1>

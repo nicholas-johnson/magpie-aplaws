@@ -16,9 +16,24 @@ body {
   width: 90%;
 }
 
+.login {
+  float:right;
+  color:#999;
+  padding:0;
+  font-size:0.8em;
+}
+
+.login a {
+  color:#999;
+}
+
+.login a:hover {
+  color:#f00;
+}
+
 #header {
   border-bottom:5px solid #0188b5;
-  padding:30px 0 0 0
+  padding:20px 0 0 0;
 }
 
 #header .title {

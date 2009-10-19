@@ -72,7 +72,7 @@
           <xsl:call-template name="accessLinks" />
           <xsl:call-template name="pageHeader" />
           <xsl:call-template name="topLinks" />
-          <xsl:call-template name="contentSectionContent" />
+          <xsl:call-template name="content" />
           <div class="clear">&#160;</div>
           <xsl:call-template name="pageFooter" />
         </div>
@@ -80,83 +80,62 @@
     </html>
   </xsl:template>
   
-  <xsl:template name="contentSectionContent">
-    <xsl:choose>
-      <xsl:when test="(count(cms:contentPanel/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(cms:contentPanel/cms:item/fileAttachments) > 0)">
-        <xsl:call-template name="contentMain" />
-        <xsl:call-template name="contentRelated" />
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:call-template name="contentMain" />
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
   
-  <xsl:template name="contentMain">
-    <a name="content" class="access">&#160;</a>
-    <div class="main">
-      <div class="content_wrapper">
-        <div class="content">
-          <!-- xsl:if test="//nav:greetingItem//imageAttachments[useContext='title']">
-            <h1>
-              <img src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={//nav:greetingItem//imageAttachments[useContext='title']//id}" alt="{//nav:greetingItem//imageAttachments[useContext='title']//description}" />
-            </h1>
-          </xsl:if -->
-          <xsl:apply-templates select="cms:contentPanel/cms:item"/>
-          <xsl:apply-templates select="cms:articleSectionPanel"/>
-        </div>
+  <xsl:template name="content">
+    <div id="left_col">
+      <a name="navigation" class="access">&#160;</a>
+      <h2>Navigation</h2>
+      <a name="nav" class="access">&#160;</a>
+      <xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
+    </div>
+    
+    <div>
+      <xsl:choose>
+        <xsl:when test="(count(cms:contentPanel/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(cms:contentPanel/cms:item/fileAttachments) > 0)">
+          <xsl:attribute name="id">main_col</xsl:attribute>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:attribute name="id">main_col_wide</xsl:attribute>
+        </xsl:otherwise>
+      </xsl:choose>
+      <a name="content" class="access">&#160;</a>
+      <div class="content">
+        <xsl:apply-templates select="cms:contentPanel/cms:item"/>
+        <xsl:apply-templates select="cms:articleSectionPanel"/>
       </div>
     </div>
-  </xsl:template>
-  
-  <xsl:template name="contentRelated">
-    <div class="links">
-      <div class="content_wrapper">
-        <div class="content">
-          <!-- form id="search">
-            <fieldset>
-              <input type="text" class="search" value="search" />
-              <input type="submit" class="submit" value="search" />
-            </fieldset>
-          </form -->
-          <h2><img src="{$theme-prefix}/images/titles/useful_links.png" alt="Useful Links" /></h2>
-          <ul>&#160;
-            <xsl:for-each select="//cms:item//links">
-              <li>
-                <xsl:if test="targetType='internalLink'">
-                  <xsl:variable name="uri">/redirect/?oid=<xsl:call-template name="url-encode"><xsl:with-param name="str" select="targetItem/@oid" /></xsl:call-template></xsl:variable>
-                  <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
-                  <xsl:variable name="title"><xsl:value-of select="linkDescription" /></xsl:variable>
-                  <a href="{$uri}" title="{$title}">
-                    <xsl:value-of select="$text" />
-                  </a>
-                </xsl:if>
-                <xsl:if test="targetType='externalLink'">
-                  <xsl:variable name="uri"><xsl:value-of select="targetURI"/></xsl:variable>
-                  <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
-                  <xsl:variable name="title">Go to external website - <xsl:value-of select="linkDescription" /></xsl:variable>
-                  <xsl:variable name="newPage">true</xsl:variable>
-                  <a href="{$uri}" title="{$title}">
-                    <xsl:value-of select="$text" />
-                  </a>
-                </xsl:if>
-              </li>
-            </xsl:for-each>
-          </ul>
-        </div>
+    
+    <xsl:if test="(count(cms:contentPanel/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(cms:contentPanel/cms:item/fileAttachments) > 0)">
+      <div id="right_col">
+        <h2>Useful Links</h2>
+        <ul>&#160;
+          <xsl:for-each select="//cms:item//links">
+            <li>
+              <xsl:if test="targetType='internalLink'">
+                <xsl:variable name="uri">/redirect/?oid=<xsl:call-template name="url-encode"><xsl:with-param name="str" select="targetItem/@oid" /></xsl:call-template></xsl:variable>
+                <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
+                <xsl:variable name="title"><xsl:value-of select="linkDescription" /></xsl:variable>
+                <a href="{$uri}" title="{$title}">
+                  <xsl:value-of select="$text" />
+                </a>
+              </xsl:if>
+              <xsl:if test="targetType='externalLink'">
+                <xsl:variable name="uri"><xsl:value-of select="targetURI"/></xsl:variable>
+                <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
+                <xsl:variable name="title">Go to external website - <xsl:value-of select="linkDescription" /></xsl:variable>
+                <xsl:variable name="newPage">true</xsl:variable>
+                <a href="{$uri}" title="{$title}">
+                  <xsl:value-of select="$text" />
+                </a>
+              </xsl:if>
+            </li>
+          </xsl:for-each>
+        </ul>
       </div>
-    </div>
+    </xsl:if>
   </xsl:template>
       
   <xsl:template name="cssContent">
-    <xsl:choose>
-      <xsl:when test="(count(cms:contentPanel/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(cms:contentPanel/cms:item/fileAttachments) > 0)">
-        <link rel="stylesheet" href="{$theme-prefix}/stylesheets/two_col_content.css" type="text/css" />
-      </xsl:when>
-      <xsl:otherwise>
-        <link rel="stylesheet" href="{$theme-prefix}/stylesheets/one_col_content.css" type="text/css" />
-      </xsl:otherwise>
-    </xsl:choose>
     <link rel="stylesheet" href="{$theme-prefix}/stylesheets/content_page.css" type="text/css" />
   </xsl:template>
 

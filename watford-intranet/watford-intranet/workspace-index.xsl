@@ -80,9 +80,11 @@
       <xsl:apply-templates select="//portal:homepageWorkspace[@id='left']" />
     </div>
     <div id="main_col">
-      <a name="content" class="access">&#160;</a>
-      <xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />
-      <div class="clear">&#160;</div>
+      <div class="content">
+        <a name="content" class="access">&#160;</a>
+        <xsl:apply-templates select="//portal:homepageWorkspace[@id='middle']" />
+        <div class="clear">&#160;</div>
+      </div>
     </div>
     <div id="right_col">
       <xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />

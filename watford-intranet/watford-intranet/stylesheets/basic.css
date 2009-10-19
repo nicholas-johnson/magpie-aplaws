@@ -13,6 +13,11 @@ body {
   font-size:1px;
 }
 
+.access {
+  font-size:1px;
+  line-height:1px;
+}
+
 /* Anchors */
 
 
@@ -35,7 +40,7 @@ a img {
 h1 {
   font-size:2em;
   font-weight:normal;
-  margin:35px 0 63px 0;
+  margin:20px 0 20px 0;
   padding:0;
 }
 

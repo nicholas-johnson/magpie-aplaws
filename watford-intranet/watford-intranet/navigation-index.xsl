@@ -60,15 +60,14 @@
         <xsl:call-template name="css" />
         <xsl:call-template name="navigation_css" />
         <xsl:call-template name="javascript" />
-        <xsl:call-template name="navigation_javascript" />
       </head>
       <body>
         <div id="wrapper">
           <xsl:call-template name="accessLinks" />
           <xsl:call-template name="pageHeader" />
           <xsl:call-template name="topLinks" />
+          <xsl:call-template name="navigationBreadcrumb" />
           <xsl:call-template name="navigationContent" />
-          <div class="clear">&#160;</div>
           <xsl:call-template name="pageFooter" />
         </div>
       </body>
@@ -76,109 +75,45 @@
   </xsl:template>
   
   <xsl:template name="navigationContent">
-    <div class="top_row">
-      <a name="content" class="access">&#160;</a>
-      <div class="main">
-        <div class="content_wrapper">
-          <div class="content">
-            <xsl:if test="//nav:greetingItem//imageAttachments[useContext='title']">
-              <h1>
-                <img src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={//nav:greetingItem//imageAttachments[useContext='title']//id}" alt="{//nav:greetingItem//imageAttachments[useContext='title']//description}" />
-              </h1>
-            </xsl:if>
-            <xsl:value-of select="//nav:greetingItem//textAsset/content" disable-output-escaping="yes" />
-          </div>
-        </div>
-      </div>
-      <div class="links">
-        <div class="content_wrapper">
-          <div class="content">
-            <!--form id="search">
-              <fieldset>
-                <input type="text" class="search" value="search" />
-                <input type="submit" class="submit" value="search" />
-              </fieldset>
-            </form -->
-            <h2><img src="{$theme-prefix}/images/titles/useful_links.png" alt="Useful Links" /></h2>
-            <ul>
-              <xsl:for-each select="//nav:greetingItem//links">
-                <li>
-                  <xsl:if test="targetType='internalLink'">
-                    <xsl:variable name="uri">/redirect/?oid=<xsl:call-template name="url-encode"><xsl:with-param name="str" select="targetItem/@oid" /></xsl:call-template></xsl:variable>
-                    <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
-                    <xsl:variable name="title"><xsl:value-of select="linkDescription" /></xsl:variable>
-                    <a href="{$uri}" title="{$title}">
-                      <xsl:value-of select="$text" />
-                    </a>
-                  </xsl:if>
-                  <xsl:if test="targetType='externalLink'">
-                    <xsl:variable name="uri"><xsl:value-of select="targetURI"/></xsl:variable>
-                    <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
-                    <xsl:variable name="title">Go to external website - <xsl:value-of select="linkDescription" /></xsl:variable>
-                    <xsl:variable name="newPage">true</xsl:variable>
-                    <a href="{$uri}" title="{$title}">
-                      <xsl:value-of select="$text" />
-                    </a>
-                  </xsl:if>
-                </li>
-              </xsl:for-each>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="clear">&#160;</div>
+    <div id="left_col">
+      <a name="navigation" class="access">&#160;</a>
+      <h2>Navigation</h2>
+      <a name="nav" class="access">&#160;</a>
+      <xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
     </div>
-    <xsl:if test="//nav:greetingItem//imageAttachments[useContext='items']">
-      <div class="middle_row">
-        <img src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={//nav:greetingItem//imageAttachments[useContext='items']//id}" alt="{//nav:greetingItem//imageAttachments[useContext='items']//description}" />
+    <div id="main_col">
+      <div class="content">
+        <a name="content" class="access">&#160;</a>
+        <h2><xsl:value-of select="/nav:categoryList/nav:category[last()]" /></h2>
+        <xsl:apply-templates select="nav:greetingItem" />
+        <xsl:apply-templates select="nav:simpleObjectList" mode="alphabetical" />
       </div>
-    </xsl:if>
-    
-    
-    <div class="bottom_row">
-      <xsl:variable name="faq_divider" select="ceiling(count(nav:simpleObjectList[@id='itemList']//nav:item) div 2)" />
-      <div class="faq accordian_1">
-        <div class="content_wrapper">
-          <h2><img src="{$theme-prefix}/images/titles/frequently_asked_questions.png" alt="Frequently asked questions" /></h2>
-          <ul>
-            <xsl:for-each select="nav:simpleObjectList[@id='itemList']//nav:item[position() &lt; ($faq_divider + 1)]">
-              <li>
-                <div class="question">
-                  <h3>
-                    <xsl:value-of select="nav:attribute[@name='title']" />
-                  </h3>
-                </div>
-                <div class="answer">
-                  <div class="content">
-                    <xsl:value-of select="nav:attribute[@name='summary']" disable-output-escaping="yes" />&#160;
-                  </div>
-                </div>
-              </li>
-            </xsl:for-each>
-          </ul>
-        </div>
-      </div>
-      <div class="faq accordian_2">
-        <div class="content_wrapper">
-          <h2><img src="{$theme-prefix}/images/titles/continued.png" alt="continued..." /></h2>
-          <ul>
-            <xsl:for-each select="nav:simpleObjectList[@id='itemList']//nav:item[position() &gt; ($faq_divider)]">
-              <li>
-                <div class="question">
-                  <h3>
-                    <xsl:value-of select="nav:attribute[@name='title']" />
-                  </h3>
-                </div>
-                <div class="answer">
-                  <div class="content">
-                    <xsl:value-of select="nav:attribute[@name='summary']" disable-output-escaping="yes" />&#160;
-                  </div>
-                </div>
-              </li>
-            </xsl:for-each>
-          </ul>
-        </div>
-      </div>
+    </div>
+    <div id="right_col">
+      <h2>Useful Links</h2>
+      <ul>
+        <xsl:for-each select="//nav:greetingItem//links">
+          <li>
+            <xsl:if test="targetType='internalLink'">
+              <xsl:variable name="uri">/redirect/?oid=<xsl:call-template name="url-encode"><xsl:with-param name="str" select="targetItem/@oid" /></xsl:call-template></xsl:variable>
+              <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
+              <xsl:variable name="title"><xsl:value-of select="linkDescription" /></xsl:variable>
+              <a href="{$uri}" title="{$title}">
+                <xsl:value-of select="$text" />
+              </a>
+            </xsl:if>
+            <xsl:if test="targetType='externalLink'">
+              <xsl:variable name="uri"><xsl:value-of select="targetURI"/></xsl:variable>
+              <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
+              <xsl:variable name="title">Go to external website - <xsl:value-of select="linkDescription" /></xsl:variable>
+              <xsl:variable name="newPage">true</xsl:variable>
+              <a href="{$uri}" title="{$title}">
+                <xsl:value-of select="$text" />
+              </a>
+            </xsl:if>
+          </li>
+        </xsl:for-each>
+      </ul>
     </div>
   </xsl:template>
   
@@ -186,9 +121,8 @@
     <link rel="stylesheet" href="{$theme-prefix}/stylesheets/navigation_page.css" type="text/css" />
   </xsl:template>
   
-	<xsl:template name="navigation_javascript">
-		<script src="{$theme-prefix}/javascripts/accordian.js">&#160;</script>
-	</xsl:template>
-	
+  <xsl:template name="navigationBreadcrumb">
+    <xsl:apply-templates select="nav:categoryPath" />
+  </xsl:template>
   
 </xsl:stylesheet>

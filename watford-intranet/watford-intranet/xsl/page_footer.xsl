@@ -12,7 +12,7 @@
     
   <xsl:template name="pageFooter">
     <div id="footer">
-      <a href="http://www.coventry.gov.uk">
+      <a href="http://www.watford.gov.uk">
         Watford
       </a>
     </div>

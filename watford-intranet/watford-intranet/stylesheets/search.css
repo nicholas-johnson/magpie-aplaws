@@ -1,0 +1,26 @@
+.info {
+  font-size:0.8em;
+  line-height:1em
+}
+
+.resultsPage {
+  margin:30px 0 0 0;
+}
+
+#resultsList {
+  padding:10px 0;
+}
+
+#resultsList .searchResult {
+  margin:10px 0 20px 0;
+}
+
+#resultsList .searchResult a {
+  font-weight:bold;
+  line-height:1.2em;
+}
+
+#resultsList .searchResult p {
+  margin:0;
+  line-height:1.2em;
+}

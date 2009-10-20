@@ -95,7 +95,7 @@
           <xsl:attribute name="id">main_col</xsl:attribute>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:attribute name="id">main_col_wide</xsl:attribute>
+          <xsl:attribute name="id">wide_main_col</xsl:attribute>
         </xsl:otherwise>
       </xsl:choose>
       <a name="content" class="access">&#160;</a>

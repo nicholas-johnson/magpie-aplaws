@@ -47,6 +47,7 @@
         </title>
         <xsl:call-template name="metaData"/>
         <xsl:call-template name="css" />
+        <xsl:call-template name="searchCss" />
         <xsl:call-template name="javascript" />
       </head>
       <body>
@@ -73,8 +74,8 @@
   </xsl:template>
   
   <xsl:template name="searchMain">
-    <div id="content">
-      <h2>Search</h2>
+    <div class="content">
+      <h2>Search: <xsl:value-of select="//search:query/search:terms/@value" /></h2>
       <xsl:choose>
         <xsl:when test="@id='search'">
           <xsl:call-template name="searchBasic" />
@@ -105,6 +106,43 @@
   
   <xsl:template name="searchBreadcrumb">
     <div id="breadcrumb"><a href="{$dispatcher-prefix}/">Home</a> &gt; Search</div>
+  </xsl:template>
+  
+  <xsl:template name="searchCss">
+    <link rel="stylesheet" href="{$theme-prefix}/stylesheets/search.css" type="text/css"/>
+  </xsl:template>
+  
+  
+  <xsl:template name="searchBasic">
+    <div class="item">
+      <xsl:for-each select="bebop:form[@name='search']">
+        <div id="searchArea">
+          <div class="info">
+            <xsl:choose>
+              <xsl:when test="//search:results">
+                <xsl:apply-templates select="//search:paginator" mode="results-summary" />
+              </xsl:when>
+              <xsl:otherwise>
+                <p>Type one or more words into the box below and click 'Search'</p>
+              </xsl:otherwise>
+            </xsl:choose>
+          </div><!-- /info -->
+          <form name="{@name}" id="{@name}" method="get" action="{@action}">
+            <label class="searchLabel" for="terms">Search for: </label>
+            <input class="searchBox" id="terms" name="terms">
+              <xsl:attribute name="value">
+                <xsl:value-of select="./search:query/search:terms/@value" />
+              </xsl:attribute>
+            </input>
+            <input type="submit" name="Submit" id="basicSearchGo" value="Search" class="adgo" />
+            <xsl:apply-templates select="bebop:pageState" />
+          </form>
+        </div><!-- /searchArea -->
+      </xsl:for-each>
+    </div><!-- /item -->
+    <xsl:if test="/bebop:page/search:results/search:paginator/@objectCount &gt; 0">
+      <xsl:apply-templates select="search:results" />
+    </xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>

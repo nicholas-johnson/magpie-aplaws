@@ -12,9 +12,16 @@
     
   <xsl:template name="pageFooter">
     <div id="footer">
-      <a href="http://www.watford.gov.uk">
-        Watford
-      </a>
+      <ul>
+        <li>&#169; 2009 Watford Borough Council</li>
+        <li>
+          <a href="http://www.watford.gov.uk">Watford Website</a>
+        </li>
+        <li>
+          <a href="mailto:enquiries@watford.gov.uk">Contact the Web Team</a>
+        </li>
+        
+      </ul>
     </div>
   </xsl:template>
   

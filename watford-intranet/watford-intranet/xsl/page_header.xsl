@@ -40,7 +40,7 @@
           <label for="terms">Search for: </label>
           <input class="search_field" id="terms" name="terms">
             <xsl:choose>
-              <xsl:when test="//search:query/search/terms">
+              <xsl:when test="//search:query/search:terms">
                 <xsl:attribute name="value">
                   <xsl:value-of select="//search:query/search:terms/@value" />
                 </xsl:attribute>

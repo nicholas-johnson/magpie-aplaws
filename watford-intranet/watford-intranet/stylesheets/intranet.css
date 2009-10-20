@@ -137,4 +137,20 @@ padding:0 0 0 5%
 
 #footer {
   clear:both;
+  font-size:0.9em;
+  color:#999;
+  padding:40px 0 0 26%;
+}
+
+#footer li {
+  float:left;
+  padding:0 20px 0 0;
+}
+
+#footer a {
+  color:#999;
+}
+
+#footer a:hover {
+  color:#f00;
 }

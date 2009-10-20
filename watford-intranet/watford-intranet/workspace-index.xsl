@@ -92,7 +92,6 @@
   </xsl:template>
   
   <xsl:template name="cssHomepage">
-    <link rel="stylesheet" href="{$theme-prefix}/stylesheets/navigation_page.css" type="text/css" />
     <link rel="stylesheet" href="{$theme-prefix}/stylesheets/homepage.css" type="text/css" />
   </xsl:template>
 

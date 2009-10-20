@@ -9,9 +9,4 @@
         exclude-result-prefixes="xsl admin bebop cms portal portlet"
         version="1.0">
 
-
-	<xsl:template match="bebop:portlet[portlet:contentItem]">
-		Rudi!!
-	</xsl:template>
-
 </xsl:stylesheet>

@@ -16,5 +16,6 @@
 	<xsl:import href="links.xsl" />
 	<xsl:import href="item.xsl" />
 	<xsl:import href="date.xsl" />
+	<xsl:import href="inline_site.xsl" />
 
 </xsl:stylesheet>

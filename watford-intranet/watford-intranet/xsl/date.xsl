@@ -12,25 +12,23 @@
 		
 	<xsl:template name="date">
 		<xsl:param name="date" />
-		<xsl:value-of select="substring($date, 8, 4)" />
-		<xsl:text> </xsl:text>
+		<xsl:value-of select="substring($date, 8, 3)" />
+		<xsl:text>/</xsl:text>
 		<xsl:variable name="month" select="substring($date, 5, 3)"/>
 		<xsl:choose>
-			<xsl:when test="$month='Jan'">January</xsl:when>
-			<xsl:when test="$month='Feb'">February</xsl:when>
-			<xsl:when test="$month='Mar'">March</xsl:when>
-			<xsl:when test="$month='Apr'">April</xsl:when>
-			<xsl:when test="$month='May'">May</xsl:when>
-			<xsl:when test="$month='Jun'">June</xsl:when>
-			<xsl:when test="$month='Jul'">July</xsl:when>
-			<xsl:when test="$month='Aug'">August</xsl:when>
-			<xsl:when test="$month='Sep'">September</xsl:when>
-			<xsl:when test="$month='Oct'">October</xsl:when>
-			<xsl:when test="$month='Nov'">November</xsl:when>
-			<xsl:when test="$month='Dec'">December</xsl:when>
+			<xsl:when test="$month='Jan'">1</xsl:when>
+			<xsl:when test="$month='Feb'">2</xsl:when>
+			<xsl:when test="$month='Mar'">3</xsl:when>
+			<xsl:when test="$month='Apr'">4</xsl:when>
+			<xsl:when test="$month='May'">5</xsl:when>
+			<xsl:when test="$month='Jun'">6</xsl:when>
+			<xsl:when test="$month='Jul'">7</xsl:when>
+			<xsl:when test="$month='Aug'">8</xsl:when>
+			<xsl:when test="$month='Sep'">9</xsl:when>
+			<xsl:when test="$month='Oct'">10</xsl:when>
+			<xsl:when test="$month='Nov'">11</xsl:when>
+			<xsl:when test="$month='Dec'">12</xsl:when>
 		</xsl:choose>
-		<xsl:text> </xsl:text>
-		<xsl:value-of select="number(substring($date, 25, 4))" />
 	</xsl:template>
 
 </xsl:stylesheet>

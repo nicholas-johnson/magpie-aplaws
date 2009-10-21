@@ -37,21 +37,26 @@
       <xsl:attribute name="style">background:transparent url(http://www.watford.gov.uk/ext-static/<xsl:value-of select="translate(@title, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ &amp;-_%#@', 'abcdefghijklmnopqrstuvwxyz')" />.png) top right no-repeat;</xsl:attribute>
       <h2><xsl:value-of select="@title" /></h2>
       <xsl:for-each select="nav:objectList/nav:item">
-        <h3><a href="{nav:path}"><xsl:value-of select="nav:attribute[@name='title']" /></a></h3>
+        <h3>
+          <a href="{nav:path}">
+            <xsl:if test="nav:attribute[@name='newsDate']">
+              <strong class="date"><xsl:text> </xsl:text>
+                <xsl:call-template name="date">
+                  <xsl:with-param name="date">
+                    <xsl:value-of select="nav:attribute[@name='newsDate']" />
+                  </xsl:with-param>
+                </xsl:call-template>
+              </strong> - 
+            </xsl:if>
+            <xsl:value-of select="nav:attribute[@name='title']" />
+          </a>
+        </h3>
         <p>
           <xsl:if test="nav:attribute[@name='imageAttachments.image.id']">
-            <img align="left" border="1" style="width:60px; height:60px;" src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={nav:attribute[@name='imageAttachments.image.id']}" alt="nav:attribute[@name='imageAttachments.caption']" />
+            <img align="left" style="width:60px; height:60px;" src="{$dispatcher-prefix}/cms-service/stream/image/?image_id={nav:attribute[@name='imageAttachments.image.id']}" alt="nav:attribute[@name='imageAttachments.caption']" />
           </xsl:if>
+          
           <xsl:value-of select="nav:attribute[@name='lead']"/>
-          <xsl:if test="nav:attribute[@name='newsDate']">
-            <strong class="date"><xsl:text> </xsl:text>Posted on 
-              <xsl:call-template name="date">
-                <xsl:with-param name="date">
-                  <xsl:value-of select="nav:attribute[@name='newsDate']" />
-                </xsl:with-param>
-              </xsl:call-template>
-            </strong>
-          </xsl:if>
           <div class="clear">&#160;</div>
         </p>
       </xsl:for-each>

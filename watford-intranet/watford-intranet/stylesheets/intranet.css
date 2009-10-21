@@ -106,7 +106,12 @@ float:right;
 }
 
 #main_col .content, #wide_main_col .content {
-  padding:0 0 0 5%
+  padding:0 2% 0 7%
+}
+
+#main_col .content img, #wide_main_col .content img {
+float: right;
+margin:0 0 0.5em 0.5em;
 }
 
 #left_col {

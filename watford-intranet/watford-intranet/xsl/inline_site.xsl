@@ -26,7 +26,7 @@
 					<xsl:attribute name="frameborder">0</xsl:attribute>
 					<xsl:attribute name="name">content</xsl:attribute>
 					<xsl:attribute name="width">100%</xsl:attribute>
-					<xsl:attribute name="height">400</xsl:attribute>
+					<xsl:attribute name="height">800</xsl:attribute>
 					<xsl:attribute name="scrolling">auto</xsl:attribute>
 					<xsl:attribute name="src">
 						<xsl:value-of select="url" />

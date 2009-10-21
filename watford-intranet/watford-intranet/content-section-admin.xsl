@@ -9,8 +9,6 @@
 
   <xsl:import href="../../../../ROOT/__ccm__/apps/content-section/xsl/admin.xsl"/>
   <xsl:import href="../../../../ROOT/packages/bebop/xsl/dcp.xsl"/>
-
-  <xsl:import href="../../../../ROOT/__ccm__/themes/aplaws/category-step.xsl"/>
   
   <xsl:param name="theme-prefix" />
 

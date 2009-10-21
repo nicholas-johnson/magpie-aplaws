@@ -16,6 +16,7 @@
       <xsl:choose>
         <xsl:when test="//ui:userBanner/@screenName">
           welcome: <xsl:value-of select="//ui:userBanner/@screenName" /> - 
+          <a href="{$dispatcher-prefix}/content-center">content center</a> -
           <a href="{//ui:userBanner/@logoutURL}">logout</a>
         </xsl:when>
         <xsl:otherwise>

@@ -11,6 +11,7 @@
 
 
 <xsl:template match="portlet:login">
+  RUDI
   <div id="loginBox"><xsl:apply-templates /></div>
 </xsl:template>
 
@@ -25,8 +26,6 @@
     </xsl:for-each>
 		<li><a href="{$dispatcher-prefix}/register/logout" title="Logout">Logout</a></li>
   </ul>
-<span class="hide">|</span>
-<div id="registerB"><a title="why register?" href="/whyregister">why register?</a></div>
 
 </xsl:template>
 

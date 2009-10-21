@@ -72,7 +72,7 @@ float:right;
 
 #header .atoz a {
   display:block;
-  width:1.5em;
+  width:1.4em;
 }
 
 #header .atoz a.selected {
@@ -106,7 +106,7 @@ float:right;
 }
 
 #main_col .content, #wide_main_col .content {
-padding:0 0 0 5%
+  padding:0 0 0 5%
 }
 
 #left_col {

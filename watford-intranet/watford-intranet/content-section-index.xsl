@@ -103,6 +103,8 @@
         <xsl:apply-templates select="cms:contentPanel/cms:item"/>
         <xsl:apply-templates select="cms:articleSectionPanel"/>
       </div>
+      <xsl:if test="//ui:userBanner/@screenName">
+      </xsl:if>
     </div>
     
     <xsl:if test="(count(cms:contentPanel/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(cms:contentPanel/cms:item/fileAttachments) > 0)">

@@ -97,4 +97,18 @@
     </div>
   </xsl:template>
   
+  <xsl:template match="portlet:loginuser">
+    <h2>Welcome <strong><xsl:value-of select="@givenName" />&#xA0;<xsl:value-of select="@familyName" /></strong> </h2>
+    <ul>
+      <xsl:for-each select="bebop:link">
+        <li>
+          <xsl:apply-templates select="." />
+        </li>
+      </xsl:for-each>
+      <li>
+        <a href="{$dispatcher-prefix}/register/logout" title="Logout">Logout</a>
+      </li>
+    </ul>
+  </xsl:template>
+  
 </xsl:stylesheet>

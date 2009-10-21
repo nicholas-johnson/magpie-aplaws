@@ -35,108 +35,111 @@
           <a href="http://www.watford.gov.uk">Watford Borough Council</a>
         </div>
       </div>
-      <div class="search">
-        <form method="get" action="{$dispatcher-prefix}/search">
-          <label for="terms">Search for: </label>
-          <input class="search_field" id="terms" name="terms">
-            <xsl:choose>
-              <xsl:when test="//search:query/search:terms">
-                <xsl:attribute name="value">
-                  <xsl:value-of select="//search:query/search:terms/@value" />
-                </xsl:attribute>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:attribute name="value">
-                  <xsl:text>search</xsl:text>
-                </xsl:attribute>
-              </xsl:otherwise>
-            </xsl:choose>
-          </input>
-          <input type="submit" name="Submit" id="basicSearchGo" value="Search" class="adgo" />
-          <xsl:apply-templates select="bebop:pageState" />
-        </form>
-      </div>
-      <div class="atoz">
-        <ul>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">a</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">b</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">c</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">d</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">e</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">f</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">g</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">h</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">i</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">j</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">k</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">l</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">m</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">n</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">o</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">p</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">q</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">r</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">s</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">t</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">u</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">v</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">w</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">x</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">y</xsl:with-param>
-          </xsl:call-template>
-          <xsl:call-template name="atozLetter">
-            <xsl:with-param name="letter">z</xsl:with-param>
-          </xsl:call-template>
-        </ul>
+      <div class="finder">
+        <div class="search">
+          <form method="get" action="{$dispatcher-prefix}/search">
+            <label for="terms">Search for: </label>
+            <input class="search_field" id="terms" name="terms">
+              <xsl:choose>
+                <xsl:when test="//search:query/search:terms">
+                  <xsl:attribute name="value">
+                    <xsl:value-of select="//search:query/search:terms/@value" />
+                  </xsl:attribute>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:attribute name="value">
+                    <xsl:text>search</xsl:text>
+                  </xsl:attribute>
+                </xsl:otherwise>
+              </xsl:choose>
+            </input>
+            <input type="submit" name="Submit" id="basicSearchGo" value="Search" class="adgo" />
+            <xsl:apply-templates select="bebop:pageState" />
+          </form>
+        </div>
+        <div class="clear">&#160;</div>
+        <div class="atoz">
+          <ul>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">a</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">b</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">c</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">d</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">e</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">f</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">g</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">h</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">i</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">j</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">k</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">l</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">m</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">n</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">o</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">p</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">q</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">r</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">s</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">t</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">u</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">v</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">w</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">x</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">y</xsl:with-param>
+            </xsl:call-template>
+            <xsl:call-template name="atozLetter">
+              <xsl:with-param name="letter">z</xsl:with-param>
+            </xsl:call-template>
+          </ul>
+        </div>
       </div>
       <div class="clear">&#160;</div>
     </div>

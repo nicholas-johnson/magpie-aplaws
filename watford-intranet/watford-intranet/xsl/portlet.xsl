@@ -34,6 +34,7 @@
   
   <xsl:template match="bebop:portlet[nav:objectList]">
     <div class="content_list">
+      <xsl:attribute name="style">background:transparent url(http://www.watford.gov.uk/ext-static/<xsl:value-of select="translate(@title, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ &amp;-_%#@', 'abcdefghijklmnopqrstuvwxyz')" />.png) top right no-repeat;</xsl:attribute>
       <h2><xsl:value-of select="@title" /></h2>
       <xsl:for-each select="nav:objectList/nav:item">
         <h3><a href="{nav:path}"><xsl:value-of select="nav:attribute[@name='title']" /></a></h3>
@@ -58,35 +59,38 @@
   </xsl:template>
 
   <xsl:template match="bebop:portlet[portlet:contentDirectory]">
-    <h2>
-      <span>Navigation</span>
-    </h2>
-    <a name="nav" class="access">&#160;</a>
-    <ul>
-      <xsl:for-each select="portlet:contentDirectory/portlet:contentDirectoryEntry">
-        <xsl:sort select="@name"/>
-        <li>
-          <xsl:attribute name="class">
-            <xsl:value-of select="translate(@name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.:;()+-&amp;', 'abcdefghijklmnopqrstuvwxyz')"/>
-          </xsl:attribute>
-          <a>
-            <xsl:attribute name="href">
-              <xsl:value-of select="@url"/>
+    <div class="navigation">
+      <h2>
+        <span>Navigation</span>
+      </h2>
+      <a name="nav" class="access">&#160;</a>
+      <ul>
+        <xsl:for-each select="portlet:contentDirectory/portlet:contentDirectoryEntry">
+          <xsl:sort select="@name"/>
+          <li>
+            <xsl:attribute name="class">
+              <xsl:value-of select="translate(@name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.:;()+-&amp;', 'abcdefghijklmnopqrstuvwxyz')"/>
             </xsl:attribute>
-            <xsl:value-of select="@name"/>
-          </a>
-        </li>
-      </xsl:for-each>
-    </ul>
+            <a>
+              <xsl:attribute name="href">
+                <xsl:value-of select="@url"/>
+              </xsl:attribute>
+              <xsl:value-of select="@name"/>
+            </a>
+          </li>
+        </xsl:for-each>
+      </ul>
+    </div>
   </xsl:template>
   
   <!-- RSS Feed portlet -->
   <xsl:template match="bebop:portlet[portlet:RSSFeed]">
     <div class="rss_feed">
+      <xsl:attribute name="style">background:transparent url(http://www.watford.gov.uk/ext-static/<xsl:value-of select="translate(@title, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ &amp;-_%#@', 'abcdefghijklmnopqrstuvwxyz')" />.png) top right no-repeat;</xsl:attribute>
       <h2>
         <xsl:value-of select="@title" />
       </h2>
-      <xsl:for-each select="//item">
+      <xsl:for-each select="//item[position() &lt; 10]">
         <h3><a href="{link}"><xsl:value-of select="title" /></a></h3>
         <p><xsl:value-of select="description" /></p>
       </xsl:for-each>

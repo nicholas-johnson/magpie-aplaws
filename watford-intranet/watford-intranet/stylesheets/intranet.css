@@ -33,12 +33,13 @@ body {
 
 #header {
   border-bottom:5px solid #0188b5;
-  padding:20px 0 0 0;
+  margin:20px 0 0 0;
 }
 
 #header .title {
   float:left;
 }
+
 
 #header .title h1 {
   margin:0;
@@ -53,12 +54,15 @@ body {
   color:#999;
 }
 
+#header .finder {
+float:right;
+}
+
 #header .search {
   float:right;
 }
 
 #header .atoz {
-  clear:right;
   float:right;
 }
 
@@ -133,6 +137,10 @@ padding:0 0 0 5%
 #right_col {
   float:right;
   width:19%;
+}
+
+.navigation, .portletWrap, .content_list, .rss_feed {
+  margin:0 0 2em 0
 }
 
 #footer {

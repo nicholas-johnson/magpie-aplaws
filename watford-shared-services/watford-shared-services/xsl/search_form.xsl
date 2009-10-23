@@ -11,12 +11,11 @@
     
   <xsl:template name="search_form">
     <div class="search">
-      <!--
       <form method="get" action="{$dispatcher-prefix}/search">
         <label for="terms">Search for: </label>
         <table>
           <tr>
-            <td>
+            <td class="search_cell">
               <fieldset>
                 <input class="search_field" id="terms" name="terms">
                   <xsl:choose>
@@ -42,7 +41,6 @@
         <xsl:apply-templates select="bebop:pageState" />
       </form>
       <div class="clear">&#160;</div>
-       -->
     </div>
   </xsl:template>
   

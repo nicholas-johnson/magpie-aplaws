@@ -11,8 +11,8 @@
 	
 	
 	<xsl:template name="javascript">
-		<script src="{$theme-prefix}/javascripts/jquery-1.3.2.min.js">&#160;</script>
-		<script src="{$theme-prefix}/javascripts/search.js">&#160;</script>
+		<script src="{$theme-prefix}/javascripts/jquery-1.3.2.min.js" type="text/javascript">&#160;</script>
+		<script src="{$theme-prefix}/javascripts/search.js" type="text/javascript">&#160;</script>
 	</xsl:template>
 	
 </xsl:stylesheet>

@@ -31,7 +31,7 @@
 		<xsl:choose>
 			<xsl:when test="@url=/bebop:page/@url">
 				<li class="selected">
-					<xsl:value-of select="@title" />
+					<span><xsl:value-of select="@title" /></span>
 				</li>
 			</xsl:when>
 			<!-- If we are viewing the what's on category, only show months in the next year -->

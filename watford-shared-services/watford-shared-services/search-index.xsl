@@ -92,13 +92,12 @@
   
   <xsl:template name="searchNavigation">
     <div id="navigation">
-      <h2>Navigation</h2>
       <ul id="nav">
         <li class="home_link">
           <a href="{$dispatcher-prefix}/portal/" class="home" title="go to homepage">Home</a>
         </li>
-        <li>
-          Search
+        <li class="selected">
+          <span>Search</span>
         </li>
       </ul>
     </div>

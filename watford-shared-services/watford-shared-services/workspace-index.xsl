@@ -77,6 +77,7 @@
   
   <xsl:template name="homepageContent">
     <div id="left_col">
+      <xsl:call-template name="search_form" />
       <xsl:apply-templates select="//portal:homepageWorkspace[@id='left']" />
     </div>
     <div id="main_col">

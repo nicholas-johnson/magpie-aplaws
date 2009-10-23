@@ -76,9 +76,7 @@
   
   <xsl:template name="navigationContent">
     <div id="left_col">
-      <a name="navigation" class="access">&#160;</a>
-      <h2>Navigation</h2>
-      <a name="nav" class="access">&#160;</a>
+      <xsl:call-template name="search_form" />
       <xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
     </div>
     <div>

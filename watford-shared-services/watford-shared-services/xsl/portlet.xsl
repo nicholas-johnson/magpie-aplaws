@@ -65,9 +65,6 @@
 
   <xsl:template match="bebop:portlet[portlet:contentDirectory]">
     <div class="navigation">
-      <h2>
-        <span>Navigation</span>
-      </h2>
       <a name="nav" class="access">&#160;</a>
       <ul>
         <xsl:for-each select="portlet:contentDirectory/portlet:contentDirectoryEntry">

@@ -26,6 +26,19 @@
     </div>
     <div class="clear">&#160;</div>
     <div id="header">
+      <ul class="logos">
+        <li class="three_rivers_logo">
+          <a href="http://www.threerivers.gov.uk/">
+            <img src="{$theme-prefix}/images/logos/three_rivers_logo.png" alt="Three Rivers District Council" />
+          </a>
+        </li>
+        <li class="watford_logo">
+          <a href="http://www.watford.gov.uk">
+            <img src="{$theme-prefix}/images/logos/watford_logo.png" alt="Watford Borough Council" />
+          </a>
+        </li>
+      </ul>
+      <div class="clear">&#160;</div>
       <div class="title">
         <h1>
           <a href="{$dispatcher-prefix}"> 
@@ -36,7 +49,6 @@
           Shared working between Three Rivers District Council and Watford Borough Council
         </div>
       </div>
-      <div class="clear">&#160;</div>
     </div>
   </xsl:template>
   

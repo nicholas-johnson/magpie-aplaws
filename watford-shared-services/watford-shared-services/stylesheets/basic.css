@@ -22,7 +22,7 @@ body {
 
 
 a {
-  color:#12572A;
+  color:#12572a;
   text-decoration:none;
 }
 
@@ -37,15 +37,15 @@ a img {
 /* Headings */
 
 h1 {
-  font-size:2em;
-  font-weight:normal;
+  font-size:2.2em;
+  font-weight:lighter;
   margin:20px 0 20px 0;
   padding:0;
 }
 
 h2 {
-  font-size:1.35em;
-  font-weight:bold;
+  font-size:2em;
+  font-weight:lighter;
   margin:20px 0 20px 0;
   padding:0;
   color:#000;

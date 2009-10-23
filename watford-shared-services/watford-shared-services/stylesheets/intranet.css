@@ -35,8 +35,16 @@ body {
   margin:20px 0 0 0;
 }
 
-#header .title {
+#header .logos .three_rivers_logo {
   float:left;
+}
+
+#header .logos .watford_logo {
+  float:right;
+}
+
+#header .title {
+text-align:center;
 }
 
 #header .title h1 {
@@ -45,7 +53,7 @@ body {
 
 #header .title h1 a {
   text-decoration:none;
-  color:#12572A;
+  color:#12572a;
 }
 
 #header .title .strap a{
@@ -53,7 +61,7 @@ body {
 }
 
 #header .finder {
-float:right;
+  float:right;
 }
 
 #header .search {
@@ -108,17 +116,18 @@ float:right;
 }
 
 #main_col .content img, #wide_main_col .content img {
-float: right;
-margin:0 0 0.5em 0.5em;
+  float: right;
+  margin:0 0 0.5em 0.5em;
 }
 
 #left_col {
+  padding-top:1.45em;
   float:left;
   width:19%;
 }
 
 #left_col li {
-  border-bottom:1px solid #bbb;
+  border-bottom:3px solid #fff;
 }
 
 #left_col ul ul ul li {
@@ -129,8 +138,18 @@ margin:0 0 0.5em 0.5em;
   margin:4px 0;
 }
 
-#left_col a {
-  color:#004fa4;
+#left_col li a {
+  display:block;
+  background:#ffff01;
+  color:#000;
+  padding:2px 10px;
+}
+
+#left_col li a:hover {
+  background:#12572a;
+  color:#fff;
+  padding:2px 10px;
+  text-decoration:none;
 }
 
 #left_col .home_link a {

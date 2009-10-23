@@ -1,0 +1,167 @@
+/* basic styling */
+
+body {
+  font-size: 90%;
+  font-family: arial,helvetica,verdana,sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height:1.6em;
+  text-align:center;
+}
+
+#wrapper {
+  margin:0 auto;
+  text-align:left;
+  width: 90%;
+}
+
+.login {
+  float:right;
+  color:#999;
+  padding:0;
+  font-size:0.8em;
+}
+
+.login a {
+  color:#999;
+}
+
+.login a:hover {
+  color:#f00;
+}
+
+#header {
+  border-bottom:5px solid #ffff01;
+  margin:20px 0 0 0;
+}
+
+#header .title {
+  float:left;
+}
+
+#header .title h1 {
+  margin:0;
+}
+
+#header .title h1 a {
+  text-decoration:none;
+  color:#12572A;
+}
+
+#header .title .strap a{
+  color:#000;
+}
+
+#header .finder {
+float:right;
+}
+
+#header .search {
+  float:right;
+}
+
+#header .atoz {
+  float:right;
+}
+
+#header .atoz li {
+  float:left;
+}
+
+#header .atoz a {
+  display:block;
+  width:1.4em;
+}
+
+#header .atoz a.selected {
+  background-color:#000;
+  color:#fff;
+}
+
+#header .atoz a:hover {
+  background-color:#000;
+  color:#fff;
+}
+
+#header .atoz span {
+  display:block;
+  text-align:center;
+}
+
+#access_links {
+  position:absolute;
+  left:-3000px;
+}
+
+#main_col {
+  float:left;
+  width:60%;
+}
+
+#wide_main_col {
+  float:right;
+  width:78%;
+}
+
+#main_col .content, #wide_main_col .content {
+  padding:0 2% 0 7%
+}
+
+#main_col .content img, #wide_main_col .content img {
+float: right;
+margin:0 0 0.5em 0.5em;
+}
+
+#left_col {
+  float:left;
+  width:19%;
+}
+
+#left_col li {
+  border-bottom:1px solid #bbb;
+}
+
+#left_col ul ul ul li {
+  border:none;
+  padding-left:20px;
+  font-size:0.9em;
+  line-height:1.2em;
+  margin:4px 0;
+}
+
+#left_col a {
+  color:#004fa4;
+}
+
+#left_col .home_link a {
+  font-weight:bold;
+}
+
+#right_col {
+  float:right;
+  width:19%;
+}
+
+.navigation, .portletWrap, .content_list, .rss_feed {
+  margin:0 0 2em 0
+}
+
+#footer {
+  clear:both;
+  font-size:0.9em;
+  color:#999;
+  padding:40px 0 0 26%;
+}
+
+#footer li {
+  float:left;
+  padding:0 20px 0 0;
+}
+
+#footer a {
+  color:#999;
+}
+
+#footer a:hover {
+  color:#f00;
+}

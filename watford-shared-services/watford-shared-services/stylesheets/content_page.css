@@ -1,0 +1,22 @@
+.mpaSections {
+}
+
+.mpaSections ul li {
+  float:left;
+  padding:0 10px 0 10px;
+  border-right:1px solid #bbb;
+}
+
+.mpaSections ul li.last {
+  padding-right:0;
+  border-right:none;
+}
+
+.mpaSections ul li.first {
+  padding-left:0;
+}
+
+.pageDirection {
+  clear:both;
+  margin:1em 0;
+}

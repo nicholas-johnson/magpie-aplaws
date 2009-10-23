@@ -68,7 +68,6 @@
       <a name="nav" class="access">&#160;</a>
       <ul>
         <xsl:for-each select="portlet:contentDirectory/portlet:contentDirectoryEntry">
-          <xsl:sort select="@name"/>
           <li>
             <xsl:attribute name="class">
               <xsl:value-of select="translate(@name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.:;()+-&amp;', 'abcdefghijklmnopqrstuvwxyz')"/>

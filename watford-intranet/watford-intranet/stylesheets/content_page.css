@@ -20,3 +20,30 @@
   clear:both;
   margin:1em 0;
 }
+
+#main_col h2 {
+  color:#56017d;
+}
+
+#main_col h3 {
+  color:#0188b5;
+}
+
+#main_col .content img, #wide_main_col .content img {
+  display:block;
+  margin:1em 0;
+}
+
+#main_col ul.sol {
+  list-style:square;
+  margin-left:1em;
+}
+
+ul.nav {
+  margin-top:4.4em;
+}
+
+#right_col h2 {
+  color:#adbe10;
+  margin-bottom:1em;
+}

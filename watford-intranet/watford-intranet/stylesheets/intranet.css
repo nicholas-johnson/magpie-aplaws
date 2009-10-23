@@ -108,11 +108,6 @@ float:right;
   padding:0 2% 0 7%
 }
 
-#main_col .content img, #wide_main_col .content img {
-float: right;
-margin:0 0 0.5em 0.5em;
-}
-
 #left_col {
   float:left;
   width:19%;
@@ -120,6 +115,10 @@ margin:0 0 0.5em 0.5em;
 
 #left_col li {
   border-bottom:1px solid #bbb;
+}
+
+#left_col li.selected span {
+  font-weight:bold;
 }
 
 #left_col ul ul ul li {

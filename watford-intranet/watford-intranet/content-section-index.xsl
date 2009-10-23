@@ -72,6 +72,7 @@
           <xsl:call-template name="accessLinks" />
           <xsl:call-template name="pageHeader" />
           <xsl:call-template name="topLinks" />
+          <xsl:call-template name="contentBreadcrumb" />
           <xsl:call-template name="content" />
           <div class="clear">&#160;</div>
           <xsl:call-template name="pageFooter" />
@@ -83,8 +84,6 @@
   
   <xsl:template name="content">
     <div id="left_col">
-      <a name="navigation" class="access">&#160;</a>
-      <h2>Navigation</h2>
       <a name="nav" class="access">&#160;</a>
       <xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
     </div>
@@ -139,6 +138,10 @@
       
   <xsl:template name="cssContent">
     <link rel="stylesheet" href="{$theme-prefix}/stylesheets/content_page.css" type="text/css" />
+  </xsl:template>
+  
+  <xsl:template name="contentBreadcrumb">
+    <xsl:apply-templates select="nav:categoryPath" />
   </xsl:template>
 
 </xsl:stylesheet>

@@ -16,6 +16,7 @@ body {
 .access {
   font-size:1px;
   line-height:1px;
+  height:1px;
 }
 
 /* Anchors */
@@ -45,8 +46,8 @@ h1 {
 }
 
 h2 {
-  font-size:1.35em;
-  font-weight:bold;
+  font-size:1.8em;
+  font-weight:lighter;
   margin:20px 0 20px 0;
   padding:0;
   color:#000;

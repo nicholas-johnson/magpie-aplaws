@@ -76,8 +76,6 @@
   
   <xsl:template name="navigationContent">
     <div id="left_col">
-      <a name="navigation" class="access">&#160;</a>
-      <h2>Navigation</h2>
       <a name="nav" class="access">&#160;</a>
       <xsl:apply-templates select="/bebop:page/nav:categoryMenu" />
     </div>
@@ -131,7 +129,7 @@
   </xsl:template>
   
   <xsl:template name="navigation_css">
-    <link rel="stylesheet" href="{$theme-prefix}/stylesheets/navigation_page.css" type="text/css" />
+    <link rel="stylesheet" href="{$theme-prefix}/stylesheets/content_page.css" type="text/css" />
   </xsl:template>
   
   <xsl:template name="navigationBreadcrumb">

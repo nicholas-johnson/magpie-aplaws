@@ -22,7 +22,7 @@ body {
 
 
 a {
-  color:#12572a;
+  color:#004fa4;
   text-decoration:none;
 }
 
@@ -41,6 +41,7 @@ h1 {
   font-weight:lighter;
   margin:20px 0 20px 0;
   padding:0;
+  color:#000;
 }
 
 h2 {

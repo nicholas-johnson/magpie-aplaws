@@ -100,30 +100,9 @@
     
     <xsl:if test="(count(nav:greetingItem/cms:item/links) > 0) or (count(/bebop:page/nav:relatedItems/nav:relatedItem) > 0) or (count(nav:greetingItem/cms:item/fileAttachments) > 0)">
       <div id="right_col">
-        <h2>Useful Links</h2>
-        <ul>
-          <xsl:for-each select="//nav:greetingItem//links">
-            <li>
-              <xsl:if test="targetType='internalLink'">
-                <xsl:variable name="uri">/redirect/?oid=<xsl:call-template name="url-encode"><xsl:with-param name="str" select="targetItem/@oid" /></xsl:call-template></xsl:variable>
-                <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
-                <xsl:variable name="title"><xsl:value-of select="linkDescription" /></xsl:variable>
-                <a href="{$uri}" title="{$title}">
-                  <xsl:value-of select="$text" />
-                </a>
-              </xsl:if>
-              <xsl:if test="targetType='externalLink'">
-                <xsl:variable name="uri"><xsl:value-of select="targetURI"/></xsl:variable>
-                <xsl:variable name="text"><xsl:value-of select="linkTitle" /></xsl:variable>
-                <xsl:variable name="title">Go to external website - <xsl:value-of select="linkDescription" /></xsl:variable>
-                <xsl:variable name="newPage">true</xsl:variable>
-                <a href="{$uri}" title="{$title}">
-                  <xsl:value-of select="$text" />
-                </a>
-              </xsl:if>
-            </li>
-          </xsl:for-each>
-        </ul>
+        <xsl:call-template name="links">
+          <xsl:with-param name="item" select="nav:greetingItem/cms:item"/>
+        </xsl:call-template>
       </div>
     </xsl:if>
   </xsl:template>

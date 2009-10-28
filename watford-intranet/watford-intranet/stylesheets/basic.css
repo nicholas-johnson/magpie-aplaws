@@ -17,6 +17,8 @@ body {
   font-size:1px;
   line-height:1px;
   height:1px;
+  position:absolute;
+  left -9999px;
 }
 
 /* Anchors */

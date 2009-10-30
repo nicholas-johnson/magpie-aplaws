@@ -35,6 +35,10 @@ body {
   margin:20px 0 0 0;
 }
 
+#header .logos li {
+height:95px;
+}
+
 #header .logos .three_rivers_logo {
   float:left;
 }
@@ -48,7 +52,7 @@ text-align:center;
 }
 
 #header .title h1 {
-  margin:0;
+margin:0 0 10px 0;
 }
 
 #header .title h1 a {
@@ -110,10 +114,10 @@ text-align:center;
 }
 
 #left_col li {
+  border-bottom:1px solid #fff;
 }
 
 #left_col ul ul ul li {
-  border:none;
   padding-left:20px;
   font-size:0.9em;
   line-height:1.2em;

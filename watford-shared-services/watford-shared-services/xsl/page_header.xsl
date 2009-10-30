@@ -38,17 +38,17 @@
           </a>
         </li>
       </ul>
-      <div class="clear">&#160;</div>
       <div class="title">
         <h1>
           <a href="{$dispatcher-prefix}"> 
-            Shared Services Intranet
+            Shared&#160;Services&#160;Intranet
           </a>
         </h1>
         <div class="strap">
           Shared working between Three Rivers District Council and Watford Borough Council
         </div>
       </div>
+      <div class="clear">&#160;</div>
     </div>
   </xsl:template>
   

@@ -88,6 +88,16 @@ margin:0 0 10px 0;
   margin:0 0 0.5em 0.5em;
 }
 
+
+#main_col .content ul, #wide_main_col .content ul {
+  list-style:disc;
+  margin:1em 0 1em 2em;
+}
+
+#main_col .content li, #wide_main_col .content li {
+  margin:1em 0;
+}
+
 #left_col {
   float:left;
   width:19%;

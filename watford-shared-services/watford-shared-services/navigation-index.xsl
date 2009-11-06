@@ -94,7 +94,39 @@
           <xsl:value-of select="//nav:categoryPath/nav:category[last()]/@title" />
         </h2>
         <xsl:apply-templates select="nav:greetingItem" />
-        <xsl:apply-templates select="nav:simpleObjectList" mode="alphabetical" />
+        <xsl:if test="nav:greetingItem/nav:objectList/nav:paginator/@pageCount &gt; 1">
+          <div class="paginator">
+          Page: 
+          <xsl:call-template name="simplePaginator">
+            <xsl:with-param name="pageCount" select="nav:objectList/nav:paginator/@pageCount" />
+            <xsl:with-param name="pageNumber" select="nav:objectList/nav:paginator/@pageNumber" />
+            <xsl:with-param name="counter" select="0" />
+          </xsl:call-template>
+          </div>
+        </xsl:if>
+
+        <xsl:if test="nav:simpleObjectList/nav:objectList/nav:item">
+          <ul class="sol">
+          <xsl:for-each select="nav:simpleObjectList/nav:objectList/nav:item">
+            <xsl:sort select="nav:attribute[@name='masterVersion.id']" order="descending" />
+            <xsl:variable name="title" select="nav:attribute[@name='title']" />
+            <li><a href="{nav:path}" title="{$title}"><xsl:value-of select="nav:attribute[@name='title']" /></a></li>
+          </xsl:for-each>
+          </ul>
+        </xsl:if>
+    
+
+        <xsl:if test="nav:greetingItem/nav:objectList/nav:paginator/@pageCount &gt; 1">
+          <div class="paginator">
+          Page: 
+          <xsl:call-template name="simplePaginator">
+            <xsl:with-param name="pageCount" select="nav:objectList/nav:paginator/@pageCount" />
+            <xsl:with-param name="pageNumber" select="nav:objectList/nav:paginator/@pageNumber" />
+            <xsl:with-param name="counter" select="0" />
+          </xsl:call-template>
+          </div>
+        </xsl:if>
+
       </div>
     </div>
     

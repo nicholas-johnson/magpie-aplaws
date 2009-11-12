@@ -36,7 +36,7 @@
       </xsl:when>
       <xsl:when test="@title = 'Have Your Say'">
         <li>
-          <a href="{$dispatcher-prefix}sharedservicesintranet/have-your-say/have-your-say.en"><xsl:value-of select="@title" /></a>
+          <a href="{$dispatcher-prefix}/sharedservicesintranet/have-your-say/have-your-say.en"><xsl:value-of select="@title" /></a>
         </li>
       </xsl:when>
       <xsl:when test="@url=/bebop:page/@url">

@@ -9,10 +9,20 @@
 
   <xsl:import href="../../../../ROOT/__ccm__/apps/content-section/xsl/admin.xsl"/>
   <xsl:import href="../../../../ROOT/packages/bebop/xsl/dcp.xsl"/>
+
+  <xsl:import href="../../../../ROOT/__ccm__/themes/aplaws/category-step.xsl"/>
   
   <xsl:param name="theme-prefix" />
 
   <xsl:variable name="here"><xsl:value-of select="$static-prefix"/>/cms/admin/page</xsl:variable>
+
+  <xsl:template name="cat-widget-cat-name">
+    <xsl:value-of select="@name"/>
+
+    <xsl:if test="@pid and @domain='LGSL'">
+        (<xsl:value-of select="@pid"/>)
+    </xsl:if>
+  </xsl:template>
 
 
   <xsl:template match="bebop:page[@class = 'cms-admin']">
@@ -23,6 +33,7 @@
         <link rel="stylesheet" type="text/css" href="{$static-prefix}/cms/admin/cms-admin.css"/>
       </head>
       <body>
+        <xsl:call-template name="bebop:dcpJavascript"/>
         <table id="global-header">
           <tr>
             <td id="logo"><img src="{$theme-prefix}/images/aplaws-logo-small.png" height="30" width="30"/></td>

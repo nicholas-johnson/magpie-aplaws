@@ -40,11 +40,17 @@ height:95px;
   float:left;
 }
 
+#header .logos .three_rivers_logo img {
+  display:block;
+  padding-top:36px;
+}
+
 #header .logos .watford_logo {
   float:right;
 }
 
 #header .title {
+padding-top:25px;
 text-align:center;
 }
 
@@ -165,6 +171,10 @@ margin:0 0 10px 0;
 #right_col {
   float:right;
   width:19%;
+}
+
+#right_col li {
+  margin:1em 0
 }
 
 .navigation, .portletWrap, .content_list, .rss_feed {

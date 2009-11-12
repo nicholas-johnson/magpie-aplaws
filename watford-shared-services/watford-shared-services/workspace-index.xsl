@@ -87,9 +87,6 @@
         <div class="clear">&#160;</div>
       </div>
     </div>
-    <div id="right_col">
-      <xsl:apply-templates select="//portal:homepageWorkspace[@id='right']" />
-    </div>
   </xsl:template>
   
   <xsl:template name="cssHomepage">

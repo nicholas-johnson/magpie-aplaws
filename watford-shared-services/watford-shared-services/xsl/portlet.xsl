@@ -69,15 +69,19 @@
       <ul>
         <xsl:for-each select="portlet:contentDirectory/portlet:contentDirectoryEntry">
           <li>
-            <xsl:attribute name="class">
-              <xsl:value-of select="translate(@name, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ,.:;()+-&amp;', 'abcdefghijklmnopqrstuvwxyz')"/>
-            </xsl:attribute>
-            <a>
-              <xsl:attribute name="href">
-                <xsl:value-of select="@url"/>
-              </xsl:attribute>
-              <xsl:value-of select="@name"/>
-            </a>
+            <xsl:choose>
+              <xsl:when test="@name = 'Staff Directory'">
+                <a href="http://intranet2/directory/index.aspx"><xsl:value-of select="@name" /></a>
+              </xsl:when>
+              <xsl:otherwise>
+                <a>
+                  <xsl:attribute name="href">
+                    <xsl:value-of select="@url"/>
+                  </xsl:attribute>
+                  <xsl:value-of select="@name"/>
+                </a>
+              </xsl:otherwise>
+            </xsl:choose>
           </li>
         </xsl:for-each>
       </ul>

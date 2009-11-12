@@ -1,9 +1,5 @@
 #main_col {
-  width:50%;
-}
-
-#right_col {
-  width:29%;
+  width:79%;
 }
 
 .rss_feed h3 {
@@ -21,5 +17,5 @@
 }
 
 .content_list p {
-  margin:0 0 0 30px;
+  margin:0 0 1em 30px;
 }

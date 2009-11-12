@@ -30,10 +30,14 @@
       in the past or more than 12 months in the future -->
     <xsl:choose>
       <xsl:when test="@title = 'Staff Directory'">
-        <a href="http://intranet2/directory/index.aspx"><xsl:value-of select="@name" /></a>
+        <li>
+          <a href="http://intranet2/directory/index.aspx"><xsl:value-of select="@title" /></a>
+        </li>
       </xsl:when>
       <xsl:when test="@title = 'Have Your Say'">
-        <a href="{$dispatcher-prefix}sharedservicesintranet/have-your-say/have-your-say.en"><xsl:value-of select="@name" /></a>
+        <li>
+          <a href="{$dispatcher-prefix}sharedservicesintranet/have-your-say/have-your-say.en"><xsl:value-of select="@title" /></a>
+        </li>
       </xsl:when>
       <xsl:when test="@url=/bebop:page/@url">
         <li class="selected">

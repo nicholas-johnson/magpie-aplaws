@@ -74,7 +74,7 @@
                 <a href="http://intranet2/directory/index.aspx"><xsl:value-of select="@name" /></a>
               </xsl:when>
               <xsl:when test="@name = 'Have Your Say'">
-                <a href="{$dispatcher-prefix}sharedservicesintranet/have-your-say/have-your-say.en"><xsl:value-of select="@name" /></a>
+                <a href="{$dispatcher-prefix}/sharedservicesintranet/have-your-say/have-your-say.en"><xsl:value-of select="@name" /></a>
               </xsl:when>
               <xsl:otherwise>
                 <a>

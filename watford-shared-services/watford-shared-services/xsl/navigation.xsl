@@ -29,6 +29,9 @@
       Also test to see if you are a child of the what's on category you are not 
       in the past or more than 12 months in the future -->
     <xsl:choose>
+      <xsl:when test="@title = 'Staff Directory'">
+        <a href="http://intranet2/directory/index.aspx"><xsl:value-of select="@name" /></a>
+      </xsl:when>
       <xsl:when test="@url=/bebop:page/@url">
         <li class="selected">
           <span><xsl:value-of select="@title" /></span>

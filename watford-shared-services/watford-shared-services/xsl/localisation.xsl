@@ -12,7 +12,7 @@
 
 	<!-- Edit these files to localise your aplaws theme -->
 	<xsl:template name="councilName">
-    Watford Staff Intranet
+    Shared Services Intranet
 	</xsl:template>
 	
 	<xsl:template name="contactDetails">

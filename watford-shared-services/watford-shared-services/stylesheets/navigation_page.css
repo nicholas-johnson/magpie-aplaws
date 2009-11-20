@@ -1,0 +1,17 @@
+#main_col .content ul.nav_list,
+#wide_main_col .content ul.nav_list {
+  margin:0;
+  padding:0;
+}
+
+#main_col .content ul.nav_list li,
+#wide_main_col .content ul.nav_list li {
+  margin-left:1em;
+}
+
+#main_col .content ul.nav_list li.title,
+#wide_main_col .content ul.nav_list li.title {
+  list-style:none;
+  margin:0;
+  padding:0;
+}

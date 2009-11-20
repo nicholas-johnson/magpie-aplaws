@@ -79,9 +79,13 @@ p {
 
 /* Misc */
 
-body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,textarea,blockquote,th,td {
+body,div,dl,dt,dd,ul,ol,li,pre,fieldset,input,textarea,blockquote,th,td {
   margin:0;
   padding:0;
+}
+
+form {
+margin:1em 0
 }
 
 table {
@@ -128,5 +132,3 @@ q:before,q:after {
 abbr,acronym {
   border:0;
 }
-
-

@@ -106,6 +106,10 @@ margin:0 0 10px 0;
   padding:1.45em 0 1em 0;
 }
 
+#left_col .search form {
+  margin:0
+}
+
 #left_col .search table {
   width:100%;
 }

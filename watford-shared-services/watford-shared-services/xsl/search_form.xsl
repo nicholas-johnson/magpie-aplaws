@@ -31,6 +31,7 @@
                     </xsl:otherwise>
                   </xsl:choose>
                 </input>
+                <input type="hidden" name="restrictToContentSections" value="sharedservicesintranet" />
               </fieldset>
             </td>
             <td>

@@ -104,17 +104,76 @@
           </xsl:call-template>
           </div>
         </xsl:if>
-
         <xsl:if test="nav:simpleObjectList/nav:objectList/nav:item">
-          <ul class="sol">
-          <xsl:for-each select="nav:simpleObjectList/nav:objectList/nav:item">
-            <xsl:sort select="nav:attribute[@name='masterVersion.id']" order="descending" />
-            <xsl:variable name="title" select="nav:attribute[@name='title']" />
-            <li><a href="{nav:path}" title="{$title}"><xsl:value-of select="nav:attribute[@name='title']" /></a></li>
-          </xsl:for-each>
+        
+          <xsl:variable name="sorted_items">
+              <xsl:for-each select="nav:simpleObjectList/nav:objectList/nav:item">
+                <xsl:sort select="nav:attribute[@name='newsDate']/@year" data-type="number" order="descending" />
+                <xsl:sort select="nav:attribute[@name='newsDate']/@month" data-type="number" order="descending" />
+                <xsl:copy-of select="."/>
+             </xsl:for-each>
+          </xsl:variable>
+          <ul class="nav_list">
+            <xsl:for-each select="$sorted_items">
+              <xsl:for-each select="nav:item">
+                <xsl:variable name="title" select="nav:attribute[@name='title']" />
+                <xsl:variable name="year" select="nav:attribute[@name='newsDate']/@year" />
+                <xsl:variable name="month" select="nav:attribute[@name='newsDate']/@month" />
+                <xsl:variable name="preceeding_year" select="preceding-sibling::nav:item[1]/nav:attribute[@name='newsDate']/@year" />
+                <xsl:variable name="preceeding_month" select="preceding-sibling::nav:item[1]/nav:attribute[@name='newsDate']/@month" />
+                <xsl:variable name="preceeding_title" select="preceding-sibling::nav:item[1]/nav:attribute[@name='title']" />
+                <xsl:if test="$year != $preceeding_year or $month != $preceeding_month or count(preceding-sibling::nav:item) = 0">
+                  <li class="title">
+                    <h3>
+                      <xsl:choose>
+                        <xsl:when test="$month = 1">
+                          January
+                        </xsl:when>
+                        <xsl:when test="$month = 2">
+                          February
+                        </xsl:when>
+                        <xsl:when test="$month = 3">
+                          March
+                        </xsl:when>
+                        <xsl:when test="$month = 4">
+                          April
+                        </xsl:when>
+                        <xsl:when test="$month = 5">
+                          May
+                        </xsl:when>
+                        <xsl:when test="$month = 6">
+                          June
+                        </xsl:when>
+                        <xsl:when test="$month = 7">
+                          July
+                        </xsl:when>
+                        <xsl:when test="$month = 8">
+                          August
+                        </xsl:when>
+                        <xsl:when test="$month = 9">
+                          September
+                        </xsl:when>
+                        <xsl:when test="$month = 10">
+                          October
+                        </xsl:when>
+                        <xsl:when test="$month = 11">
+                          November
+                        </xsl:when>
+                        <xsl:when test="$month = 12">
+                          December
+                        </xsl:when>
+                      </xsl:choose>
+                      <xsl:value-of select="$year" />
+                    </h3>
+                  </li>
+                </xsl:if>
+                <li>
+                  <a href="{nav:path}"><xsl:value-of select="$title" /></a>
+                </li>
+              </xsl:for-each>
+            </xsl:for-each>
           </ul>
         </xsl:if>
-    
 
         <xsl:if test="nav:greetingItem/nav:objectList/nav:paginator/@pageCount &gt; 1">
           <div class="paginator">
@@ -138,6 +197,15 @@
       </div>
     </xsl:if>
   </xsl:template>
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   <xsl:template name="navigation_css">
     <link rel="stylesheet" href="{$theme-prefix}/stylesheets/navigation_page.css" type="text/css" />

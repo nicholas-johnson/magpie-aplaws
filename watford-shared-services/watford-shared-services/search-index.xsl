@@ -133,6 +133,7 @@
                 <xsl:value-of select="./search:query/search:terms/@value" />
               </xsl:attribute>
             </input>
+            <input type="hidden" name="restrictToContentSections" value="sharedservicesintranet" />
             <input type="submit" name="Submit" id="basicSearchGo" value="Search" class="adgo" />
             <xsl:apply-templates select="bebop:pageState" />
           </form>

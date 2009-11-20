@@ -19,5 +19,6 @@
 	<xsl:import href="inline_site.xsl" />
 	<xsl:import href="search_form.xsl" />
 	<xsl:import href="form.xsl" />
+	<xsl:import href="launch_date.xsl" />
 
 </xsl:stylesheet>

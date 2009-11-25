@@ -1,0 +1,25 @@
+#main_col {
+  width:50%;
+}
+
+#right_col {
+  width:29%;
+}
+
+.rss_feed h3 {
+  font-size:1em;
+  margin:0;
+}
+
+.rss_feed p {
+  margin:0 0 0 30px;
+}
+
+.content_list h3 {
+  font-size:1em;
+  margin:0;
+}
+
+.content_list p {
+  margin:0 0 0 30px;
+}

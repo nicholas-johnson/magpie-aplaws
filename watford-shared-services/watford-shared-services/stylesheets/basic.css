@@ -93,6 +93,17 @@ table {
   border-spacing:0;
 }
 
+td, th {
+vertical-align: top
+padding:0;
+}
+
+td p, th p {
+margin:0;
+}
+
+table 
+
 fieldset,img {
   border:0;
 }

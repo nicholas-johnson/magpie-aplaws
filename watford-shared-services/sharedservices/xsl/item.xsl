@@ -208,4 +208,38 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 		</div>
 	</xsl:template>
 
+	<!-- File storage item -->
+	<xsl:template match="cms:item[objectType='com.arsdigita.cms.contenttypes.FileStorageItem']">
+		<xsl:param name="simpleDownloadTimes" /> <!-- displays some simple download times guidelines. -->
+		<xsl:param name="adobeLink" /> <!-- displays a link to adobe acrobat if file is a pdf. -->
+		<xsl:param name="downloadTable" /> <!-- displays a table of download times. -->
+		<xsl:call-template name="itemHead" />
+		<div class="item fileStorageItem">
+			<xsl:apply-templates select="imageCaptions" />
+			<xsl:apply-templates select="imageAttachments" />
+			<xsl:if test="description or lead or summary">
+				<div class="lead">
+					<xsl:if test="description">
+						<p><xsl:value-of select="description" disable-output-escaping="yes" /></p>
+					</xsl:if>
+					<xsl:if test="lead">
+						<p><xsl:value-of select="lead" disable-output-escaping="yes" /></p>
+					</xsl:if>
+					<xsl:if test="summary">
+						<p><xsl:value-of select="summary" disable-output-escaping="yes" /></p>
+					</xsl:if>
+				</div><!-- /lead -->
+			</xsl:if>
+			<div class="itemContent">
+				<xsl:call-template name="fileAttachments">
+					<xsl:with-param name="file" select="file" />
+					<xsl:with-param name="simpleDownloadTimes" select="$simpleDownloadTimes" />
+					<xsl:with-param name="adobeLink" select="$adobeLink" />
+					<xsl:with-param name="downloadTable" select="$downloadTable" />
+				</xsl:call-template>
+				<xsl:value-of disable-output-escaping="yes" select="./textAsset/content" />
+			</div><!-- /itemContent -->
+		</div><!-- /item -->
+	</xsl:template>
+
 </xsl:stylesheet>

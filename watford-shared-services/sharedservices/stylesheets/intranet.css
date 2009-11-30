@@ -189,12 +189,12 @@ margin:0 0 10px 0;
   clear:both;
   font-size:0.9em;
   color:#999;
-  padding:40px 0 0 26%;
+  padding:40px 0;
 }
 
 #footer li {
-  float:left;
-  padding:0 20px 0 0;
+  display:inline;
+  padding:0;
 }
 
 #footer a {

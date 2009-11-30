@@ -174,9 +174,9 @@
             </xsl:for-each>
           </ul>
         </xsl:if>
-        <xsl:if test="nav:simpleObjectList/nav:objectList/nav:item[nav:attribute[name='objectType'] != 'com.arsdigita.cms.contenttypes.NewsItem']">
+        <xsl:if test="nav:simpleObjectList/nav:objectList/nav:item[nav:attribute[@name='objectType'] != 'com.arsdigita.cms.contenttypes.NewsItem']">
           <xsl:variable name="sorted_items">
-              <xsl:for-each select="nav:simpleObjectList/nav:objectList/nav:item[nav:attribute[name='objectType'] != 'com.arsdigita.cms.contenttypes.NewsItem']">
+              <xsl:for-each select="nav:simpleObjectList/nav:objectList/nav:item[nav:attribute[@name='objectType'] != 'com.arsdigita.cms.contenttypes.NewsItem']">
                 <xsl:sort select="nav:attribute[@name='newsDate']/@year" data-type="number" order="descending" />
                 <xsl:sort select="nav:attribute[@name='newsDate']/@month" data-type="number" order="descending" />
                 <xsl:copy-of select="."/>

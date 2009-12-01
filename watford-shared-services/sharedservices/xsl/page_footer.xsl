@@ -14,7 +14,7 @@
     <div id="footer">
       <ul>
         <li>
-          <a href="mailto:enquiries@watford.gov.uk">Contact the Web Team</a>
+          <a href="mailto:intranet@watford.gov.uk">Contact the Web Team</a>
         </li>
       </ul>
     </div>

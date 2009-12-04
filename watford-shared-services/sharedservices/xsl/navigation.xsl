@@ -31,7 +31,7 @@
     <xsl:choose>
       <xsl:when test="@title = 'Staff Directory'">
         <li>
-          <a href="http://intranet2/directory/index.aspx"><xsl:value-of select="@title" /></a>
+          <a href="/ssi-staffdirectory/"><xsl:value-of select="@title" /></a>
         </li>
       </xsl:when>
       <xsl:when test="@title = 'Have Your Say'">
